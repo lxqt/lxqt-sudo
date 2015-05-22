@@ -44,6 +44,7 @@ public:
     bool valid;
     bool master;
     QScopedPointer<QTimer> timer;
+    QScopedPointer<QTimer> masterStopTimer;
 
     static const int MEM_SIZE = 1024;
     static const int SPINLOCK_DELAY = 250;
@@ -57,7 +58,7 @@ namespace
         Locker(QSharedMemory& mem)
             : mMem(mem)
         {
-            //TODO: error handling!?!
+            //XXX: error handling!?!
             mMem.lock();
         }
         ~Locker()
@@ -94,8 +95,12 @@ Communication::Communication(QString const & key, bool master, QObject * parent/
     }
 
     mImpl->timer.reset(new QTimer);
-
+    mImpl->timer->setSingleShot(true);
     connect(mImpl->timer.data(), &QTimer::timeout, this, &Communication::timeout);
+
+    mImpl->masterStopTimer.reset(new QTimer);
+    mImpl->masterStopTimer->setSingleShot(true);
+    connect(mImpl->masterStopTimer.data(), &QTimer::timeout, this, &Communication::stopWaiting);
 }
 
 Communication::~Communication()
@@ -110,6 +115,16 @@ bool Communication::valid() const
 void Communication::waitForReady()
 {
     mImpl->timer->start(Impl::SPINLOCK_DELAY);
+    if (mImpl->master)
+    {
+        //stop waiting if no passwd request arrived for 15 seconds (no more password needed)
+        mImpl->masterStopTimer->start(15000);
+    }
+}
+
+void Communication::stopWaiting()
+{
+    mImpl->timer->stop();
 }
 
 void Communication::timeout()

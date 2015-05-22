@@ -53,6 +53,7 @@ int master(int argc, char **argv)
 {
     //master
     LxQt::Application app(argc, argv);
+    app.setQuitOnLastWindowClosed(false);
     QString pid = QStringLiteral("%1").arg(app.applicationPid());
     Communication comm(QStringLiteral("%1/%2").arg(app_master).arg(pid), true/*master*/);
     if (!comm.valid())
@@ -68,27 +69,53 @@ int master(int argc, char **argv)
         fi.setFile(QDir(install_dir), app_slave);
     env.insert(ENV_SUDO_ASKPASS, fi.filePath());
 
-    //start background process -> sudo
     QStringList args = app.arguments();
     //XXX: check?!? if there is something to run args.size() > 1
     args.removeAt(0);
-    QScopedPointer<QProcess> sudo{new QProcess};
-    sudo->setProcessEnvironment(env);
-    sudo->setInputChannelMode(QProcess::ForwardedInputChannel);
-    sudo->setReadChannelMode(QProcess::ForwardedOutputChannel);
-    sudo->setReadChannel(QProcess::StandardError);
-    sudo->setProgram(QStringLiteral(LXQTSUDO_SUDO));
-    sudo->setArguments(QStringList() << QStringLiteral("-A")
-            << QStringLiteral("-b")
-            << args);
-
-    PasswordDialog dlg(args, comm, *sudo);
+    PasswordDialog dlg(args);
+    dlg.setModal(true);
     dlg.setWindowIcon(QIcon::fromTheme("security-high"));
     app.setActiveWindow(&dlg);
-    dlg.show();
-    int ret = app.exec();
-    sudo.reset(nullptr);
 
+    QScopedPointer<QProcess> sudo{new QProcess};
+    QObject::connect(&comm, &Communication::passwordNeeded, [&dlg, &comm, &sudo]
+        {
+            dlg.show();
+        });
+    QObject::connect(&dlg, &QDialog::finished, [&comm, &sudo, &dlg] (int result)
+        {
+            if (QDialog::Accepted == result)
+            {
+                comm.setPassword(dlg.password());
+                comm.waitForReady();
+            } else
+            {
+                sudo->terminate();
+                if (!sudo->waitForFinished(1000))
+                    sudo->kill();
+            }
+        });
+    comm.waitForReady();
+
+    //start background process -> sudo
+    sudo->setProcessEnvironment(env);
+    sudo->setInputChannelMode(QProcess::ForwardedInputChannel);
+    sudo->setReadChannelMode(QProcess::ForwardedChannels);
+    sudo->start(QStringLiteral(LXQTSUDO_SUDO), QStringList() << QStringLiteral("-A")
+            << args);
+
+    int ret;
+    QObject::connect(sudo.data(), static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished)
+            , [&app, &ret] (int exitCode, QProcess::ExitStatus exitStatus)
+        {
+            ret = QProcess::NormalExit == exitStatus ? exitCode : 255;
+            app.quit();
+        });
+    /*TODO: error information to user in case of sudo's failure!?!*/
+
+    app.exec();
+
+    sudo->waitForFinished(-1);
     return ret;
 }
 

@@ -43,19 +43,16 @@ class PasswordDialog : public QDialog
 
 public:
     PasswordDialog(QStringList argv
-            , Communication & comm
-            , QProcess & sudo
             , QWidget * parent = 0
             , Qt::WindowFlags f = 0);
     ~PasswordDialog();
 
-    virtual void accept() override;
-    virtual void hideEvent(QHideEvent * event) override;
+    virtual void showEvent(QShowEvent * event) override;
+    QString password() const;
 
 private:
     QScopedPointer<Ui::PasswordDialog> ui;
-    Communication & mComm;
-    QProcess & mSudo;
+    int mAttempt = 0;
 };
 
 #endif // PASSWORDDIALOG_H

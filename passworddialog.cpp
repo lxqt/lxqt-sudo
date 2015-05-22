@@ -33,14 +33,10 @@
 #include <QDebug>
 
 PasswordDialog::PasswordDialog(QStringList argv
-        , Communication & comm
-        , QProcess & sudo
         , QWidget * parent/* = 0*/
         , Qt::WindowFlags f/* = 0*/)
     : QDialog(parent, f)
     , ui(new Ui::PasswordDialog)
-    , mComm(comm)
-    , mSudo(sudo)
 {
     ui->setupUi(this);
 
@@ -49,54 +45,20 @@ PasswordDialog::PasswordDialog(QStringList argv
     if (0 < argv.size())
         cmd = argv[0];
     ui->descriptionL->setText(tr("<b>%1</b> needs administrative privileges. Please enter your password.").arg(cmd));
-
-
-    connect(&mSudo, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), [this] (int exitCode, QProcess::ExitStatus exitStatus)
-        {
-            if (!isVisible())
-                return;
-
-            if (QProcess::NormalExit == exitStatus && 0 == exitCode)
-                QDialog::accept(); //sudo succeeded (with or w/o password)
-            else
-            {
-                QMessageBox b(QMessageBox::Critical, windowTitle()
-                        , tr("Child 'sudo' process failed!\n%1").arg(mSudo.readAllStandardError().constData()), QMessageBox::Ok);
-                b.exec();
-                reject();
-            }
-        });
-    mSudo.start();
-
-    connect(&mComm, &Communication::passwordNeeded, [this]
-        {
-            ui->passwordLE->setEnabled(true);
-        });
-    mComm.waitForReady();
 }
 
 PasswordDialog::~PasswordDialog()
 {
 }
 
-void PasswordDialog::accept()
+void PasswordDialog::showEvent(QShowEvent * event)
 {
-    if (ui->passwordLE->isEnabled())
-    {
-        mComm.setPassword(ui->passwordLE->text());
-        ui->passwordLE->setEnabled(false);
-        mComm.waitForReady();
-    } else
-        reject();
+    ui->errorL->setText(tr("Attempt #%1").arg(++mAttempt));
+    return QDialog::showEvent(event);
 }
 
-void PasswordDialog::hideEvent(QHideEvent * event)
+QString PasswordDialog::password() const
 {
-    if (QProcess::Running == mSudo.state())
-    {
-        mSudo.terminate();
-        mSudo.waitForFinished(1000);
-        mSudo.kill();
-    }
-    return QDialog::hideEvent(event);
+    return ui->passwordLE->text();
 }
+

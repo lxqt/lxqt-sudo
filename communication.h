@@ -47,6 +47,9 @@ public:
     //for slave
     void needPassword();
 
+public slots:
+    void stopWaiting();
+
 signals:
     //for master
     void passwordNeeded();
