@@ -32,6 +32,7 @@
 #include <QDir>
 #include <QProcess>
 #include <QTimer>
+#include <QMessageBox>
 #include <iostream>
 #include <signal.h>
 #include <sstream>
@@ -100,19 +101,45 @@ int master(int argc, char **argv)
     //start background process -> sudo
     sudo->setProcessEnvironment(env);
     sudo->setInputChannelMode(QProcess::ForwardedInputChannel);
-    sudo->setReadChannelMode(QProcess::ForwardedChannels);
-    sudo->start(QStringLiteral(LXQTSUDO_SUDO), QStringList() << QStringLiteral("-A")
-            << args);
+    sudo->setProcessChannelMode(QProcess::ForwardedOutputChannel);
+    sudo->setReadChannel(QProcess::StandardError);
 
+    QString last_line;
     int ret;
     QObject::connect(sudo.data(), static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished)
-            , [&app, &ret] (int exitCode, QProcess::ExitStatus exitStatus)
+            , [&app, &ret, &last_line, &dlg] (int exitCode, QProcess::ExitStatus exitStatus)
         {
             ret = QProcess::NormalExit == exitStatus ? exitCode : 255;
+            if (0 != ret && last_line.startsWith(QStringLiteral("sudo:")))
+            {
+                QMessageBox b(QMessageBox::Critical, dlg.windowTitle()
+                        , QObject::tr("Child 'sudo' process failed!\n%1").arg(last_line), QMessageBox::Ok);
+                b.exec();
+            }
             app.quit();
         });
-    /*TODO: error information to user in case of sudo's failure!?!*/
 
+    QObject::connect(sudo.data(), &QProcess::readyReadStandardError, [&sudo, &last_line]
+        {
+            QByteArray err = sudo->readAllStandardError();
+            std::cerr << err.constData();
+            std::cerr.flush();
+            int nl_pos = err.lastIndexOf('\n');
+            if (-1 == nl_pos)
+                last_line += err;
+            else
+            {
+                if (err.endsWith('\n'))
+                    err.remove(err.size() - 1, 1);
+                nl_pos = err.lastIndexOf('\n');
+                if (-1 != nl_pos)
+                    err.remove(0, nl_pos + 1);
+                last_line = err;
+            }
+        });
+
+    sudo->start(QStringLiteral(LXQTSUDO_SUDO), QStringList() << QStringLiteral("-A")
+            << args);
     app.exec();
 
     sudo->waitForFinished(-1);

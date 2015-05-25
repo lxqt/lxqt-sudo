@@ -28,7 +28,6 @@
 #include "passworddialog.h"
 #include "ui_passworddialog.h"
 #include <QProcess>
-#include <QMessageBox>
 #include "communication.h"
 #include <QDebug>
 
