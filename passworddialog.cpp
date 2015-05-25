@@ -27,9 +27,6 @@
 
 #include "passworddialog.h"
 #include "ui_passworddialog.h"
-#include <QProcess>
-#include "communication.h"
-#include <QDebug>
 
 PasswordDialog::PasswordDialog(QStringList argv
         , QWidget * parent/* = 0*/
@@ -39,11 +36,12 @@ PasswordDialog::PasswordDialog(QStringList argv
 {
     ui->setupUi(this);
 
-    ui->commandL->setText(argv.replaceInStrings(QRegExp(QStringLiteral("^(.*)$")), "'\\1'").join(QStringLiteral(" ")));
+    ui->commandL->setText(argv.join(QStringLiteral(" ")));
     QString cmd;
     if (0 < argv.size())
         cmd = argv[0];
-    ui->descriptionL->setText(tr("<b>%1</b> needs administrative privileges. Please enter your password.").arg(cmd));
+    ui->descriptionL->setText(tr("<b>%1</b> needs administrative privileges.\nPlease enter your password.").arg(cmd));
+    ui->iconL->setPixmap(QIcon::fromTheme("security-high").pixmap(64, 64));
 }
 
 PasswordDialog::~PasswordDialog()

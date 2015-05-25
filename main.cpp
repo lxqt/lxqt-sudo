@@ -50,11 +50,41 @@ void termSignalHandler(int signal)
         QApplication::instance()->quit();
 }
 
+void usage(QString const & err = QString())
+{
+    QTextStream(stderr)
+        << err << (err.isEmpty() ? "" : "\n\n")
+        << QObject::tr("Usage: %1 command [arguments...]\n\n"
+                "GUI frontend for %2\n\n"
+                "Arguments:\n"
+                "  command        Command to run.\n"
+                "  arguments      Optional arguments for command.\n\n").arg(app_master).arg(LXQTSUDO_SUDO);
+    if (!err.isEmpty())
+        QMessageBox(QMessageBox::Critical, app_master, err, QMessageBox::Ok).exec();
+}
+
 int master(int argc, char **argv)
 {
     //master
     LxQt::Application app(argc, argv);
     app.setQuitOnLastWindowClosed(false);
+
+    if (1 >= argc)
+    {
+        usage(QObject::tr("%1: no command to run provided!").arg(app_master));
+        return 1;
+    } else
+    {
+        //simple help check
+        std::string arg1(argv[1]);
+        if ("-h" == arg1 || "--help" == arg1)
+        {
+            usage();
+            return 0;
+        }
+        //any other arguments we simply forward to sudo
+    }
+
     QString pid = QStringLiteral("%1").arg(app.applicationPid());
     Communication comm(QStringLiteral("%1/%2").arg(app_master).arg(pid), true/*master*/);
     if (!comm.valid())
@@ -71,7 +101,7 @@ int master(int argc, char **argv)
     env.insert(ENV_SUDO_ASKPASS, fi.filePath());
 
     QStringList args = app.arguments();
-    //XXX: check?!? if there is something to run args.size() > 1
+    //check for provided command is done before
     args.removeAt(0);
     PasswordDialog dlg(args);
     dlg.setModal(true);
@@ -110,12 +140,9 @@ int master(int argc, char **argv)
             , [&app, &ret, &last_line, &dlg] (int exitCode, QProcess::ExitStatus exitStatus)
         {
             ret = QProcess::NormalExit == exitStatus ? exitCode : 255;
-            if (0 != ret && last_line.startsWith(QStringLiteral("sudo:")))
-            {
-                QMessageBox b(QMessageBox::Critical, dlg.windowTitle()
-                        , QObject::tr("Child 'sudo' process failed!\n%1").arg(last_line), QMessageBox::Ok);
-                b.exec();
-            }
+            if (0 != ret && last_line.startsWith(QStringLiteral("%1:").arg(LXQTSUDO_SUDO)))
+                QMessageBox(QMessageBox::Critical, dlg.windowTitle()
+                        , QObject::tr("Child '%1' process failed!\n%2").arg(LXQTSUDO_SUDO).arg(last_line), QMessageBox::Ok).exec();
             app.quit();
         });
 

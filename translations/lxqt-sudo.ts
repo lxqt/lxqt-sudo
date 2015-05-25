@@ -35,13 +35,41 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../passworddialog.cpp" line="47"/>
-        <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges. Please enter your password.</source>
+        <location filename="../passworddialog.cpp" line="43"/>
+        <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
+Please enter your password.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../passworddialog.cpp" line="56"/>
+        <location filename="../passworddialog.cpp" line="53"/>
         <source>Attempt #%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QObject</name>
+    <message>
+        <location filename="../main.cpp" line="57"/>
+        <source>Usage: %1 command [arguments...]
+
+GUI frontend for %2
+
+Arguments:
+  command        Command to run.
+  arguments      Optional arguments for command.
+
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="74"/>
+        <source>%1: no command to run provided!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="145"/>
+        <source>Child &apos;%1&apos; process failed!
+%2</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
