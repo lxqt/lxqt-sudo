@@ -1,0 +1,19 @@
+.TH lxqt-sudo 1 "" "" "LXQt\ Module"
+.SH NAME
+\fBlxqt-sudo\fR \- execute a command as privileged user
+.br
+\fBlxqt-sudo-helper\fR \- slave utility used by sudo (provided to sudo by SUDO_ASKPASS)
+.SH SYNOPSIS
+\fBlxqt-sudo\fR \fIcommand\fR [\fIarguments\fR]
+.SH DESCRIPTION
+\fBlxqt-sudo\fR is a graphical QT frontend for plain \fBsudo(8)\fR (for requesting optional password in GUI fashion).
+When invoked it simply spawns child \fIsudo\fR process with requested \fIcommand\fR (and \fIarguments\fR). \fIsudo\fR is instructed to use askpass program
+\fBlxqt-sudo-helper\fR by using sudo's \fB-A\fR parameter and setting \fBSUDO_ASKPASS\fR environment variable).
+If password is needed by \fBsudo\fR it spawns our \fBlxqt-sudo-helper\fR which in turn notifies \fBlxqt-sudo\fR master that the password is required and the password dialog is shown.
+.SH "REPORTING BUGS"
+Report bugs to https://github.com/lxde/lxde-qt/issues
+.SH "SEE ALSO"
+\fBsudo(8)\fR
+.SH AUTHOR
+This manual page was created by \fBPalo Kisa\fR \fI<palo.kisa@gmail.com>\fR
+for \fBLXQt\fR project.

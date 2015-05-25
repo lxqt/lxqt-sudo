@@ -96,3 +96,4 @@ add_custom_command(TARGET lxqt-sudo POST_BUILD
 install(TARGETS lxqt-sudo RUNTIME DESTINATION bin)
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/lxqt-sudo-helper" DESTINATION "${CMAKE_INSTALL_PREFIX}/bin")
 install(FILES ${DESKTOP_FILES} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/applications")
+install(FILES man/lxqt-sudo.1 DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man1")
