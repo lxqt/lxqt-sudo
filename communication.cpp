@@ -82,8 +82,8 @@ Communication::Communication(QString const & key, bool master, QObject * parent/
 
     if (!mImpl->valid)
     {
-        qCritical() << tr("%1: Communication - unable to create shared memory(%2B), ").arg(LXQTSUDO).arg(Impl::MEM_SIZE)
-            << mImpl->memory->errorString();
+        QTextStream(stderr) << tr("%1: Communication - unable to create shared memory(%2B), ").arg(LXQTSUDO).arg(Impl::MEM_SIZE)
+            << mImpl->memory->errorString() << '\n';
         return;
     }
 
@@ -180,7 +180,7 @@ void Communication::setPassword(QString passwd)
     *data = Impl::DATA_READY;
     std::string passwd_s{passwd.toStdString()};
     if (passwd_s.size() > Impl::MEM_SIZE - 2)
-        qCritical() << tr("%1: Communication - password is too long(%2) for aquired shared memory(%3), has to by cut-off...")
+        QTextStream(stderr) << tr("%1: Communication - password is too long(%2) for aquired shared memory(%3), has to be cut-off...\n")
             .arg(LXQTSUDO).arg(passwd_s.size()).arg(Impl::MEM_SIZE - 2);
     snprintf(reinterpret_cast<char *>(data + 1), Impl::MEM_SIZE - 1, "%s", passwd.toStdString().c_str());
     //to be sure there is a nul byte

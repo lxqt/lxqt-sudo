@@ -10,7 +10,8 @@
     </message>
     <message>
         <location filename="../communication.cpp" line="183"/>
-        <source>%1: Communication - password is too long(%2) for aquired shared memory(%3), has to by cut-off...</source>
+        <source>%1: Communication - password is too long(%2) for aquired shared memory(%3), has to be cut-off...
+</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
