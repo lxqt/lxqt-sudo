@@ -66,11 +66,6 @@ lxqt_translate_ts(QM_FILES
     "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
 )
 
-lxqt_translate_desktop(DESKTOP_FILES
-    SOURCES
-    lxqt-sudo.desktop.in
-)
-
 lxqt_app_translation_loader(SRCS ${PROJECT_NAME})
 #************************************************
 
