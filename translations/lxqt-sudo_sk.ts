@@ -52,7 +52,7 @@ Prosím, zadajte svoje heslo.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="57"/>
+        <location filename="../main.cpp" line="58"/>
         <source>Usage: %1 command [arguments...]
 
 GUI frontend for %2
@@ -73,12 +73,19 @@ Parametre:
 </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="74"/>
+        <location filename="../main.cpp" line="70"/>
+        <source>%1 version %2
+</source>
+        <translation>%1 verzia %2
+</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="81"/>
         <source>%1: no command to run provided!</source>
         <translation>%1: žiaden príkaz na spustenie!</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="145"/>
+        <location filename="../main.cpp" line="156"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
         <translation>Dcérsky &apos;%1&apos; process zlyhal!

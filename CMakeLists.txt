@@ -30,6 +30,7 @@ add_definitions("-DLXQTSUDO_INSTALL_DIR=\"${CMAKE_INSTALL_PREFIX}/bin\""
     "-DLXQTSUDO_SUDO=\"sudo\""
     "-DLXQTSUDO=\"lxqt-sudo\""
     "-DLXQTSUDO_HELPER=\"lxqt-sudo-helper\""
+    "-DLXQT_VERSION=\"${LXQT_VERSION}\""
     )
 
 set ( HDRS

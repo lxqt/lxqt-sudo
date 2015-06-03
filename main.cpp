@@ -39,8 +39,9 @@
 #include <QDebug>
 
 const QString app_master{QStringLiteral(LXQTSUDO)};
-const QString install_dir{QStringLiteral(LXQTSUDO_INSTALL_DIR)};
 const QString app_slave{QStringLiteral(LXQTSUDO_HELPER)};
+const QString app_version{QStringLiteral(LXQT_VERSION)};
+const QString install_dir{QStringLiteral(LXQTSUDO_INSTALL_DIR)};
 #define ENV_SUDO_ASKPASS "SUDO_ASKPASS"
 #define ENV_PID "LXQTSUDO_PID"
 
@@ -63,6 +64,12 @@ void usage(QString const & err = QString())
         QMessageBox(QMessageBox::Critical, app_master, err, QMessageBox::Ok).exec();
 }
 
+void version()
+{
+    QTextStream(stderr)
+        << QObject::tr("%1 version %2\n").arg(app_master).arg(app_version);
+}
+
 int master(int argc, char **argv)
 {
     //master
@@ -80,6 +87,10 @@ int master(int argc, char **argv)
         if ("-h" == arg1 || "--help" == arg1)
         {
             usage();
+            return 0;
+        } else if ("-v" == arg1 || "--version" == arg1)
+        {
+            version();
             return 0;
         }
         //any other arguments we simply forward to sudo
