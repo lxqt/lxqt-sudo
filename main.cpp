@@ -53,8 +53,9 @@ void termSignalHandler(int signal)
 
 void usage(QString const & err = QString())
 {
-    QTextStream(stderr)
-        << err << (err.isEmpty() ? "" : "\n\n")
+    if (!err.isEmpty())
+        QTextStream(stderr) << err;
+    QTextStream(stdout)
         << QObject::tr("Usage: %1 command [arguments...]\n\n"
                 "GUI frontend for %2\n\n"
                 "Arguments:\n"
@@ -66,7 +67,7 @@ void usage(QString const & err = QString())
 
 void version()
 {
-    QTextStream(stderr)
+    QTextStream(stdout)
         << QObject::tr("%1 version %2\n").arg(app_master).arg(app_version);
 }
 
