@@ -41,7 +41,8 @@ PasswordDialog::PasswordDialog(QStringList argv
     if (0 < argv.size())
         cmd = argv[0];
     ui->descriptionL->setText(tr("<b>%1</b> needs administrative privileges.\nPlease enter your password.").arg(cmd));
-    ui->iconL->setPixmap(QIcon::fromTheme("security-high").pixmap(64, 64));
+    ui->iconL->setPixmap(QIcon::fromTheme("dialog-password").pixmap(64, 64));
+    setWindowIcon(QIcon::fromTheme("security-high"));
 }
 
 PasswordDialog::~PasswordDialog()

@@ -117,7 +117,6 @@ int master(int argc, char **argv)
     args.removeAt(0);
     PasswordDialog dlg(args);
     dlg.setModal(true);
-    dlg.setWindowIcon(QIcon::fromTheme("security-high"));
     app.setActiveWindow(&dlg);
 
     QScopedPointer<QProcess> sudo{new QProcess};
