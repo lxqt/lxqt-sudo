@@ -29,23 +29,19 @@ include_directories (
 add_definitions("-DLXQTSUDO_INSTALL_DIR=\"${CMAKE_INSTALL_PREFIX}/bin\""
     "-DLXQTSUDO_SUDO=\"sudo\""
     "-DLXQTSUDO=\"lxqt-sudo\""
-    "-DLXQTSUDO_HELPER=\"lxqt-sudo-helper\""
     "-DLXQT_VERSION=\"${LXQT_VERSION}\""
     )
 
 set ( HDRS
-    communication.h
     passworddialog.h
 )
 
 set ( SRCS
-    communication.cpp
     passworddialog.cpp
     main.cpp
 )
 
 set ( MOCS
-    communication.h
     passworddialog.h
 )
 
@@ -77,19 +73,12 @@ add_executable(lxqt-sudo
     ${DESKTOP_FILES}
     ${QM_FILES}
 )
-add_executable(lxqt-sudo-helper IMPORTED)
 
 target_link_libraries(lxqt-sudo
     Qt5::Widgets
     ${LXQT_LIBRARIES}
 )
 
-add_custom_command(TARGET lxqt-sudo POST_BUILD
-    COMMAND ln -f -s lxqt-sudo lxqt-sudo-helper
-    WORKING_DIRECTORY .
-    COMMENT "Creating lxqt-sudo-helper symlink")
-
 install(TARGETS lxqt-sudo RUNTIME DESTINATION bin)
-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/lxqt-sudo-helper" DESTINATION "${CMAKE_INSTALL_PREFIX}/bin")
 install(FILES ${DESKTOP_FILES} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/applications")
 install(FILES man/lxqt-sudo.1 DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man1")

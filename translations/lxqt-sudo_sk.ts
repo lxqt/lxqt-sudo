@@ -2,21 +2,6 @@
 <!DOCTYPE TS>
 <TS version="2.0">
 <context>
-    <name>Communication</name>
-    <message>
-        <location filename="../communication.cpp" line="85"/>
-        <source>%1: Communication - unable to create shared memory(%2B), </source>
-        <translation>%1: Communication - vytváranie zdieľanej pamäte(%2B) zlyhalo, </translation>
-    </message>
-    <message>
-        <location filename="../communication.cpp" line="183"/>
-        <source>%1: Communication - password is too long(%2) for aquired shared memory(%3), has to be cut-off...
-</source>
-        <translation>%1: Communication - heslo je príliš dlhé(%2) pre použitú zdieľanú pamäť(%3), musí byť orezané...
-</translation>
-    </message>
-</context>
-<context>
     <name>PasswordDialog</name>
     <message>
         <location filename="../passworddialog.ui" line="20"/>
@@ -44,7 +29,7 @@ Please enter your password.</source>
 Prosím, zadajte svoje heslo.</translation>
     </message>
     <message>
-        <location filename="../passworddialog.cpp" line="53"/>
+        <location filename="../passworddialog.cpp" line="54"/>
         <source>Attempt #%1</source>
         <translation>Pokus č. %1</translation>
     </message>
@@ -52,7 +37,7 @@ Prosím, zadajte svoje heslo.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="58"/>
+        <location filename="../main.cpp" line="57"/>
         <source>Usage: %1 command [arguments...]
 
 GUI frontend for %2
@@ -73,19 +58,19 @@ Parametre:
 </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="70"/>
+        <location filename="../main.cpp" line="69"/>
         <source>%1 version %2
 </source>
         <translation>%1 verzia %2
 </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="81"/>
+        <location filename="../main.cpp" line="80"/>
         <source>%1: no command to run provided!</source>
         <translation>%1: žiaden príkaz na spustenie!</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="156"/>
+        <location filename="../main.cpp" line="131"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
         <translation>Dcérsky &apos;%1&apos; process zlyhal!
