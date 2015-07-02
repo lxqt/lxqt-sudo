@@ -33,7 +33,6 @@
 #include <QTimer>
 #include <QMessageBox>
 #include <QSocketNotifier>
-#include <signal.h>
 #include <sstream>
 #include <QDebug>
 
@@ -42,12 +41,6 @@ const QString app_version{QStringLiteral(LXQT_VERSION)};
 const QString install_dir{QStringLiteral(LXQTSUDO_INSTALL_DIR)};
 const QString sudo_prog{QStringLiteral(LXQTSUDO_SUDO)};
 const QString sudo_pwd_prompt{QStringLiteral("Password:\n")};
-
-void termSignalHandler(int signal)
-{
-    if (QApplication::instance())
-        QApplication::instance()->quit();
-}
 
 void usage(QString const & err = QString())
 {
@@ -72,7 +65,7 @@ void version()
 int master(int argc, char **argv)
 {
     //master
-    LxQt::Application app(argc, argv);
+    LxQt::Application app(argc, argv, true);
     app.setQuitOnLastWindowClosed(false);
 
     if (1 >= argc)
@@ -180,14 +173,5 @@ int master(int argc, char **argv)
 
 int main(int argc, char **argv)
 {
-    // Quit gracefully
-    ::signal(SIGALRM, termSignalHandler);
-    ::signal(SIGTERM, termSignalHandler);
-    ::signal(SIGINT, termSignalHandler);
-    ::signal(SIGQUIT, termSignalHandler);
-    ::signal(SIGHUP, termSignalHandler);
-    ::signal(SIGSTOP, termSignalHandler);
-    ::signal(SIGTSTP, termSignalHandler);
-
     return master(argc, argv);
 }
