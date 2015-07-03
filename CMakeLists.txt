@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.11)
+cmake_minimum_required(VERSION 3.0.2 FATAL_ERROR)
 
 project(lxqt-sudo)
 
@@ -18,12 +18,10 @@ endif()
 find_package(Qt5Widgets REQUIRED QUIET)
 find_package(lxqt REQUIRED QUIET)
 
-include(${LXQT_USE_FILE})
 include(LXQtTranslate)
 
 include_directories (
     ${CMAKE_CURRENT_BINARY_DIR}
-    ${LXQT_INCLUDE_DIRS}
 )
 
 add_definitions("-DLXQTSUDO_INSTALL_DIR=\"${CMAKE_INSTALL_PREFIX}/bin\""
@@ -76,7 +74,7 @@ add_executable(lxqt-sudo
 
 target_link_libraries(lxqt-sudo
     Qt5::Widgets
-    ${LXQT_LIBRARIES}
+    lxqt
 )
 
 install(TARGETS lxqt-sudo RUNTIME DESTINATION bin)
