@@ -4,6 +4,8 @@ project(lxqt-sudo)
 
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
 
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
 include(CheckCXXCompilerFlag)
 CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
 CHECK_CXX_COMPILER_FLAG("-std=c++0x" COMPILER_SUPPORTS_CXX0X)
@@ -19,10 +21,6 @@ find_package(Qt5Widgets REQUIRED QUIET)
 find_package(lxqt REQUIRED QUIET)
 
 include(LXQtTranslate)
-
-include_directories (
-    ${CMAKE_CURRENT_BINARY_DIR}
-)
 
 add_definitions("-DLXQTSUDO_INSTALL_DIR=\"${CMAKE_INSTALL_PREFIX}/bin\""
     "-DLXQTSUDO_SUDO=\"sudo\""
