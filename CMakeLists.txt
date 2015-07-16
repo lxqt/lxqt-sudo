@@ -78,12 +78,15 @@ target_compile_definitions(lxqt-sudo
 install(TARGETS
     lxqt-sudo
     RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
+    COMPONENT Runtime
 )
 install(FILES
     ${DESKTOP_FILES}
     DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications"
+    COMPONENT Runtime
 )
 install(FILES
     man/lxqt-sudo.1
     DESTINATION "${CMAKE_INSTALL_MANDIR}/man1"
+    COMPONENT Runtime
 )
