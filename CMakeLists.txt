@@ -8,6 +8,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 
+include(GNUInstallDirs)
 include(CheckCXXCompilerFlag)
 CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
 CHECK_CXX_COMPILER_FLAG("-std=c++0x" COMPILER_SUPPORTS_CXX0X)
@@ -24,7 +25,7 @@ find_package(lxqt REQUIRED QUIET)
 
 include(LXQtTranslate)
 
-add_definitions("-DLXQTSUDO_INSTALL_DIR=\"${CMAKE_INSTALL_PREFIX}/bin\""
+add_definitions("-DLXQTSUDO_INSTALL_DIR=\"${CMAKE_INSTALL_FULL_BINDIR}\""
     "-DLXQTSUDO_SUDO=\"sudo\""
     "-DLXQTSUDO=\"lxqt-sudo\""
     "-DLXQT_VERSION=\"${LXQT_VERSION}\""
@@ -73,6 +74,6 @@ target_link_libraries(lxqt-sudo
     lxqt
 )
 
-install(TARGETS lxqt-sudo RUNTIME DESTINATION bin)
-install(FILES ${DESKTOP_FILES} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/applications")
-install(FILES man/lxqt-sudo.1 DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man1")
+install(TARGETS lxqt-sudo RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}")
+install(FILES ${DESKTOP_FILES} DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications")
+install(FILES man/lxqt-sudo.1 DESTINATION "${CMAKE_INSTALL_MANDIR}/man1")
