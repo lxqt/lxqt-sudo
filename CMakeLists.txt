@@ -25,12 +25,6 @@ find_package(lxqt REQUIRED QUIET)
 
 include(LXQtTranslate)
 
-add_definitions("-DLXQTSUDO_INSTALL_DIR=\"${CMAKE_INSTALL_FULL_BINDIR}\""
-    "-DLXQTSUDO_SUDO=\"sudo\""
-    "-DLXQTSUDO=\"lxqt-sudo\""
-    "-DLXQT_VERSION=\"${LXQT_VERSION}\""
-    )
-
 set ( HDRS
     passworddialog.h
 )
@@ -72,6 +66,13 @@ add_executable(lxqt-sudo
 target_link_libraries(lxqt-sudo
     Qt5::Widgets
     lxqt
+)
+
+target_compile_definitions(lxqt-sudo
+    PRIVATE "LXQTSUDO_INSTALL_DIR=\"${CMAKE_INSTALL_FULL_BINDIR}\""
+    PRIVATE "LXQTSUDO_SUDO=\"sudo\""
+    PRIVATE "LXQTSUDO=\"lxqt-sudo\""
+    PRIVATE "LXQT_VERSION=\"${LXQT_VERSION}\""
 )
 
 install(TARGETS lxqt-sudo RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}")
