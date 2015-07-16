@@ -5,6 +5,7 @@ project(lxqt-sudo)
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_AUTOMOC ON)
 
 include(CheckCXXCompilerFlag)
 CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
@@ -45,7 +46,6 @@ set( UIS
     passworddialog.ui
 )
 
-qt5_wrap_cpp(MOC_OBJECTS ${MOCS})
 qt5_wrap_ui(UI_HEADERS ${UIS})
 
 # Translations **********************************
@@ -65,7 +65,6 @@ lxqt_app_translation_loader(SRCS ${PROJECT_NAME})
 add_executable(lxqt-sudo
     ${SRCS}
     ${UI_HEADERS}
-    ${MOC_OBJECTS}
     ${DESKTOP_FILES}
     ${QM_FILES}
 )
