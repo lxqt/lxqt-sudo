@@ -75,6 +75,15 @@ target_compile_definitions(lxqt-sudo
     PRIVATE "LXQT_VERSION=\"${LXQT_VERSION}\""
 )
 
-install(TARGETS lxqt-sudo RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}")
-install(FILES ${DESKTOP_FILES} DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications")
-install(FILES man/lxqt-sudo.1 DESTINATION "${CMAKE_INSTALL_MANDIR}/man1")
+install(TARGETS
+    lxqt-sudo
+    RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
+)
+install(FILES
+    ${DESKTOP_FILES}
+    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications"
+)
+install(FILES
+    man/lxqt-sudo.1
+    DESTINATION "${CMAKE_INSTALL_MANDIR}/man1"
+)
