@@ -38,7 +38,6 @@
 
 const QString app_master{QStringLiteral(LXQTSUDO)};
 const QString app_version{QStringLiteral(LXQT_VERSION)};
-const QString install_dir{QStringLiteral(LXQTSUDO_INSTALL_DIR)};
 const QString sudo_prog{QStringLiteral(LXQTSUDO_SUDO)};
 const QString sudo_pwd_prompt{QStringLiteral("Password:\n")};
 

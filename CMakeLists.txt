@@ -69,7 +69,6 @@ target_link_libraries(lxqt-sudo
 )
 
 target_compile_definitions(lxqt-sudo
-    PRIVATE "LXQTSUDO_INSTALL_DIR=\"${CMAKE_INSTALL_FULL_BINDIR}\""
     PRIVATE "LXQTSUDO_SUDO=\"sudo\""
     PRIVATE "LXQTSUDO=\"lxqt-sudo\""
     PRIVATE "LXQT_VERSION=\"${LXQT_VERSION}\""
