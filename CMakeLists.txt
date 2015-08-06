@@ -22,6 +22,8 @@ set ( HDRS
 
 set ( SRCS
     passworddialog.cpp
+    sudo.cpp
+    su.cpp
     main.cpp
 )
 
@@ -56,11 +58,13 @@ add_executable(lxqt-sudo
 
 target_link_libraries(lxqt-sudo
     Qt5::Widgets
+    util
     lxqt
 )
 
 target_compile_definitions(lxqt-sudo
     PRIVATE "LXQTSUDO_SUDO=\"sudo\""
+    PRIVATE "LXQTSUDO_SU=\"su\""
     PRIVATE "LXQTSUDO=\"lxqt-sudo\""
     PRIVATE "LXQT_VERSION=\"${LXQT_VERSION}\""
 )

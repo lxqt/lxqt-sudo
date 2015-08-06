@@ -2,12 +2,20 @@
 .SH NAME
 \fBlxqt-sudo\fR \- execute a command as privileged user
 .SH SYNOPSIS
-\fBlxqt-sudo\fR \fIcommand\fR [\fIarguments\fR]
+\fBlxqt-sudo\fR [\fIoption\fR] [\fIcommand\fR [\fIarguments\fR]]
 .SH DESCRIPTION
-\fBlxqt-sudo\fR is a graphical QT frontend for plain \fBsudo(8)\fR (for requesting optional password in GUI fashion).
+\fBlxqt-sudo\fR is a graphical QT frontend for plain \fBsudo(8)\fR or \fBsu(1)\fR(for requesting optional password in GUI fashion).
 .br
-When invoked it simply spawns child \fIsudo\fR process with requested \fIcommand\fR (and \fIarguments\fR). If \fIsudo\fR requests user's password,
-the GUI password dialog is shown and (after submit) the password is provided to \fIsudo\fR.
+When invoked it simply spawns child \fIsudo\fR or \fIsu\fR process with requested \fIcommand\fR (and optional \fIarguments\fR). If \fIsudo\fR/\fIsu\fR requests user's password,
+the GUI password dialog is shown and (after submit) the password is provided to backend.
+.SH OPTIONS
+\fBoption\fR is one of:
+.br
+  -h|--help      Print help.
+.br
+  -v|--version   Print version information.
+.br
+  -s|--su        Use \fBsu\fR as backend (instead of the default \fBsudo\fR).
 .SH "REPORTING BUGS"
 Report bugs to https://github.com/lxde/lxqt/issues
 .SH "SEE ALSO"
