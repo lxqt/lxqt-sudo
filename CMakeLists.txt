@@ -13,7 +13,7 @@ include(GNUInstallDirs)
 find_package(Qt5Widgets REQUIRED QUIET)
 find_package(lxqt REQUIRED QUIET)
 
-include(LXQtCompilerSettings)
+include(LXQtCompilerSettings NO_POLICY_SCOPE)
 include(LXQtTranslate)
 
 set ( HDRS
