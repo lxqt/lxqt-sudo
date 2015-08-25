@@ -64,7 +64,7 @@ void version()
 int master(int argc, char **argv)
 {
     //master
-    LxQt::Application app(argc, argv, true);
+    LXQt::Application app(argc, argv, true);
     app.setQuitOnLastWindowClosed(false);
 
     if (1 >= argc)
