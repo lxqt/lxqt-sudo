@@ -25,32 +25,47 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#ifndef PASSWORDDIALOG_H
-#define PASSWORDDIALOG_H
+#ifndef SUDO_H
+#define SUDO_H
 
-#include <QDialog>
+#include <QObject>
+#include <QScopedPointer>
+#include <QStringList>
 
-namespace Ui {
-    class PasswordDialog;
-}
+class PasswordDialog;
 
-class PasswordDialog : public QDialog
+class Sudo : public QObject
 {
     Q_OBJECT
 
 public:
-    PasswordDialog(QStringList argv
-            , QWidget * parent = 0
-            , Qt::WindowFlags f = 0);
-    ~PasswordDialog();
+    enum backend_t
+    {
+        BACK_NONE
+            , BACK_SUDO
+            , BACK_SU
+    };
 
-    virtual void showEvent(QShowEvent * event) override;
-    QString password() const;
+public:
+    Sudo();
+    ~Sudo();
+    int main();
+private:
+    //parent methods
+    int parent();
+    void stopChild();
+
+    //child methods
+    void child();
 
 private:
-    QScopedPointer<Ui::PasswordDialog> ui;
-    int mAttempt = 0;
+    QScopedPointer<PasswordDialog> mDlg;
+    QStringList mArgs;
+    backend_t mBackend;
+
+    int mChildPid;
+    int mPwdFd;
+    int mRet;
 };
 
-#endif // PASSWORDDIALOG_H
-
+#endif //SUDO_H

@@ -26,7 +26,6 @@ set ( HDRS
 set ( SRCS
     passworddialog.cpp
     sudo.cpp
-    su.cpp
     main.cpp
 )
 
