@@ -136,9 +136,11 @@ int Sudo::main()
         return 1;
     } else if (BACK_SU == mBackend && 1 < mArgs.size())
     {
-        QMessageBox(QMessageBox::Critical, mDlg->windowTitle()
-                , QObject::tr("With %1 backend only one argument/command is supported!").arg(su_prog), QMessageBox::Ok).exec();
-        return 1;
+        QString cmd = mArgs.replaceInStrings(QRegExp(QStringLiteral("^(.*)$")), "'\\1'").join(QStringLiteral(" "));
+        QTextStream(stderr) << tr("%1: warning - got multiple arguments for %2 backend, squashing into one: %3")
+            .arg(app_master).arg(su_prog).arg(cmd);
+        mArgs.erase(++mArgs.begin(), mArgs.end());
+        mArgs[0] = std::move(cmd);
     }
 
     mDlg.reset(new PasswordDialog{mArgs});
