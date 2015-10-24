@@ -132,7 +132,7 @@ int Sudo::main()
     if (BACK_NONE == mBackend)
     {
         //we were invoked through unknown link (or renamed binary)
-        usage(tr("%1: no backend choosen!").arg(app_master));
+        usage(tr("%1: no backend chosen!").arg(app_master));
         return 1;
     } else if (BACK_SU == mBackend && 1 < mArgs.size())
     {
