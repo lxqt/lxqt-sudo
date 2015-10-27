@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0">
+<TS version="2.1">
 <context>
     <name>PasswordDialog</name>
     <message>
         <location filename="../passworddialog.ui" line="20"/>
-        <location filename="../build/ui_passworddialog.h" line="129"/>
         <source>LXQt sudo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="77"/>
-        <location filename="../build/ui_passworddialog.h" line="134"/>
         <source>Command:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="84"/>
-        <location filename="../build/ui_passworddialog.h" line="135"/>
         <source>Password:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -36,31 +33,70 @@ Please enter your password.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="57"/>
-        <source>Usage: %1 command [arguments...]
+        <location filename="../sudo.cpp" line="63"/>
+        <source>Usage: %1 option [command [arguments...]]
 
-GUI frontend for %2
+GUI frontend for %2/%3
 
 Arguments:
-  command        Command to run.
-  arguments      Optional arguments for command.
+  option:
+    -h|--help      Print this help.
+    -v|--version   Print version information.
+    -s|--su        Use %3(1) as backend.
+    -d|--sudo      Use %2(8) as backend.
+  command          Command to run.
+  arguments        Optional arguments for command.
 
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="69"/>
+        <location filename="../sudo.cpp" line="80"/>
         <source>%1 version %2
 </source>
         <translation type="unfinished"></translation>
     </message>
+</context>
+<context>
+    <name>Sudo</name>
     <message>
-        <location filename="../main.cpp" line="80"/>
+        <location filename="../sudo.cpp" line="128"/>
         <source>%1: no command to run provided!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="131"/>
+        <location filename="../sudo.cpp" line="135"/>
+        <source>%1: no backend chosen!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sudo.cpp" line="140"/>
+        <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sudo.cpp" line="155"/>
+        <source>Failed to fork: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sudo.cpp" line="193"/>
+        <source>%1: Failed to exec &apos;%2&apos;: %3
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sudo.cpp" line="222"/>
+        <source>Failed to set non-block: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sudo.cpp" line="230"/>
+        <source>Failed to fdopen: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sudo.cpp" line="263"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
         <translation type="unfinished"></translation>

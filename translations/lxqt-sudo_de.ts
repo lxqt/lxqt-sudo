@@ -5,19 +5,16 @@
     <name>PasswordDialog</name>
     <message>
         <location filename="../passworddialog.ui" line="20"/>
-        <location filename="../build/ui_passworddialog.h" line="129"/>
         <source>LXQt sudo</source>
         <translation>LXQt sudo</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="77"/>
-        <location filename="../build/ui_passworddialog.h" line="134"/>
         <source>Command:</source>
         <translation>Befehl:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="84"/>
-        <location filename="../build/ui_passworddialog.h" line="135"/>
         <source>Password:</source>
         <translation>Kennwort:</translation>
     </message>
@@ -37,43 +34,88 @@ Bitte Kennwort eingeben.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="57"/>
-        <source>Usage: %1 command [arguments...]
+        <location filename="../sudo.cpp" line="63"/>
+        <source>Usage: %1 option [command [arguments...]]
 
-GUI frontend for %2
+GUI frontend for %2/%3
 
 Arguments:
-  command        Command to run.
-  arguments      Optional arguments for command.
+  option:
+    -h|--help      Print this help.
+    -v|--version   Print version information.
+    -s|--su        Use %3(1) as backend.
+    -d|--sudo      Use %2(8) as backend.
+  command          Command to run.
+  arguments        Optional arguments for command.
 
 </source>
-        <translation>Verwendung: %1 command [arguments...]
+        <translation>Verwendung: %1 Option [Befehl [Argumente...]]
 
-graphische Benutzeroberfläche für %2
+Graphische Benutzeroberfläche für %2/%3
 
 Argumente:
-  command        auszuführender Befehl
-  arguments      Argumente zum auszuführenden Befehl
+  Option:
+    -h|--help      Gibt diese Hilfe aus.
+    -v|--version   Ausgabe der Versionsinformation.
+    -s|--su        Verwendet %3(1) als Backend.
+    -d|--sudo      Verwendet %2(8) als Backend.
+  Befehl           Auszuführender Befehl.
+  Argumente        Argumente zum auszuführenden Befehl.
 
 </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="69"/>
+        <location filename="../sudo.cpp" line="80"/>
         <source>%1 version %2
 </source>
         <translation>%1 Version %2
 </translation>
     </message>
+</context>
+<context>
+    <name>Sudo</name>
     <message>
-        <location filename="../main.cpp" line="80"/>
+        <location filename="../sudo.cpp" line="128"/>
         <source>%1: no command to run provided!</source>
         <translation>%1: kein auszuführender Befehl angegeben!</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="131"/>
+        <location filename="../sudo.cpp" line="135"/>
+        <source>%1: no backend chosen!</source>
+        <translation>%1: kein Backend gewählt!</translation>
+    </message>
+    <message>
+        <location filename="../sudo.cpp" line="140"/>
+        <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
+        <translation>%1: Warnung - mehrere Argumente für Backend %2 erhalten. %3 wird verwendet</translation>
+    </message>
+    <message>
+        <location filename="../sudo.cpp" line="155"/>
+        <source>Failed to fork: %1</source>
+        <translation>Abspalten des Prozesses fehlgeschlagen: %1</translation>
+    </message>
+    <message>
+        <location filename="../sudo.cpp" line="193"/>
+        <source>%1: Failed to exec &apos;%2&apos;: %3
+</source>
+        <translation>%1: Ausführen von &apos;%2&apos; fehlgeschlagen:
+%3</translation>
+    </message>
+    <message>
+        <location filename="../sudo.cpp" line="222"/>
+        <source>Failed to set non-block: %1</source>
+        <translation>Das Setzen von der Option O_NONBLOCK schlug fehl: %1</translation>
+    </message>
+    <message>
+        <location filename="../sudo.cpp" line="230"/>
+        <source>Failed to fdopen: %1</source>
+        <translation>Das Öffnen schlug fehl: %1</translation>
+    </message>
+    <message>
+        <location filename="../sudo.cpp" line="263"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation>nachgeordneter Prozess &apos;%1&apos; ist fehlgeschlagen!
+        <translation>Nachgeordneter Prozess &apos;%1&apos; ist fehlgeschlagen!
 %2</translation>
     </message>
 </context>
