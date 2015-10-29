@@ -79,6 +79,13 @@ namespace
         QTextStream(stdout)
             << QObject::tr("%1 version %2\n").arg(app_master).arg(app_version);
     }
+
+    inline void env_workarounds()
+    {
+        //cleanup environment
+        //pcmanfm-qt will not start if the DBUS_SESSION_BUS_ADDRESS is preserved
+        unsetenv("DBUS_SESSION_BUS_ADDRESS");
+    }
 }
 
 Sudo::Sudo()
@@ -188,6 +195,8 @@ void Sudo::child()
         *(param_arg++) = a.c_str();
 
     *param_arg = nullptr;
+
+    env_workarounds();
 
     setsid(); //session leader
     execvp(params[0], const_cast<char **>(params.get()));
