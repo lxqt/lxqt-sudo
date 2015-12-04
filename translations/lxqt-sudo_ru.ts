@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru_RU">
+<TS version="2.1" language="ru">
 <context>
     <name>PasswordDialog</name>
     <message>
@@ -49,7 +49,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation>Использоваие: %1 опция [команда [аргументы...]]
+        <translation>Использование: %1 опция [команда [аргументы...]]
 
 Пользовательский графический интерфейс для %2/%3
 
@@ -57,8 +57,8 @@ Arguments:
   опции:
     -h|--help      Напечатать эту справку.
     -v|--version   Напечатать информацию о версии.
-    -s|--su        Использовать %3(1) как бекенд.
-    -d|--sudo      Использовать %2(8) как бекенд.
+    -s|--su        Использовать %3(1) как бэкенд.
+    -d|--sudo      Использовать %2(8) как бэкенд.
   command          Запускаемая команда.
   arguments        Дополнительные аргументы для команды.
 
@@ -66,10 +66,8 @@ Arguments:
     </message>
     <message>
         <location filename="../sudo.cpp" line="80"/>
-        <source>%1 version %2
-</source>
-        <translation>%1 версия %2
-</translation>
+        <source>%1 version %2</source>
+        <translation>%1 версия %2</translation>
     </message>
 </context>
 <context>
@@ -82,29 +80,27 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="142"/>
         <source>%1: no backend chosen!</source>
-        <translation>%1: бекенд не выбран!</translation>
+        <translation>%1: бэкенд не выбран!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="147"/>
         <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation>%1: внимание — получено несколько аргументов для бекенда %2, они были объеденины в один: %3</translation>
+        <translation>%1: внимание — получено несколько аргументов для бэкенда %2, они были объединены в один: %3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="162"/>
         <source>Failed to fork: %1</source>
-        <translation>Не удалось разветвить процесс: %1</translation>
+        <translation>Не удалось форкнуть: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="205"/>
-        <source>%1: Failed to exec &apos;%2&apos;: %3
-</source>
-        <translation>%1: Не удалось выполнить &apos;%2&apos;: %3
-</translation>
+        <source>%1: Failed to exec &apos;%2&apos;: %3</source>
+        <translation>%1: Не удалось выполнить &apos;%2&apos;: %3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="234"/>
         <source>Failed to set non-block: %1</source>
-        <translation>Не удалось сделать не блокитующим : %1</translation>
+        <translation>Не удалось сделать не блокирующим: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="242"/>
@@ -113,10 +109,8 @@ Arguments:
     </message>
     <message>
         <location filename="../sudo.cpp" line="275"/>
-        <source>Child &apos;%1&apos; process failed!
-%2</source>
-        <translation>Не удалось создать дочерний процесс &apos;%1&apos;!
-%2</translation>
+        <source>Child &apos;%1&apos; process failed!%2</source>
+        <translation>Дочерний процесс &apos;%1&apos; завершился с ошибкой!%2</translation>
     </message>
 </context>
 </TS>
