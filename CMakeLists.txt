@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.0.2 FATAL_ERROR)
 project(lxqt-sudo)
 
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
+option(PULL_TRANSLATIONS "Pull translations" ON)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
@@ -47,6 +48,8 @@ lxqt_translate_ts(QM_FILES
     ${UIS}
     INSTALL_DIR
     "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+    PULL_TRANSLATIONS ${PULL_TRANSLATIONS}
+    CLEAN_TRANSLATIONS ${CLEAN_TRANSLATIONS}
 )
 
 lxqt_app_translation_loader(SRCS ${PROJECT_NAME})
