@@ -4,29 +4,29 @@
 <context>
     <name>PasswordDialog</name>
     <message>
-        <location filename="../passworddialog.ui" line="20"/>
+        <location filename="../../passworddialog.ui" line="20"/>
         <source>LXQt sudo</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../passworddialog.ui" line="77"/>
+        <location filename="../../passworddialog.ui" line="77"/>
         <source>Command:</source>
         <translation>Команда:</translation>
     </message>
     <message>
-        <location filename="../passworddialog.ui" line="84"/>
+        <location filename="../../passworddialog.ui" line="84"/>
         <source>Password:</source>
         <translation>Пароль:</translation>
     </message>
     <message>
-        <location filename="../passworddialog.cpp" line="43"/>
+        <location filename="../../passworddialog.cpp" line="43"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
 Please enter your password.</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; нужны права администратора.
 Пожалуйста, введите свой пароль.</translation>
     </message>
     <message>
-        <location filename="../passworddialog.cpp" line="54"/>
+        <location filename="../../passworddialog.cpp" line="54"/>
         <source>Attempt #%1</source>
         <translation>Попытка № %1</translation>
     </message>
@@ -34,7 +34,7 @@ Please enter your password.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../sudo.cpp" line="63"/>
+        <location filename="../../sudo.cpp" line="63"/>
         <source>Usage: %1 option [command [arguments...]]
 
 GUI frontend for %2/%3
@@ -65,7 +65,7 @@ Arguments:
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="80"/>
+        <location filename="../../sudo.cpp" line="80"/>
         <source>%1 version %2</source>
         <translation>%1 версия %2</translation>
     </message>
@@ -73,42 +73,42 @@ Arguments:
 <context>
     <name>Sudo</name>
     <message>
-        <location filename="../sudo.cpp" line="135"/>
+        <location filename="../../sudo.cpp" line="135"/>
         <source>%1: no command to run provided!</source>
         <translation>%1: не указана команда для запуска!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="142"/>
+        <location filename="../../sudo.cpp" line="142"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: бэкенд не выбран!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="147"/>
+        <location filename="../../sudo.cpp" line="147"/>
         <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
         <translation>%1: внимание — получено несколько аргументов для бэкенда %2, они были объединены в один: %3</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="162"/>
+        <location filename="../../sudo.cpp" line="162"/>
         <source>Failed to fork: %1</source>
         <translation>Не удалось форкнуть: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="205"/>
+        <location filename="../../sudo.cpp" line="205"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3</source>
         <translation>%1: Не удалось выполнить &apos;%2&apos;: %3</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="234"/>
+        <location filename="../../sudo.cpp" line="234"/>
         <source>Failed to set non-block: %1</source>
         <translation>Не удалось сделать не блокирующим: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="242"/>
+        <location filename="../../sudo.cpp" line="242"/>
         <source>Failed to fdopen: %1</source>
         <translation>Не удалось использовать fdopen: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="275"/>
+        <location filename="../../sudo.cpp" line="275"/>
         <source>Child &apos;%1&apos; process failed!%2</source>
         <translation>Дочерний процесс &apos;%1&apos; завершился с ошибкой!%2</translation>
     </message>
