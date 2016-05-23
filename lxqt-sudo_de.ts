@@ -75,44 +75,44 @@ Argumente:
 <context>
     <name>Sudo</name>
     <message>
-        <location filename="../../sudo.cpp" line="128"/>
+        <location filename="../../sudo.cpp" line="135"/>
         <source>%1: no command to run provided!</source>
         <translation>%1: kein auszuführender Befehl angegeben!</translation>
     </message>
     <message>
-        <location filename="../../sudo.cpp" line="135"/>
+        <location filename="../../sudo.cpp" line="142"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: kein Backend gewählt!</translation>
     </message>
     <message>
-        <location filename="../../sudo.cpp" line="140"/>
+        <location filename="../../sudo.cpp" line="147"/>
         <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
         <translation>%1: Warnung - mehrere Argumente für Backend %2 erhalten. %3 wird verwendet</translation>
     </message>
     <message>
-        <location filename="../../sudo.cpp" line="155"/>
+        <location filename="../../sudo.cpp" line="162"/>
         <source>Failed to fork: %1</source>
         <translation>Abspalten des Prozesses fehlgeschlagen: %1</translation>
     </message>
     <message>
-        <location filename="../../sudo.cpp" line="193"/>
+        <location filename="../../sudo.cpp" line="205"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
         <translation>%1: Ausführen von &apos;%2&apos; fehlgeschlagen:
 %3</translation>
     </message>
     <message>
-        <location filename="../../sudo.cpp" line="222"/>
+        <location filename="../../sudo.cpp" line="234"/>
         <source>Failed to set non-block: %1</source>
         <translation>Das Setzen von der Option O_NONBLOCK schlug fehl: %1</translation>
     </message>
     <message>
-        <location filename="../../sudo.cpp" line="230"/>
+        <location filename="../../sudo.cpp" line="242"/>
         <source>Failed to fdopen: %1</source>
         <translation>Das Öffnen schlug fehl: %1</translation>
     </message>
     <message>
-        <location filename="../../sudo.cpp" line="263"/>
+        <location filename="../../sudo.cpp" line="275"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
         <translation>Nachgeordneter Prozess &apos;%1&apos; ist fehlgeschlagen!

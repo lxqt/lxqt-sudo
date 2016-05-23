@@ -66,8 +66,14 @@ Arguments:
     </message>
     <message>
         <location filename="../../sudo.cpp" line="80"/>
+        <source>%1 version %2
+</source>
+        <translation type="unfinished">%1 версия %2
+ {1 ?}</translation>
+    </message>
+    <message>
         <source>%1 version %2</source>
-        <translation>%1 версия %2</translation>
+        <translation type="vanished">%1 версия %2</translation>
     </message>
 </context>
 <context>
@@ -94,8 +100,20 @@ Arguments:
     </message>
     <message>
         <location filename="../../sudo.cpp" line="205"/>
+        <source>%1: Failed to exec &apos;%2&apos;: %3
+</source>
+        <translation type="unfinished">%1: Не удалось выполнить &apos;%2&apos;: %3
+ {1:?} {2&apos;?}</translation>
+    </message>
+    <message>
+        <location filename="../../sudo.cpp" line="275"/>
+        <source>Child &apos;%1&apos; process failed!
+%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>%1: Failed to exec &apos;%2&apos;: %3</source>
-        <translation>%1: Не удалось выполнить &apos;%2&apos;: %3</translation>
+        <translation type="vanished">%1: Не удалось выполнить &apos;%2&apos;: %3</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="234"/>
@@ -108,9 +126,8 @@ Arguments:
         <translation>Не удалось использовать fdopen: %1</translation>
     </message>
     <message>
-        <location filename="../../sudo.cpp" line="275"/>
         <source>Child &apos;%1&apos; process failed!%2</source>
-        <translation>Дочерний процесс &apos;%1&apos; завершился с ошибкой!%2</translation>
+        <translation type="vanished">Дочерний процесс &apos;%1&apos; завершился с ошибкой!%2</translation>
     </message>
 </context>
 </TS>

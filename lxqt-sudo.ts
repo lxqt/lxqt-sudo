@@ -6,53 +6,32 @@
     <message>
         <location filename="../../passworddialog.ui" line="20"/>
         <source>LXQt sudo</source>
-        <translation>LXQt sudo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../passworddialog.ui" line="77"/>
         <source>Command:</source>
-        <translation>指令：</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../passworddialog.ui" line="84"/>
         <source>Password:</source>
-        <translation>密碼：</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../passworddialog.cpp" line="43"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
 Please enter your password.</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt; 需要管理員權限
-請輸入您的密碼 </translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../passworddialog.cpp" line="54"/>
         <source>Attempt #%1</source>
-        <translation>嘗試 %1</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
-    <message>
-        <source>Usage: %1 command [arguments...]
-
-GUI frontend for %2
-
-Arguments:
-  command        Command to run.
-  arguments      Optional arguments for command.
-
-</source>
-        <translation type="vanished">用法：%1 指令 [選項...]
-
-%2 的圖型前端
-
-選項：
-  指令           要執行的指令
-  選項           給指令的選項
-
-</translation>
-    </message>
     <message>
         <location filename="../../sudo.cpp" line="63"/>
         <source>Usage: %1 option [command [arguments...]]
@@ -75,17 +54,7 @@ Arguments:
         <location filename="../../sudo.cpp" line="80"/>
         <source>%1 version %2
 </source>
-        <translation>%1 版本 %s</translation>
-    </message>
-    <message>
-        <source>%1: no command to run provided!</source>
-        <translation type="vanished">%1：沒有可執行的指令</translation>
-    </message>
-    <message>
-        <source>Child &apos;%1&apos; process failed!
-%2</source>
-        <translation type="vanished">子執行序&apos;%1&apos;執行失敗！
-%2</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -93,7 +62,7 @@ Arguments:
     <message>
         <location filename="../../sudo.cpp" line="135"/>
         <source>%1: no command to run provided!</source>
-        <translation type="unfinished">%1：沒有可執行的指令</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="142"/>
@@ -130,8 +99,7 @@ Arguments:
         <location filename="../../sudo.cpp" line="275"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation type="unfinished">子執行序&apos;%1&apos;執行失敗！
-%2</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
