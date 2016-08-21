@@ -43,7 +43,7 @@ Arguments:
   arguments      Optional arguments for command.
 
 </source>
-        <translation type="vanished">Χρήση: %1 εντολή [ορίσματα...]
+        <translation>Χρήση: %1 εντολή [ορίσματα...]
 
 Περιβάλλον συστήματος υποστήριξης του %2
 
@@ -69,7 +69,20 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Χρήση: %1 επιλογή [εντολή ορίσματα...]]
+
+περιβάλλον συστήματος υποστήριξης για το %2/%3
+
+Ορίσματα:
+  επιλογή:
+    -h|--help      Εκτύπωση της βοήθειας.
+    -v|--version   Εκτύπωση της έκδοσης.
+    -s|--su        Χρήση του %3(1) ως σύστημα υποστήριξης.
+    -d|--sudo      Χρήση του %2(8) ως σύστημα υποστήριξης.
+  εντολή          Εντολή προς εκτέλεση.
+  ορίσματα        Προαιρετικά ορίσματα της εντολής.
+
+</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="80"/>
@@ -80,12 +93,12 @@ Arguments:
     </message>
     <message>
         <source>%1: no command to run provided!</source>
-        <translation type="vanished">%1: δεν παρείχατε κάποια εντολή προς εκτέλεση!</translation>
+        <translation>%1: δεν παρείχατε κάποια εντολή προς εκτέλεση!</translation>
     </message>
     <message>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation type="vanished">Η θυγατρική διεργασία «%1» απέτυχε!
+        <translation>Η θυγατρική διεργασία «%1» απέτυχε!
 %2</translation>
     </message>
 </context>
@@ -94,44 +107,45 @@ Arguments:
     <message>
         <location filename="../../sudo.cpp" line="135"/>
         <source>%1: no command to run provided!</source>
-        <translation type="unfinished">%1: δεν παρείχατε κάποια εντολή προς εκτέλεση!</translation>
+        <translation>%1: δεν παρείχατε κάποια εντολή προς εκτέλεση!</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="142"/>
         <source>%1: no backend chosen!</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: δεν έχετε επιλέξει το σύστημα υποστήριξης!</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="147"/>
         <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: προειδοποίηση - ελήφθησαν πολλαπλά ορίσματα για το σύστημα υποστήριξης %2· διατήρηση του ενός: %3</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="162"/>
         <source>Failed to fork: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποτυχία δικράνωσης του: %1</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="205"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Αποτυχία εκτέλεσης του «%2»: «%3»
+</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="234"/>
         <source>Failed to set non-block: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποτυχία καθορισμού ως χωρίς φραγή: %1</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="242"/>
         <source>Failed to fdopen: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποτυχία εκτέλεσης fdopen για: %1</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="275"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation type="unfinished">Η θυγατρική διεργασία «%1» απέτυχε!
+        <translation>Η θυγατρική διεργασία «%1» απέτυχε!
 %2</translation>
     </message>
 </context>
