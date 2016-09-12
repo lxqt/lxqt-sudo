@@ -36,12 +36,14 @@
 #include <QSocketNotifier>
 #include <QDebug>
 #include <QThread>
+#include <QProcessEnvironment>
 #include <pty.h>
 #include <unistd.h>
 #include <memory>
 #include <csignal>
 #include <sys/wait.h>
 #include <fcntl.h>
+#include <iostream>
 
 namespace
 {
@@ -80,11 +82,42 @@ namespace
             << QObject::tr("%1 version %2\n").arg(app_master).arg(app_version);
     }
 
+    //Note: array must be sorted to allow usage of binary search
+    static constexpr char const * const ALLOWED_VARS[] = {
+        "DISPLAY"
+            , "LANG", "LANGUAGE", "LC_ADDRESS", "LC_ALL", "LC_COLLATE", "LC_CTYPE", "LC_IDENTIFICATION", "LC_MEASUREMENT"
+            , "LC_MESSAGES", "LC_MONETARY", "LC_NAME", "LC_NUMERIC", "LC_PAPER", "LC_TELEPHONE", "LC_TIME"
+            , "PATH", "QT_PLATFORM_PLUGIN", "QT_QPA_PLATFORMTHEME", "WAYLAND_DISPLAY", "XAUTHORITY"
+    };
+    static constexpr char const * const * const ALLOWED_END = ALLOWED_VARS + sizeof (ALLOWED_VARS) / sizeof (ALLOWED_VARS[0]);
+    struct assert_helper
+    {
+        assert_helper()
+        {
+            Q_ASSERT(std::is_sorted(ALLOWED_VARS, ALLOWED_END
+                        , [] (char const * const a, char const * const b) { return strcmp(a, b) < 0; }));
+        }
+    };
+    assert_helper h;
+
     inline void env_workarounds()
     {
-        //cleanup environment
-        //pcmanfm-qt will not start if the DBUS_SESSION_BUS_ADDRESS is preserved
-        unsetenv("DBUS_SESSION_BUS_ADDRESS");
+        std::cerr << LXQTSUDO << ": Stripping child environment except for: ";
+        std::copy(ALLOWED_VARS, ALLOWED_END - 1, std::ostream_iterator<const char *>{std::cerr, ", "});
+        std::cerr << *(ALLOWED_END - 1) << '\n'; // printing the last separately to avoid trailing comma
+        // cleanup environment, because e.g.:
+        // - pcmanfm-qt will not start if the DBUS_SESSION_BUS_ADDRESS is preserved
+        // - Qt apps may change user's config files permissions if the XDG_* are preserved
+        for (auto const & key : QProcessEnvironment::systemEnvironment().keys())
+        {
+            auto const & i = std::lower_bound(ALLOWED_VARS, ALLOWED_END, key, [] (char const * const a, QString const & b) {
+                return b > a;
+            });
+            if (i == ALLOWED_END || key != *i)
+            {
+                unsetenv(key.toStdString().c_str());
+            }
+        }
     }
 }
 
