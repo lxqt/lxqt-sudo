@@ -1,0 +1,64 @@
+
+lxqt-sudo-0.11.0 / 2016-09-24
+=============================
+
+  * Add README.md
+  * build: Forward translations parameters
+  * ts-files removal (#21)
+  * Remove translations (will be pulled in build time)
+  * Bump year
+  * Italian translation update
+  * Updated Russian translation Fix language and typos
+  * Add Russian translation
+
+0.10.0 / 2015-11-02
+===================
+
+  * Fix LICENSE file
+  * Fix starting pcmanfm-qt
+  * Preserve environment with sudo backend
+  * Update Slovak translation
+  * Updated translation template, updated german translation.
+  * Add a plus to AUTHORS license AUTHORS must match the files fixes lxde/lxqt/issues/784 fix typo choosen --> chosen
+  * lxqt-sudo: partial support for running cmd with arguments using su backend
+  * lxqt-sudo: unified processing logic for su & sudo into common code
+  * lxqt-sudo: lxsu & lxsudo symlinks for lxqt-sudo
+  * lxqt-sudo: added support for su(1) backend
+  * Add Polish translation
+  * Rename LxQt to LXQt everywhere
+  * Remove the country specific from language code.
+  * Add Greek (el) translation
+  * Created italian translation, fixed missing line <TS version="2.1" language="XX"> for _de.ts and -sk.ts
+  * Traditional Chinese translation
+  * Handles CMake policy CMP0063
+  * Use the LXQtCompilerSettings CMake module
+  * main: removed old useless define
+  * Adds Runtime install COMPONENT
+  * Coding style change
+  * Use target_compile_definitions()
+  * Use GNUInstallDirs
+  * Use CMAKE_AUTOUIC, drop qt5_wrap_ui()
+  * Use CMAKE_AUTOMOC, drop qt5_wrap_cpp()
+  * Use CMAKE_INCLUDE_CURRENT_DIR
+  * main: use standard liblxqt unix signal handling to quit
+  * Updates the build system to the Targets infrastructure
+  * German translation
+  * lxqt-sudo: licensing
+
+0.9.0 / 2015-06-10
+==================
+
+  * lxqt-sudo: direct communication with sudo
+  * lxqt-sudo: use dialog-password icon
+  * lxqt-sudo: help & version info into stdout (instead of stderr)
+  * man: bug reporting link fixed
+  * lxqt-sudo: version parameter support
+  * lxqt-sudo: added sk translation
+  * lxqt-sudo: proper communication error messages to stderr
+  * lxqt-sudo: removed .desktop file
+  * lxqt-sudo: showing big "security-high" icon
+  * lxqt-sudo: help/usage added
+  * lxqt-sudo: information about sudo's failure
+  * lxqt-sudo: manual page
+  * lxqt-sudo: do not use -b for sudo (fixes some application starting problems)
+  * lxqt-sudo: new GUI frontend for sudo
