@@ -68,8 +68,8 @@ Arguments:
         <location filename="../../sudo.cpp" line="80"/>
         <source>%1 version %2
 </source>
-        <translation type="unfinished">%1 версия %2
- {1 ?}</translation>
+        <translation>%1 версия %2
+</translation>
     </message>
     <message>
         <source>%1 version %2</source>
@@ -102,14 +102,15 @@ Arguments:
         <location filename="../../sudo.cpp" line="205"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation type="unfinished">%1: Не удалось выполнить &apos;%2&apos;: %3
- {1:?} {2&apos;?}</translation>
+        <translation>%1: Не удалось выполнить &apos;%2&apos;: %3
+</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="275"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Дочерний процесс &apos;%1&apos; завершился с ошибкой!
+%2</translation>
     </message>
     <message>
         <source>%1: Failed to exec &apos;%2&apos;: %3</source>
