@@ -1,21 +1,27 @@
 cmake_minimum_required(VERSION 3.0.2 FATAL_ERROR)
-
 project(lxqt-sudo)
 
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
 option(PULL_TRANSLATIONS "Pull translations" ON)
 
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTOUIC ON)
-
 include(GNUInstallDirs)
 
+set(LXQTBT_MINIMUM_VERSION "0.1.0")
+
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
 find_package(Qt5Widgets REQUIRED QUIET)
+find_package(lxqt-build-tools ${LXQTBT_MINIMUM_VERSION} REQUIRED)
 find_package(lxqt REQUIRED QUIET)
 
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
 include(LXQtTranslate)
+
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release)
+endif()
 
 set ( LINK_LXSU "lxsu")
 set ( LINK_LXSUDO "lxsudo")
