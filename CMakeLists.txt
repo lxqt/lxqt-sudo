@@ -2,20 +2,21 @@ cmake_minimum_required(VERSION 3.0.2 FATAL_ERROR)
 
 project(lxqt-sudo)
 
+include(GNUInstallDirs)
+
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
 option(PULL_TRANSLATIONS "Pull translations" ON)
 
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTOUIC ON)
+find_package(Qt5Widgets REQUIRED)
+message(STATUS "Building with Qt${Qt5Core_VERSION_STRING}")
 
-include(GNUInstallDirs)
-
-find_package(Qt5Widgets REQUIRED QUIET)
-find_package(lxqt REQUIRED QUIET)
+find_package(lxqt REQUIRED)
 
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
-include(LXQtTranslate)
 
 set ( LINK_LXSU "lxsu")
 set ( LINK_LXSUDO "lxsudo")
@@ -38,20 +39,30 @@ set( UIS
     passworddialog.ui
 )
 
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release)
+endif()
 
 # Translations **********************************
+include(LXQtTranslate)
+
 lxqt_translate_ts(QM_FILES
-    UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
+    UPDATE_TRANSLATIONS
+        ${UPDATE_TRANSLATIONS}
     SOURCES
-    ${HDRS}
-    ${SRCS}
-    ${UIS}
+        ${HDRS}
+        ${SRCS}
+        ${UIS}
     INSTALL_DIR
-    "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
-    PULL_TRANSLATIONS ${PULL_TRANSLATIONS}
-    CLEAN_TRANSLATIONS ${CLEAN_TRANSLATIONS}
-    TRANSLATIONS_REPO ${TRANSLATIONS_REPO}
-    TRANSLATIONS_REFSPEC ${TRANSLATIONS_REFSPEC}
+        "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+    PULL_TRANSLATIONS
+        ${PULL_TRANSLATIONS}
+    CLEAN_TRANSLATIONS
+        ${CLEAN_TRANSLATIONS}
+    TRANSLATIONS_REPO
+        ${TRANSLATIONS_REPO}
+    TRANSLATIONS_REFSPEC
+        ${TRANSLATIONS_REFSPEC}
 )
 
 lxqt_app_translation_loader(SRCS ${PROJECT_NAME})
