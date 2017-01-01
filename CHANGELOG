@@ -1,7 +1,13 @@
 
-lxqt-sudo-0.11.0 / 2016-09-24
+lxqt-sudo-0.11.1 / 2017-01-01
 =============================
 
+  * Make CMakeLists.txt more uniform.
+
+0.11.0 / 2016-09-24
+===================
+
+  * Release 0.11.0: Add changelog
   * Add README.md
   * build: Forward translations parameters
   * ts-files removal (#21)
