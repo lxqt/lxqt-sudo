@@ -87,7 +87,7 @@ Arguments:
     <message>
         <location filename="../../sudo.cpp" line="147"/>
         <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation>%1: advertència - tenía múltiples arguments per al rerefons %2, s&apos;aixafen a un: %3</translation>
+        <translation>%1: advertència - tenia múltiples arguments per al rerefons %2, s&apos;aixafen a un: %3</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="162"/>
