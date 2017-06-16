@@ -75,17 +75,17 @@ Arguments:
         <location filename="../../sudo.cpp" line="80"/>
         <source>%1 version %2
 </source>
-        <translation>%1 wersja %2
+        <translation>%1 w wersji %2
 </translation>
     </message>
     <message>
         <source>%1: no command to run provided!</source>
-        <translation type="vanished">%1: nie podano komendy do wykonania!</translation>
+        <translation>%1: nie podano komendy do uruchomienia!</translation>
     </message>
     <message>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation type="vanished">Wykonanie procesu &apos;%1&apos; nie powiodło się!
+        <translation type="vanished">Proces potomny &apos;%1&apos; nie powiódł się!
 %2</translation>
     </message>
 </context>
@@ -94,7 +94,7 @@ Arguments:
     <message>
         <location filename="../../sudo.cpp" line="135"/>
         <source>%1: no command to run provided!</source>
-        <translation type="unfinished">%1: nie podano komendy do wykonania!</translation>
+        <translation>%1: nie podano komendy do uruchomienia!</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="142"/>
@@ -109,13 +109,14 @@ Arguments:
     <message>
         <location filename="../../sudo.cpp" line="162"/>
         <source>Failed to fork: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie udało się rozwidlić: %1</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="205"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Nie udało się wykonać  &apos;%2&apos;: %3
+</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="234"/>
@@ -125,13 +126,13 @@ Arguments:
     <message>
         <location filename="../../sudo.cpp" line="242"/>
         <source>Failed to fdopen: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie udało się wykonać fdopen: %1</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="275"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation type="unfinished">Wykonanie procesu &apos;%1&apos; nie powiodło się!
+        <translation>Wykonanie procesu potomnego &apos;%1&apos; nie powiodło się!
 %2</translation>
     </message>
 </context>
