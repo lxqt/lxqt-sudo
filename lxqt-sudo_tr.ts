@@ -87,34 +87,34 @@ Parametreler:
     <message>
         <location filename="../../sudo.cpp" line="147"/>
         <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: uyarı - %2 arka uç için birden fazla argüman var, biriyle çakışıyor: %3</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="162"/>
         <source>Failed to fork: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Çatallanamadı: %1</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="205"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1: &apos;%2&apos; çalıştırılamadı: %3</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="234"/>
         <source>Failed to set non-block: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Blok dışı ayarlanamadı: %1</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="242"/>
         <source>Failed to fdopen: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>fdopen başarısız: %1</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="275"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Child &apos;%1&apos; işlem başarısız!</translation>
     </message>
 </context>
 </TS>
