@@ -32,6 +32,8 @@ int main(int argc, char **argv)
 {
     LXQt::Application app(argc, argv, true);
     app.setQuitOnLastWindowClosed(false);
+    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+
     Sudo s;
     return s.main();
 }
