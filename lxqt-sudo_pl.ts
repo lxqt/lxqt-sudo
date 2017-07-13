@@ -80,7 +80,7 @@ Arguments:
     </message>
     <message>
         <source>%1: no command to run provided!</source>
-        <translation>%1: nie podano komendy do uruchomienia!</translation>
+        <translation type="vanished">%1: nie podano komendy do uruchomienia!</translation>
     </message>
     <message>
         <source>Child &apos;%1&apos; process failed!

@@ -43,7 +43,7 @@ Arguments:
   arguments      Optional arguments for command.
 
 </source>
-        <translation>Χρήση: %1 εντολή [ορίσματα...]
+        <translation type="vanished">Χρήση: %1 εντολή [ορίσματα...]
 
 Περιβάλλον συστήματος υποστήριξης του %2
 
@@ -93,12 +93,12 @@ Arguments:
     </message>
     <message>
         <source>%1: no command to run provided!</source>
-        <translation>%1: δεν παρείχατε κάποια εντολή προς εκτέλεση!</translation>
+        <translation type="vanished">%1: δεν παρείχατε κάποια εντολή προς εκτέλεση!</translation>
     </message>
     <message>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation>Η θυγατρική διεργασία «%1» απέτυχε!
+        <translation type="vanished">Η θυγατρική διεργασία «%1» απέτυχε!
 %2</translation>
     </message>
 </context>
