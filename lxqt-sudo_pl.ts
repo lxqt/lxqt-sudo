@@ -99,12 +99,12 @@ Arguments:
     <message>
         <location filename="../../sudo.cpp" line="142"/>
         <source>%1: no backend chosen!</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: nie wybrano backendu!</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="147"/>
         <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: ostrzeżenie – wiele argumentów dla backendu %2, połączono w jeden: %3</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="162"/>
