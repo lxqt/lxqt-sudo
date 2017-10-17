@@ -16,6 +16,9 @@ message(STATUS "Building with Qt${Qt5Core_VERSION}")
 
 find_package(lxqt REQUIRED)
 
+# Patch version 0
+
+
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
 
 set ( LINK_LXSU "lxsu")
