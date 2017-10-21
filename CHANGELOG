@@ -1,7 +1,17 @@
 
-lxqt-sudo-0.11.1 / 2017-01-01
+lxqt-sudo-0.12.0 / 2017-10-21
 =============================
 
+  * Set informal patch version
+  * Added basic .gitattributes
+  * Drops Qt5Core_VERSION_STRING
+  * set Qt::AA_UseHighDpiPixmaps to true
+  * Bump year
+
+0.11.1 / 2017-01-01
+===================
+
+  * Release 0.11.1: Update changelog
   * Make CMakeLists.txt more uniform.
 
 0.11.0 / 2016-09-24
