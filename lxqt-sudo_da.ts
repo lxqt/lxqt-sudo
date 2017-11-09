@@ -115,7 +115,7 @@ Argumenter:
         <location filename="../../sudo.cpp" line="275"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation>Barneprocessen &apos;%1&apos; fejlede!
+        <translation>Barneprocessen &apos;%1&apos; mislykkedes!
 %2</translation>
     </message>
 </context>
