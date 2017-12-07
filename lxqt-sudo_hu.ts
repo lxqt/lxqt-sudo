@@ -61,7 +61,7 @@ paraméterek:
     -s|--su        %3(1) a végrehajtó.
     -d|--sudo      %2(8) a végrehajtó.
   parancs           A végrehajtandó parancs.
-  paraméterek        Opcionális paraméterki.
+  paraméterek        Választható paraméterek.
 
 </translation>
     </message>
@@ -83,7 +83,7 @@ paraméterek:
     <message>
         <location filename="../../sudo.cpp" line="142"/>
         <source>%1: no backend chosen!</source>
-        <translation>%1: nincs végrehajtó parancs!</translation>
+        <translation>%1: nincs végrehajtó választva!</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="147"/>
