@@ -61,13 +61,15 @@ Argumentos:
     -d|--sudo      Utiliza %2(8) como infraestrutura.
   command          Comando a executar.
   arguments        Argumentos opcionais do comando.
+
 </translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="80"/>
         <source>%1 version %2
 </source>
-        <translation>%1 versão %2</translation>
+        <translation>%1 versão %2
+</translation>
     </message>
 </context>
 <context>
@@ -96,7 +98,8 @@ Argumentos:
         <location filename="../../sudo.cpp" line="205"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation>%1: falha ao executar %2: %3</translation>
+        <translation>%1: falha ao executar %2: %3
+</translation>
     </message>
     <message>
         <location filename="../../sudo.cpp" line="234"/>
