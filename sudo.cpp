@@ -81,10 +81,20 @@ namespace
     }
 
     inline void env_workarounds()
-    {
-        //cleanup environment
-        //pcmanfm-qt will not start if the DBUS_SESSION_BUS_ADDRESS is preserved
+    { // cleanup environment
+        // pcmanfm-qt will not start if the DBUS_SESSION_BUS_ADDRESS is preserved
         unsetenv("DBUS_SESSION_BUS_ADDRESS");
+        // these should definitely be unset
+        unsetenv("XDG_CONFIG_HOME");
+        unsetenv("XDG_DATA_HOME");
+        unsetenv("XDG_CACHE_HOME");
+        unsetenv("XDG_DATA_DIRS");
+        // should be unset to have the right permissions
+        unsetenv("XDG_RUNTIME_DIR");
+        // better for gtk apps
+        unsetenv("GTK2_RC_FILES");
+        // for the sake of certainty
+        setenv("HOME", "/root", 1);
     }
 }
 
