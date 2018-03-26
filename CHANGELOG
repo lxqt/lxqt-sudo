@@ -35,7 +35,7 @@ lxqt-sudo-0.12.0 / 2017-10-21
   * Preserve environment with sudo backend
   * Update Slovak translation
   * Updated translation template, updated german translation.
-  * Add a plus to AUTHORS license AUTHORS must match the files fixes lxde/lxqt/issues/784 fix typo choosen --> chosen
+  * Add a plus to AUTHORS license AUTHORS must match the files fixes lxqt/lxqt#784 fix typo choosen --> chosen
   * lxqt-sudo: partial support for running cmd with arguments using su backend
   * lxqt-sudo: unified processing logic for su & sudo into common code
   * lxqt-sudo: lxsu & lxsudo symlinks for lxqt-sudo
