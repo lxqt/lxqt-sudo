@@ -18,7 +18,7 @@ find_package(lxqt REQUIRED)
 
 # Patch version 0
 
-
+include(LXQtPreventInSourceBuilds)
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
 
 set ( LINK_LXSU "lxsu")
