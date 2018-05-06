@@ -27,6 +27,7 @@
 
 #include "passworddialog.h"
 #include "ui_passworddialog.h"
+#include <QIcon>
 
 PasswordDialog::PasswordDialog(QStringList argv
         , QWidget * parent/* = 0*/
