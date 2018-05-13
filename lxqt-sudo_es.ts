@@ -28,7 +28,7 @@ Introduzca su contraseña.</translation>
     <message>
         <location filename="../../passworddialog.cpp" line="54"/>
         <source>Attempt #%1</source>
-        <translation>Intento nro. %1</translation>
+        <translation>Intento número %1</translation>
     </message>
 </context>
 <context>
