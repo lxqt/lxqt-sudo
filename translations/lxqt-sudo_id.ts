@@ -4,29 +4,29 @@
 <context>
     <name>PasswordDialog</name>
     <message>
-        <location filename="../../passworddialog.ui" line="20"/>
+        <location filename="../passworddialog.ui" line="20"/>
         <source>LXQt sudo</source>
         <translation>LXQt sudo</translation>
     </message>
     <message>
-        <location filename="../../passworddialog.ui" line="77"/>
+        <location filename="../passworddialog.ui" line="77"/>
         <source>Command:</source>
         <translation>Perintah:</translation>
     </message>
     <message>
-        <location filename="../../passworddialog.ui" line="84"/>
+        <location filename="../passworddialog.ui" line="84"/>
         <source>Password:</source>
         <translation>Kata sandi:</translation>
     </message>
     <message>
-        <location filename="../../passworddialog.cpp" line="43"/>
+        <location filename="../passworddialog.cpp" line="44"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
 Please enter your password.</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; membutuhkan hak akses administratif.
 Silakan masukkan kata sandi Anda.</translation>
     </message>
     <message>
-        <location filename="../../passworddialog.cpp" line="54"/>
+        <location filename="../passworddialog.cpp" line="55"/>
         <source>Attempt #%1</source>
         <translation>Mencoba #%1</translation>
     </message>
@@ -34,7 +34,7 @@ Silakan masukkan kata sandi Anda.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../sudo.cpp" line="63"/>
+        <location filename="../sudo.cpp" line="63"/>
         <source>Usage: %1 option [command [arguments...]]
 
 GUI frontend for %2/%3
@@ -65,7 +65,7 @@ Argumen:
 </translation>
     </message>
     <message>
-        <location filename="../../sudo.cpp" line="80"/>
+        <location filename="../sudo.cpp" line="80"/>
         <source>%1 version %2
 </source>
         <translation>%1 versi %2
@@ -75,44 +75,44 @@ Argumen:
 <context>
     <name>Sudo</name>
     <message>
-        <location filename="../../sudo.cpp" line="135"/>
+        <location filename="../sudo.cpp" line="135"/>
         <source>%1: no command to run provided!</source>
         <translation>%1: tidak tersedia perintah untuk dijalankan!</translation>
     </message>
     <message>
-        <location filename="../../sudo.cpp" line="142"/>
+        <location filename="../sudo.cpp" line="142"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: tidak ada backend yang dipilih!</translation>
     </message>
     <message>
-        <location filename="../../sudo.cpp" line="147"/>
+        <location filename="../sudo.cpp" line="147"/>
         <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
         <translation>%1: peringatan - mendapat beberapa argemen untuk backend %2, squashing menjadi satu: %3</translation>
     </message>
     <message>
-        <location filename="../../sudo.cpp" line="162"/>
+        <location filename="../sudo.cpp" line="162"/>
         <source>Failed to fork: %1</source>
         <translation>Gagal mencabangkan: %1</translation>
     </message>
     <message>
-        <location filename="../../sudo.cpp" line="205"/>
+        <location filename="../sudo.cpp" line="205"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
         <translation>%1: Gagal mengeksekusi &apos;%2&apos;: %3
 </translation>
     </message>
     <message>
-        <location filename="../../sudo.cpp" line="234"/>
+        <location filename="../sudo.cpp" line="234"/>
         <source>Failed to set non-block: %1</source>
         <translation>Gagal mengatur non-block: %1</translation>
     </message>
     <message>
-        <location filename="../../sudo.cpp" line="242"/>
+        <location filename="../sudo.cpp" line="242"/>
         <source>Failed to fdopen: %1</source>
         <translation>Gagal untuk fdopen: %1</translation>
     </message>
     <message>
-        <location filename="../../sudo.cpp" line="275"/>
+        <location filename="../sudo.cpp" line="275"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
         <translation>Proses &apos;%1&apos; child gagal!
