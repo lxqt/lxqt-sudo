@@ -9,7 +9,6 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
-option(PULL_TRANSLATIONS "Pull translations" ON)
 
 find_package(Qt5Widgets REQUIRED)
 message(STATUS "Building with Qt${Qt5Core_VERSION}")
@@ -58,14 +57,6 @@ lxqt_translate_ts(QM_FILES
         ${UIS}
     INSTALL_DIR
         "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
-    PULL_TRANSLATIONS
-        ${PULL_TRANSLATIONS}
-    CLEAN_TRANSLATIONS
-        ${CLEAN_TRANSLATIONS}
-    TRANSLATIONS_REPO
-        ${TRANSLATIONS_REPO}
-    TRANSLATIONS_REFSPEC
-        ${TRANSLATIONS_REFSPEC}
 )
 
 lxqt_app_translation_loader(SRCS ${PROJECT_NAME})
