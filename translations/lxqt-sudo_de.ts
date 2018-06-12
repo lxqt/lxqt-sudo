@@ -92,7 +92,7 @@ Argumente:
     <message>
         <location filename="../sudo.cpp" line="162"/>
         <source>Failed to fork: %1</source>
-        <translation>Abspalten des Prozesses fehlgeschlagen: %1</translation>
+        <translation>Forken des Prozesses fehlgeschlagen: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="205"/>
