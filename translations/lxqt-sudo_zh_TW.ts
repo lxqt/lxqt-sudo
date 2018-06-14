@@ -22,8 +22,8 @@
         <location filename="../passworddialog.cpp" line="44"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
 Please enter your password.</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt; 需要管理員權限
-請輸入您的密碼 </translation>
+        <translation>&lt;b&gt;%1&lt;/b&gt; 需要管理員權限。
+請輸入您的密碼。</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="55"/>
@@ -68,7 +68,8 @@ GUI 前端 %2/%3
         <location filename="../sudo.cpp" line="80"/>
         <source>%1 version %2
 </source>
-        <translation>%1 版本 %s</translation>
+        <translation>%1 版本 %2
+</translation>
     </message>
 </context>
 <context>
