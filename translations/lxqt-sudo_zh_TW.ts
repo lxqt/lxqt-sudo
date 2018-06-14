@@ -49,7 +49,20 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>使用方式：%1 選項 [指令 [參數...]]
+
+GUI 前端 %2/%3
+
+參數：
+  選項：
+    -h|--help      顯示此幫助訊息。
+    -v|--version  顯示版本訊息。
+    -s|--su       使用 %3(1) 當後端。
+    -d|--sudo     使用 %2(8) 當後端。
+  指令            要執行的指令。
+  參數            可選的指令參數。
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="80"/>
@@ -63,44 +76,45 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="135"/>
         <source>%1: no command to run provided!</source>
-        <translation type="unfinished">%1：沒有可執行的指令</translation>
+        <translation>%1：沒有可執行的指令！</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="142"/>
         <source>%1: no backend chosen!</source>
-        <translation type="unfinished"></translation>
+        <translation>%1：沒有選擇後端！</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="147"/>
         <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>%1：警告 - %2 後端得到多項參數，壓縮成一個：%3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="162"/>
         <source>Failed to fork: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>分岔失敗：%1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="205"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1：執行 &apos;%2&apos; 失敗：%3
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="234"/>
         <source>Failed to set non-block: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>設定非阻塞失敗：%1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="242"/>
         <source>Failed to fdopen: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>執行fdopen失敗：%1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="275"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation type="unfinished">子執行序&apos;%1&apos;執行失敗！
+        <translation>子執行序&apos;%1&apos;執行失敗！
 %2</translation>
     </message>
 </context>
