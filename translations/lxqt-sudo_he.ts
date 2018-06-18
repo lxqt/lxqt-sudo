@@ -11,23 +11,24 @@
     <message>
         <location filename="../passworddialog.ui" line="77"/>
         <source>Command:</source>
-        <translation></translation>
+        <translation>פקודה:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="84"/>
         <source>Password:</source>
-        <translation></translation>
+        <translation>ססמה:</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="44"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
 Please enter your password.</source>
-        <translation></translation>
+        <translation>ל־&lt;b&gt;%1&lt;/b&gt; נדרשות הרשאות ניהול.
+נא להקליד את הססמה שלך.</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="55"/>
         <source>Attempt #%1</source>
-        <translation></translation>
+        <translation>ניסיון מס׳ %1</translation>
     </message>
 </context>
 <context>
