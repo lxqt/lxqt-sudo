@@ -99,7 +99,8 @@ Argumente:
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
         <translation>%1: Ausführen von &apos;%2&apos; fehlgeschlagen:
-%3</translation>
+%3
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="234"/>
