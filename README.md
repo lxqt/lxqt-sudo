@@ -31,3 +31,10 @@ In order to use it as front-end of `sudo` the corresponding permissions have to 
 lxqt-sudo comes with a man page explaining the syntax very well so running `man 1 lxqt-sudo` should get you started.   
 
 By default `sudo` is used as backend, the choice can be enforced by command line options `--su[do]` or by using symbolic links `lxsu` and `lxsudo` which belong to regular installations of lxqt-sudo.   
+
+
+### Translation (Weblate)
+
+<a href="https://weblate.lxqt.org/projects/lxqt/lxqt-sudo/">
+<img src="https://weblate.lxqt.org/widgets/lxqt/-/lxqt-sudo/multi-auto.svg" alt="Translation status" />
+</a>
