@@ -23,12 +23,12 @@
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
 Please enter your password.</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; vyžaduje oprávnění správce (superuživatele).
-Zadejte, prosím, své heslo.</translation>
+Zadejte  své heslo.</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="55"/>
         <source>Attempt #%1</source>
-        <translation>Pokus #%1</translation>
+        <translation>Pokus č.%1</translation>
     </message>
 </context>
 <context>
@@ -87,7 +87,7 @@ Argumenty:
     <message>
         <location filename="../sudo.cpp" line="147"/>
         <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation>%1: varování - obdrženo několik argumentů pro podpůrnou vrstvu %2, použije se: %3</translation>
+        <translation>%1: varování – obdrženo několik argumentů pro podpůrnou vrstvu %2, použije se: %3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="162"/>
@@ -98,8 +98,9 @@ Argumenty:
         <location filename="../sudo.cpp" line="205"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation>%1: Nepodařilo se spustit &apos;%2&apos;:
-%3</translation>
+        <translation>%1: Nepodařilo se spustit „%2“:
+%3
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="234"/>
@@ -115,7 +116,7 @@ Argumenty:
         <location filename="../sudo.cpp" line="275"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation>Selhal podřízený proces &apos;%1!
+        <translation>Selhal podřízený proces „%1“!
 %2</translation>
     </message>
 </context>
