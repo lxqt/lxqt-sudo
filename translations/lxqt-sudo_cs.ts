@@ -23,12 +23,12 @@
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
 Please enter your password.</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; vyžaduje oprávnění správce (superuživatele).
-Zadejte  své heslo.</translation>
+Zadejte své heslo.</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="55"/>
         <source>Attempt #%1</source>
-        <translation>Pokus č.%1</translation>
+        <translation>Pokus číslo %1</translation>
     </message>
 </context>
 <context>
@@ -58,7 +58,7 @@ Argumenty:
     -h|--help      Zobrazí tuto nápovědu.
     -v|--version   Zobrazí informace o verzi.
     -s|--su        Použít %3(1) jako podpůrnou vrstvu.
-    -d|--sudo      Použít %2(8) podpůrnou vrstvu.
+    -d|--sudo      Použít %2(8) jako podpůrnou vrstvu.
   command          Příkaz ke spuštění.
   arguments        Volitelné argumenty pro příkaz.
 
@@ -92,7 +92,7 @@ Argumenty:
     <message>
         <location filename="../sudo.cpp" line="162"/>
         <source>Failed to fork: %1</source>
-        <translation>Nepodařilo se odnožit proces:%1</translation>
+        <translation>Nepodařilo se vytvořit rozvětvení procesu: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="205"/>
