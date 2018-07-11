@@ -49,7 +49,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation>Použití: %1 volba [příkaz [argumenty...]]
+        <translation>Použití: %1 volba [příkaz [argumenty…]]
 
 Uživatelské rozhraní pro %2/%3
 
@@ -68,7 +68,7 @@ Argumenty:
         <location filename="../sudo.cpp" line="80"/>
         <source>%1 version %2
 </source>
-        <translation>%1 Verze %2
+        <translation>%1 verze %2
 </translation>
     </message>
 </context>
@@ -77,7 +77,7 @@ Argumenty:
     <message>
         <location filename="../sudo.cpp" line="135"/>
         <source>%1: no command to run provided!</source>
-        <translation>%1: nezadán žádný spustitelný příkaz!</translation>
+        <translation>%1: nezadán žádný příkaz ke spuštění!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="142"/>
@@ -98,8 +98,7 @@ Argumenty:
         <location filename="../sudo.cpp" line="205"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation>%1: Nepodařilo se spustit „%2“:
-%3
+        <translation>%1: Nepodařilo se spustit „%2“: %3
 </translation>
     </message>
     <message>
@@ -116,7 +115,7 @@ Argumenty:
         <location filename="../sudo.cpp" line="275"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation>Selhal podřízený proces „%1“!
+        <translation>Nezdar v podřízeném procesu „%1“!
 %2</translation>
     </message>
 </context>
