@@ -52,7 +52,8 @@ namespace
 
     const QString su_prog{QStringLiteral(LXQTSUDO_SU)};
     const QString sudo_prog{QStringLiteral(LXQTSUDO_SUDO)};
-    const QString pwd_prompt_end{QStringLiteral(": ")};
+    const QString pwd_prompt_end{QStringLiteral(":")};
+    const QString pwd_prompt_end_with_space{QStringLiteral(": ")};
     const QChar nl{QLatin1Char('\n')};
 
     void usage(QString const & err = QString())
@@ -277,7 +278,8 @@ int Sudo::parent()
                 lxqtApp->quit();
             } else
             {
-                if (line.endsWith(pwd_prompt_end))
+                if (line.endsWith(pwd_prompt_end) ||
+                    line.endsWith(pwd_prompt_end_with_space))
                 {
                     //if now echo is turned off, su/sudo requests password
                     struct termios tios;
