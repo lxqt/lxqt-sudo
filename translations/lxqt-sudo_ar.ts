@@ -16,14 +16,14 @@
     <message>
         <location filename="../passworddialog.ui" line="84"/>
         <source>Password:</source>
-        <translation>كلمة المرور:</translation>
+        <translation>كلمة السر:</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="44"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
 Please enter your password.</source>
         <translation>يحتاج &lt;b&gt;%1&lt;/b&gt; امتيازات المدير.
-فضلًا أدخل كلمة المرور.</translation>
+رجاءً أدخِل كلمة السر.</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="55"/>
@@ -51,16 +51,16 @@ Arguments:
 </source>
         <translation>‎الاستخدام:‎ %1 الخيار ‎[الأمر ‎[المعاملات...]]
 
-واجهة رسوميّة لِ‍ %2/%3
+واجهة رسومية لِ‍ %2/%3
 
 المعاملات:‏
   الخيار:‏
     -h|--help      يطبع هذه المساعدة.‏
     -v|--version   يطبع معلومات الإصدارة.‏
-    -s|--su        يستخدم %3(1) سندًا.‏
-    -d|--sudo      يستخدم %2(8) سندًا.‏
+    -s|--su        يستخدم %3(1) سندا.‏
+    -d|--sudo      يستخدم %2(8) سندا.‏
   ‎الأمر‎          الأمر لتنفيذه.‏
-  ‎المعاملات‎        المعاملات الاختياريّة للأمر.‏
+  ‎المعاملات‎        المعاملات الاختيارية للأمر.‏
 
 </translation>
     </message>
@@ -77,17 +77,17 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="135"/>
         <source>%1: no command to run provided!</source>
-        <translation>%1: لم يُوفّر أمر لتنفيذه!</translation>
+        <translation>%1: لم تقدّم أمرا لتنفيذه!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="142"/>
         <source>%1: no backend chosen!</source>
-        <translation>%1: لم يُختر سند!</translation>
+        <translation>%1: لم تختر سندا!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="147"/>
         <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation>%1: تحذير - حصلت على عدّة معاملات للسّند %2، سأجمعها في واحدة: %3</translation>
+        <translation>%1: تحذير - حصلتُ على عدد من المعاملات للسند %2، سأجمعها في واحدة: %3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="162"/>
@@ -98,13 +98,13 @@ Arguments:
         <location filename="../sudo.cpp" line="205"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation>%1: فشل تنفيذ &apos;%2&apos;:‏ %3
+        <translation>⁨%1⁩: فشل تنفيذ ”⁨%2⁩“: %3
 </translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="234"/>
         <source>Failed to set non-block: %1</source>
-        <translation>تعذّر ضبط non-block:‏ %1</translation>
+        <translation>تعذر ضبط non-block:‏ %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="242"/>
@@ -115,7 +115,7 @@ Arguments:
         <location filename="../sudo.cpp" line="275"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation>فشلت العمليّة الإبنة &apos;%1&apos;!
+        <translation>فشلت العملية الابنة ”%1“!
 %2</translation>
     </message>
 </context>
