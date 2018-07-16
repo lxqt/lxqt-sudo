@@ -22,7 +22,7 @@
         <location filename="../passworddialog.cpp" line="44"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
 Please enter your password.</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt; vyžaduje oprávnění správce (superuživatele).
+        <translation>&lt;b&gt;%1&lt;/b&gt; vyžaduje oprávnění na úrovni správce.
 Zadejte své heslo.</translation>
     </message>
     <message>
@@ -51,7 +51,7 @@ Arguments:
 </source>
         <translation>Použití: %1 volba [příkaz [argumenty…]]
 
-Uživatelské rozhraní pro %2/%3
+Grafická nadstavba pro %2/%3
 
 Argumenty:
   volba:
@@ -87,7 +87,7 @@ Argumenty:
     <message>
         <location filename="../sudo.cpp" line="147"/>
         <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation>%1: varování – obdrženo několik argumentů pro podpůrnou vrstvu %2, použije se: %3</translation>
+        <translation>%1: varování – obdrženo vícero argumentů pro podpůrnou vrstvu %2, použije se pouze: %3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="162"/>
@@ -109,7 +109,7 @@ Argumenty:
     <message>
         <location filename="../sudo.cpp" line="242"/>
         <source>Failed to fdopen: %1</source>
-        <translation>Nepodařilo se otevřít: %1</translation>
+        <translation>Nepodařilo se otevřít popisovač souboru: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="275"/>
