@@ -64,22 +64,22 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="135"/>
         <source>%1: no command to run provided!</source>
-        <translation type="unfinished">%1: non è stato fornito alcun comando da eseguire!</translation>
+        <translation>%1: non è stato fornito alcun comando da eseguire!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="142"/>
         <source>%1: no backend chosen!</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: selezionato nessun backend!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="147"/>
         <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: avviso - argomenti multipli per il backend %2, riunendo in uno: %3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="162"/>
         <source>Failed to fork: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Fork fallito: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="205"/>
@@ -101,7 +101,7 @@ Arguments:
         <location filename="../sudo.cpp" line="275"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation type="unfinished">Sottoprocesso %1 non riuscito!
+        <translation>Processo figlio %1 non riuscito!
 %2</translation>
     </message>
 </context>
