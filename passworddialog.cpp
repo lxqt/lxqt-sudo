@@ -4,7 +4,7 @@
  * LXQt - a lightweight, Qt based, desktop toolset
  * https://lxqt.org
  *
- * Copyright: 2015 LXQt team
+ * Copyright: 2015-2018 LXQt team
  * Authors:
  *   Palo Kisa <palo.kisa@gmail.com>
  *
@@ -29,7 +29,7 @@
 #include "ui_passworddialog.h"
 #include <QIcon>
 
-PasswordDialog::PasswordDialog(QStringList argv
+PasswordDialog::PasswordDialog(const QString & cmd
         , QWidget * parent/* = 0*/
         , Qt::WindowFlags f/* = 0*/)
     : QDialog(parent, f)
@@ -37,10 +37,7 @@ PasswordDialog::PasswordDialog(QStringList argv
 {
     ui->setupUi(this);
 
-    ui->commandL->setText(argv.join(QStringLiteral(" ")));
-    QString cmd;
-    if (0 < argv.size())
-        cmd = argv[0];
+    ui->commandL->setText(cmd);
     ui->descriptionL->setText(tr("<b>%1</b> needs administrative privileges.\nPlease enter your password.").arg(cmd));
     ui->iconL->setPixmap(QIcon::fromTheme("dialog-password").pixmap(64, 64));
     setWindowIcon(QIcon::fromTheme("security-high"));

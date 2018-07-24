@@ -4,7 +4,7 @@
  * LXQt - a lightweight, Qt based, desktop toolset
  * https://lxqt.org
  *
- * Copyright: 2015 LXQt team
+ * Copyright: 2015-2018 LXQt team
  * Authors:
  *   Palo Kisa <palo.kisa@gmail.com>
  *
@@ -141,16 +141,12 @@ int Sudo::main()
         //we were invoked through unknown link (or renamed binary)
         usage(tr("%1: no backend chosen!").arg(app_master));
         return 1;
-    } else if (BACK_SU == mBackend && 1 < mArgs.size())
-    {
-        QString cmd = mArgs.replaceInStrings(QRegExp(QStringLiteral("^(.*)$")), "'\\1'").join(QStringLiteral(" "));
-        QTextStream(stderr) << tr("%1: warning - got multiple arguments for %2 backend, squashing into one: %3")
-            .arg(app_master).arg(su_prog).arg(cmd);
-        mArgs.erase(++mArgs.begin(), mArgs.end());
-        mArgs[0] = std::move(cmd);
     }
 
-    mDlg.reset(new PasswordDialog{mArgs});
+    mArgs.replaceInStrings(QStringLiteral("'"), QStringLiteral("'\\''"));
+    mSquashedArgs = mArgs.replaceInStrings(QRegExp(QStringLiteral("^(.*)$")), "'\\1'").join(QStringLiteral(" "));
+
+    mDlg.reset(new PasswordDialog{mSquashedArgs});
     mDlg->setModal(true);
     lxqtApp->setActiveWindow(mDlg.data());
 
@@ -169,9 +165,8 @@ int Sudo::main()
 
 void Sudo::child()
 {
-    int params_cnt = 2 //1. su/sudo & last nullptr
-        + 1 //-c for su | -E for sudo
-        + mArgs.size();
+    int params_cnt = 3 //1. su/sudo & "shell command" & last nullptr
+        + (BACK_SU == mBackend ? 1 : 3); //-c for su | -E /bin/sh -c for sudo
     std::unique_ptr<char const *[]> params{new char const *[params_cnt]};
     const char ** param_arg = params.get() + 1;
 
@@ -179,20 +174,33 @@ void Sudo::child()
     if (BACK_SU == mBackend)
     {
         program = su_prog.toStdString();
-        *(param_arg++) = "-c"; //run command
     } else
     {
         program = sudo_prog.toStdString();
         *(param_arg++) = "-E"; //preserve environment
+        *(param_arg++) = "/bin/sh";
     }
+    *(param_arg++) = "-c"; //run command
 
     params[0] = program.c_str();
 
-    std::vector<std::string> arguments;
-    for (const auto & a : mArgs)
-        arguments.push_back(a.toStdString());
-    for (const auto & a : arguments)
-        *(param_arg++) = a.c_str();
+    // Note: we force the su/sudo to communicate with us in the simplest
+    // locale and then set the locale back for the command
+    char const * const env_lc_all = getenv("LC_ALL");
+    setenv("LC_ALL", "C", 1);
+    std::string command;
+    if (env_lc_all == nullptr)
+    {
+        command = "unset LC_ALL; ";
+    } else
+    {
+        command = "LC_ALL='";
+        command += env_lc_all;
+        command += "' ";
+    }
+    command += "exec ";
+    command += mSquashedArgs.toStdString();
+    *(param_arg++) = command.c_str();
 
     *param_arg = nullptr;
 

@@ -39,7 +39,7 @@ class PasswordDialog : public QDialog
     Q_OBJECT
 
 public:
-    PasswordDialog(QStringList argv
+    PasswordDialog(const QString & cmd
             , QWidget * parent = 0
             , Qt::WindowFlags f = 0);
     ~PasswordDialog();
