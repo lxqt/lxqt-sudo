@@ -87,7 +87,7 @@ Argumenten:
     <message>
         <location filename="../sudo.cpp" line="147"/>
         <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation>%1: waarschuwing: meerdere argumenten ontvangen voor achtergronddienst %2. %3 wordt gebruikt.</translation>
+        <translation>%1: waarschuwing: meerdere argumenten ontvangen voor achtergronddienst %2. Worden samengeperst in één: %3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="162"/>
