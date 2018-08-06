@@ -233,6 +233,13 @@ void Sudo::child()
         command = "unset LC_ALL; ";
     } else
     {
+        // Note: we need to check if someone is not trying to inject commands
+        // for privileged execution via the LC_ALL
+        if (nullptr != strchr(env_lc_all, '\''))
+        {
+            QTextStream{stderr, QIODevice::WriteOnly} << tr("%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exitting!\n").arg(app_master).arg(env_lc_all);
+            exit(1);
+        }
         command = "LC_ALL='";
         command += env_lc_all;
         command += "' ";
