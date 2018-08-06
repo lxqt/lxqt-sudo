@@ -37,6 +37,7 @@
 #include <QDebug>
 #include <QThread>
 #include <QProcessEnvironment>
+#include <QTimer>
 #include <pty.h>
 #include <unistd.h>
 #include <memory>
@@ -44,6 +45,7 @@
 #include <sys/wait.h>
 #include <fcntl.h>
 #include <iostream>
+#include <thread>
 
 namespace
 {
@@ -179,14 +181,18 @@ int Sudo::main()
     mArgs.replaceInStrings(QStringLiteral("'"), QStringLiteral("'\\''"));
     mSquashedArgs = mArgs.replaceInStrings(QRegExp(QStringLiteral("^(.*)$")), "'\\1'").join(QStringLiteral(" "));
 
+    mChildPid = forkpty(&mPwdFd, nullptr, nullptr, nullptr);
+    if (0 == mChildPid)
+    {
+        child(); // never returns
+        return 1; // but for sure
+    }
+
     mDlg.reset(new PasswordDialog{mSquashedArgs});
     mDlg->setModal(true);
     lxqtApp->setActiveWindow(mDlg.data());
 
-    mChildPid = forkpty(&mPwdFd, nullptr, nullptr, nullptr);
-    if (0 == mChildPid)
-        child(); //never returns
-    else if (-1 == mChildPid)
+    if (-1 == mChildPid)
         QMessageBox(QMessageBox::Critical, mDlg->windowTitle()
                 , tr("Failed to fork: %1").arg(strerror(errno)), QMessageBox::Ok).exec();
     else
@@ -249,7 +255,6 @@ void Sudo::child()
 
 void Sudo::stopChild()
 {
-    close(mPwdFd);
     kill(mChildPid, SIGINT);
     int res, status;
     for (int cnt = 10; 0 == (res = waitpid(mChildPid, &status, WNOHANG)) && 0 < cnt; --cnt)
@@ -258,12 +263,7 @@ void Sudo::stopChild()
     if (0 == res)
     {
         kill(mChildPid, SIGKILL);
-        mRet = 1;
-    } else
-    {
-        mRet = WIFEXITED(status) ? WEXITSTATUS(status) : 1;
     }
-    mChildPid = -1;
 }
 
 int Sudo::parent()
@@ -295,27 +295,24 @@ int Sudo::parent()
             } else
             {
                 stopChild();
-                lxqtApp->quit();
             }
         });
 
     QString last_line;
     QScopedPointer<QSocketNotifier> pwd_watcher{new QSocketNotifier{mPwdFd, QSocketNotifier::Read}};
-    QObject::connect(pwd_watcher.data(), &QSocketNotifier::activated, [&]
+    auto reader = [&]
         {
             QString line = child_str.readAll();
             if (line.isEmpty())
             {
-                pwd_watcher.reset(nullptr);
+                pwd_watcher.reset(nullptr); //stop the notifications events
+
                 QString const & prog = BACK_SU == mBackend ? su_prog : sudo_prog;
                 if (last_line.startsWith(QStringLiteral("%1:").arg(prog)))
                 {
-                    pwd_watcher.reset(nullptr); //stop the notifications events
-                    stopChild();
                     QMessageBox(QMessageBox::Critical, mDlg->windowTitle()
                             , tr("Child '%1' process failed!\n%2").arg(prog).arg(last_line), QMessageBox::Ok).exec();
                 }
-                lxqtApp->quit();
             } else
             {
                 if (line.endsWith(pwd_prompt_end))
@@ -337,16 +334,30 @@ int Sudo::parent()
                 last_line = lines.isEmpty() ? QString() : lines.back();
             }
 
+        };
+
+    QObject::connect(pwd_watcher.data(), &QSocketNotifier::activated, reader);
+
+    std::unique_ptr<std::thread> child_waiter;
+    QTimer::singleShot(0, [&child_waiter, this] {
+            child_waiter.reset(new std::thread{[this] {
+                    int res, status;
+                    res = waitpid(mChildPid, &status, 0);
+                    mRet = (mChildPid == res && WIFEXITED(status)) ? WEXITSTATUS(status) : 1;
+                    lxqtApp->quit();
+                }
+            });
         });
 
     lxqtApp->exec();
 
-    if (0 < mChildPid)
-    {
-        int res, status;
-        res = waitpid(mChildPid, &status, 0);
-        mRet = (mChildPid == res && WIFEXITED(status)) ? WEXITSTATUS(status) : 1;
-    }
+    child_waiter->join();
+
+    // try to read the last line(s)
+    reader();
+
+    fclose(pwd_f);
+    close(mPwdFd);
 
     return mRet;
 }
