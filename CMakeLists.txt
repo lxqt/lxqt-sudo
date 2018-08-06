@@ -72,6 +72,7 @@ target_link_libraries(lxqt-sudo
     Qt5::Widgets
     util
     lxqt
+    -pthread
 )
 
 target_compile_definitions(lxqt-sudo
