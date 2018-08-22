@@ -59,7 +59,7 @@ Arguments:
     -v|--version   Affiche la version.
     -s|--su        Utilise %3(1) comme Backend.
     -d|--sudo      Utilise %2(8) comme Backend.
-  ommande           Commande à exécuter.
+  Commande        Commande à exécuter.
   Arguments        Arguments de la commande à exécuterl.
 
 </translation>
@@ -87,7 +87,7 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="147"/>
         <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation>%1: Attention - plusieurs arguments pour le backend %2. %3 sera utilisé</translation>
+        <translation>%1: Attention - les multipless arguments pour le backend %2 seront écrasés en un seul: %3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="162"/>
