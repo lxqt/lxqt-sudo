@@ -4,7 +4,7 @@
 <context>
     <name>PasswordDialog</name>
     <message>
-        <location filename="../passworddialog.ui" line="20"/>
+        <location filename="../passworddialog.ui" line="14"/>
         <source>LXQt sudo</source>
         <translation>LXQt sudo</translation>
     </message>
@@ -19,14 +19,18 @@
         <translation>Mot de passe :</translation>
     </message>
     <message>
-        <location filename="../passworddialog.cpp" line="44"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
 Please enter your password.</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt;nécessite les droits de l&apos;administrateur.
+        <translation type="vanished">&lt;b&gt;%1&lt;/b&gt;nécessite les droits de l&apos;administrateur.
 Entrez son mot de passe.</translation>
     </message>
     <message>
-        <location filename="../passworddialog.cpp" line="55"/>
+        <location filename="../passworddialog.cpp" line="41"/>
+        <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../passworddialog.cpp" line="52"/>
         <source>Attempt #%1</source>
         <translation>Essai #%1</translation>
     </message>
@@ -34,7 +38,7 @@ Entrez son mot de passe.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../sudo.cpp" line="63"/>
+        <location filename="../sudo.cpp" line="67"/>
         <source>Usage: %1 option [command [arguments...]]
 
 GUI frontend for %2/%3
@@ -65,7 +69,7 @@ Arguments:
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="80"/>
+        <location filename="../sudo.cpp" line="84"/>
         <source>%1 version %2
 </source>
         <translation>%1 Version %2
@@ -75,44 +79,49 @@ Arguments:
 <context>
     <name>Sudo</name>
     <message>
-        <location filename="../sudo.cpp" line="135"/>
+        <location filename="../sudo.cpp" line="170"/>
         <source>%1: no command to run provided!</source>
         <translation>%1: aucune commande à exécuter n&apos;a été spécifiée !</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="142"/>
+        <location filename="../sudo.cpp" line="177"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: aucun Backend n&apos;a été choisi !</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="147"/>
         <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation>%1: Attention - les multipless arguments pour le backend %2 seront écrasés en un seul: %3</translation>
+        <translation type="vanished">%1: Attention - les multipless arguments pour le backend %2 seront écrasés en un seul: %3</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="162"/>
+        <location filename="../sudo.cpp" line="197"/>
         <source>Failed to fork: %1</source>
         <translation>Impossible de créer un embranchement de processus (fork) de : %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="205"/>
+        <location filename="../sudo.cpp" line="240"/>
+        <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exitting!
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sudo.cpp" line="259"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
         <translation>%1: Impossible d&apos;exécuter &apos;%2&apos; :
 %3</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="234"/>
+        <location filename="../sudo.cpp" line="282"/>
         <source>Failed to set non-block: %1</source>
         <translation>Echec de l&apos;option O_NONBLOCK l: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="242"/>
+        <location filename="../sudo.cpp" line="290"/>
         <source>Failed to fdopen: %1</source>
         <translation>Echec de l&apos;ouverture : %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="275"/>
+        <location filename="../sudo.cpp" line="321"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
         <translation>Echec du processus fils &apos;%1&apos; !
