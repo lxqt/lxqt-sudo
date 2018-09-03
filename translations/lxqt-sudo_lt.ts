@@ -27,7 +27,7 @@ Prašome įrašyti savo slaptažodį.</translation>
     <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;%1&lt;/b&gt; reikalauja administratoriaus teisių.&lt;br&gt;Prašome įrašyti savo slaptažodį.</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="52"/>
@@ -101,7 +101,8 @@ Argumentai:
         <location filename="../sudo.cpp" line="240"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exitting!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Aptiktas bandymas įskiepyti privilegijuotą komandą per LC_ALL env(%2). Išeinama!
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="259"/>
