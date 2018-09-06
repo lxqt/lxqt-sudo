@@ -27,7 +27,7 @@ Introduïu la vostra contrasenya.</translation>
     <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;%1&lt;/b&gt; necessita privilegis administratius.&lt;br&gt;Introduïu la vostra contrasenya.</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="52"/>
@@ -101,7 +101,8 @@ Arguments:
         <location filename="../sudo.cpp" line="240"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exitting!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1: S&apos;ha detectat un intent per injectar una ordre privilegiada a través de LC_ALL env(%2). Se surt!
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="259"/>
