@@ -27,7 +27,7 @@ Please enter your password.</source>
     <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>Το &lt;b&gt;%1&lt;/b&gt; απαιτεί προνόμια διαχειριστή.&lt;br&gt;Παρακαλώ εισαγάγετε τον κωδικό πρόσβασης.</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="52"/>
@@ -101,7 +101,7 @@ Arguments:
         <location filename="../sudo.cpp" line="240"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exitting!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Εντοπίστηκε απόπειρα έγχυσης προνομιούχας εντολής μέσω του LC_ALL env(%2). Εγκατάλειψη!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="259"/>
