@@ -30,6 +30,7 @@
 #include <QIcon>
 
 PasswordDialog::PasswordDialog(const QString & cmd
+        , const QString & args
         , QWidget * parent/* = 0*/
         , Qt::WindowFlags f/* = 0*/)
     : QDialog(parent, f)
@@ -37,8 +38,18 @@ PasswordDialog::PasswordDialog(const QString & cmd
 {
     ui->setupUi(this);
 
-    ui->commandL->setText(cmd);
-    ui->descriptionL->setText(tr("<b>%1</b> needs administrative privileges.<br>Please enter your password.").arg(cmd));
+    if(args == "-r" || args == "--remove"){
+        ui->commandL->setVisible(false);
+        ui->descCommandL->setVisible(false);
+        ui->descriptionL->setText(tr("The application needs administrative privileges.<br>Please enter your password."));
+    }
+    else{
+        ui->commandL->setVisible(true);
+        ui->descCommandL->setVisible(true);
+        ui->commandL->setText(cmd);
+        ui->descriptionL->setText(tr("<b>%1</b> needs administrative privileges.<br>Please enter your password.").arg(cmd));
+    }
+    
     ui->iconL->setPixmap(QIcon::fromTheme("dialog-password").pixmap(64, 64));
     setWindowIcon(QIcon::fromTheme("security-high"));
 }

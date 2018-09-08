@@ -46,6 +46,7 @@
 #include <fcntl.h>
 #include <iostream>
 #include <thread>
+#include <QDebug>
 
 namespace
 {
@@ -72,6 +73,7 @@ namespace
                     "    -v|--version   Print version information.\n"
                     "    -s|--su        Use %3(1) as backend.\n"
                     "    -d|--sudo      Use %2(8) as backend.\n"
+                    "    -r|--remove    Do not show the command to be executed in the window.\n"
                     "  command          Command to run.\n"
                     "  arguments        Optional arguments for command.\n\n").arg(app_master).arg(sudo_prog).arg(su_prog);
         if (!err.isEmpty())
@@ -141,6 +143,7 @@ Sudo::~Sudo()
 
 int Sudo::main()
 {
+    QString m_remove;
     if (0 < mArgs.size())
     {
         //simple option check
@@ -161,6 +164,15 @@ int Sudo::main()
         {
             mBackend = BACK_SUDO;
             mArgs.removeAt(0);
+        } else if ("-r" == arg1)
+        {
+            mArgs.removeAt(0);
+            m_remove = "-r";
+        }
+        else if ("--remove" == arg1)
+        {
+            mArgs.removeAt(0);
+            m_remove = "--remove";
         }
     }
     //any other arguments we simply forward to su/sudo
@@ -188,7 +200,7 @@ int Sudo::main()
         return 1; // but for sure
     }
 
-    mDlg.reset(new PasswordDialog{mSquashedArgs});
+    mDlg.reset(new PasswordDialog{mSquashedArgs,m_remove});
     mDlg->setModal(true);
     lxqtApp->setActiveWindow(mDlg.data());
 
