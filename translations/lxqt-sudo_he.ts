@@ -27,7 +27,7 @@ Please enter your password.</source>
     <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>ל־&lt;b&gt;%1&lt;/b&gt; נדרשות הרשאות ניהוליות.&lt;br&gt;נא להקליד את הססמה שלך.</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="52"/>
@@ -83,7 +83,8 @@ Arguments:
         <location filename="../sudo.cpp" line="240"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exitting!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exitting!
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="259"/>
