@@ -40,6 +40,7 @@ class PasswordDialog : public QDialog
 
 public:
     PasswordDialog(const QString & cmd
+            , const QString & args
             , QWidget * parent = 0
             , Qt::WindowFlags f = 0);
     ~PasswordDialog();
