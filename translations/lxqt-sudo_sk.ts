@@ -81,12 +81,12 @@ Parametre:
     <message>
         <location filename="../sudo.cpp" line="170"/>
         <source>%1: no command to run provided!</source>
-        <translation>%1: žiaden príkaz na spustenie!</translation>
+        <translation>%1: nezadali ste príkaz na spustenie!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="177"/>
         <source>%1: no backend chosen!</source>
-        <translation>%1: nevybratý backend!</translation>
+        <translation>%1: nevybrali ste žiadny backend!</translation>
     </message>
     <message>
         <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
@@ -108,7 +108,8 @@ Parametre:
         <location filename="../sudo.cpp" line="259"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation>%1: Zlyhal exec &apos;%2&apos;: %3</translation>
+        <translation>%1: Zlyhal exec &apos;%2&apos;: %3
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="282"/>
@@ -124,7 +125,7 @@ Parametre:
         <location filename="../sudo.cpp" line="321"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation>Dcérsky &apos;%1&apos; process zlyhal!
+        <translation>Proces &apos;%1&apos; zlyhal!
 %2</translation>
     </message>
 </context>
