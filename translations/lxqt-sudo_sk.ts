@@ -21,8 +21,8 @@
     <message>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
 Please enter your password.</source>
-        <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; vyžaduje práva administrátora.
-Prosím, zadajte svoje heslo.</translation>
+        <translation>&lt;b&gt;%1&lt;/b&gt; si vyžaduje oprávnenia správcu.
+Zadajte, prosím, svoje heslo.</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="41"/>
@@ -55,7 +55,7 @@ Arguments:
 </source>
         <translation>Použitie: %1 option [command [arguments...]]
 
-GUI frontend pre %2/%3
+Grafické rozhranie pre %2/%3
 
 Parametre:
   option:
@@ -63,8 +63,8 @@ Parametre:
     -v|--version   Zobraziť verziu.
     -s|--su        Použiť %3(1) ako backend.
     -d|--sudo      Použíť %2(8) ako backend.
-  command        Príkaz na spustenie.
-  arguments      Parametre príkazu.
+  command          Príkaz na spustenie.
+  arguments        Parametre príkazu.
 
 </translation>
     </message>
