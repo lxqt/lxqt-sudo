@@ -27,7 +27,7 @@ Zadejte své heslo.</translation>
     <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;%1&lt;/b&gt; potřebuje oprávnění správce.&lt;br&gt;Zadejte své heslo.</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="52"/>
@@ -101,7 +101,8 @@ Argumenty:
         <location filename="../sudo.cpp" line="240"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exitting!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Zjištěn pokus o vpravení privilegovaného příkazů prostřednictvím LC_ALL env(%2). Ukončuje se!
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="259"/>
