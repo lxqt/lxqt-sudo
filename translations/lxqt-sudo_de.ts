@@ -21,8 +21,8 @@
     <message>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
 Please enter your password.</source>
-        <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; benötigt root-Rechte.
-Bitte Kennwort eingeben.</translation>
+        <translation>&lt;b&gt;%1&lt;/b&gt; benötigt Administratorrechte.
+Bitte geben Sie Ihr Passwort ein.</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="41"/>
@@ -53,16 +53,16 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation>Verwendung: %1 Option [Befehl [Argumente...]]
+        <translation>Aufruf: %1 Option [Befehl [Argumente...]]
 
-Graphische Benutzeroberfläche für %2/%3
+Grafische Benutzeroberfläche für %2/%3
 
 Argumente:
   Option:
-    -h|--help      Gibt diese Hilfe aus.
-    -v|--version   Ausgabe der Versionsinformation.
-    -s|--su        Verwendet %3(1) als Backend.
-    -d|--sudo      Verwendet %2(8) als Backend.
+    -h|--help      Diese Hilfe ausgeben.
+    -v|--version   Versionsinformation ausgeben.
+    -s|--su        %3(1) als Backend verwenden.
+    -d|--sudo      %2(8) als Backend verwenden.
   Befehl           Auszuführender Befehl.
   Argumente        Argumente zum auszuführenden Befehl.
 
@@ -108,8 +108,7 @@ Argumente:
         <location filename="../sudo.cpp" line="259"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation>%1: Ausführen von &apos;%2&apos; fehlgeschlagen:
-%3
+        <translation>%1: Ausführen von &apos;%2&apos; fehlgeschlagen: %3
 </translation>
     </message>
     <message>
