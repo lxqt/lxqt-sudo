@@ -101,7 +101,7 @@ Argumenty:
         <location filename="../sudo.cpp" line="240"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exitting!
 </source>
-        <translation>%1: Zjištěn pokus o vpravení privilegovaného příkazů prostřednictvím LC_ALL env(%2). Ukončuje se!
+        <translation>%1: Zjištěn pokus o vpravení privilegovaného příkazu prostřednictvím LC_ALL env(%2). Ukončuje se!
 </translation>
     </message>
     <message>
