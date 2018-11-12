@@ -27,7 +27,7 @@ Digita la tua password.</translation>
     <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;%1&lt;/b&gt; richiede privilegi di amministratore.&lt;br&gt;Inserire il password per favore.</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="52"/>
@@ -53,7 +53,20 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Uso: %1 opzione [comando [argomenti...]]
+
+Frontend grafico per  %2/%3
+
+Argomenti:
+··opzioni:
+··· -h|--help     Mostra questo aiuto.
+····-v|--version   Mostra versione.
+····-s|--su        Usa %3(1) come backend.
+····-d|--sudo      Usa %2(8) come backend.
+··command          Comando da eseguire.
+··arguments        Argomenti opzionali per il comando.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="84"/>
@@ -88,23 +101,25 @@ Arguments:
         <location filename="../sudo.cpp" line="240"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exitting!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Rilevato tentativo di inserimento di un commando con privilegi tramite LC_ALL env(%2). Esco!
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="259"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Esecuzione di &apos;%2&apos; fallita: %3
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="282"/>
         <source>Failed to set non-block: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Settaggio non-block fallito: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="290"/>
         <source>Failed to fdopen: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Fallito fdopen: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="321"/>
