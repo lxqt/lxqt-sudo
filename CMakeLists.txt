@@ -14,10 +14,13 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
 
-find_package(Qt5Widgets REQUIRED)
-message(STATUS "Building with Qt${Qt5Core_VERSION}")
+# Minimum Versions
+set(LXQT_MINIMUM_VERSION "0.14.0")
+set(QT_MINIMUM_VERSION "5.7.1")
 
-find_package(lxqt REQUIRED)
+find_package(Qt5Widgets ${QT_MINIMUM_VERSION} REQUIRED)
+find_package(lxqt ${LXQT_MINIMUM_VERSION} REQUIRED)
+message(STATUS "Building with Qt${Qt5Core_VERSION}")
 
 # Patch version 0
 
