@@ -6,7 +6,7 @@
     <message>
         <location filename="../passworddialog.ui" line="14"/>
         <source>LXQt sudo</source>
-        <translation></translation>
+        <translation>«sudo» doLXQt</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="77"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../passworddialog.cpp" line="52"/>
         <source>Attempt #%1</source>
-        <translation>Intento número %1</translation>
+        <translation>Intento núm. %1</translation>
     </message>
 </context>
 <context>
@@ -47,7 +47,20 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation></translation>
+        <translation>Uso: %1 opción [orde [argumentos...]]
+
+Interface gráfica para %2/%3
+
+Argumentos:
+  opción:
+    -h|--help       Amosa esta axuda.
+    -v|--version    Amosa a información da versión.
+    -s|--su         Use %3(1) como infraestrutura.
+    -d|--sudo       Use %2(8)  como infraestrutura.
+  orde              Orde a executar.
+  argumentos        Argumentos opcionais para a orde.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="84"/>
@@ -96,7 +109,7 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="290"/>
         <source>Failed to fdopen: %1</source>
-        <translation>Produciuse un fallo en fdopen: %1</translation>
+        <translation>Produciuse un fallo no «fdopen»: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="321"/>
