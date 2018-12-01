@@ -27,7 +27,7 @@ Please enter your password.</source>
     <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;%1&lt;/b&gt; требует привилегий администратора.&lt;br&gt;Пожалуйста, введите пароль.</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="52"/>
