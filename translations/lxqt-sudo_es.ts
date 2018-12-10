@@ -19,12 +19,6 @@
         <translation>Contraseña:</translation>
     </message>
     <message>
-        <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
-Please enter your password.</source>
-        <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; necesita privilegios de administrador.
-Introduzca su contraseña.</translation>
-    </message>
-    <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; necesita privilegios administrativos.&lt;br&gt;Introduzca su contraseña.</translation>
@@ -87,10 +81,6 @@ Argumentos:
         <location filename="../sudo.cpp" line="177"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: ¡no se ha elegido ninguna aplicación de fondo!</translation>
-    </message>
-    <message>
-        <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation type="vanished">%1: aviso - hay varios argumentos para la aplicación de fondo%2; se reducen a uno: %3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="197"/>

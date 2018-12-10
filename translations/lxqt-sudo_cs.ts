@@ -19,12 +19,6 @@
         <translation>Heslo:</translation>
     </message>
     <message>
-        <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
-Please enter your password.</source>
-        <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; vyžaduje oprávnění na úrovni správce.
-Zadejte své heslo.</translation>
-    </message>
-    <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; potřebuje oprávnění správce.&lt;br&gt;Zadejte své heslo.</translation>
@@ -87,10 +81,6 @@ Argumenty:
         <location filename="../sudo.cpp" line="177"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: nevybrána žádná podpůrná vrstva!</translation>
-    </message>
-    <message>
-        <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation type="vanished">%1: varování – obdrženo vícero argumentů pro podpůrnou vrstvu %2, použije se pouze: %3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="197"/>
