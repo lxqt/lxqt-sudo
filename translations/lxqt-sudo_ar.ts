@@ -19,12 +19,6 @@
         <translation>كلمة السر:</translation>
     </message>
     <message>
-        <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
-Please enter your password.</source>
-        <translation type="vanished">يحتاج &lt;b&gt;%1&lt;/b&gt; امتيازات المدير.
-رجاءً أدخِل كلمة السر.</translation>
-    </message>
-    <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
         <translation type="unfinished"></translation>
@@ -87,10 +81,6 @@ Arguments:
         <location filename="../sudo.cpp" line="177"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: لم تختر سندا!</translation>
-    </message>
-    <message>
-        <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation type="vanished">%1: تحذير - حصلتُ على عدد من المعاملات للسند %2، سأجمعها في واحدة: %3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="197"/>

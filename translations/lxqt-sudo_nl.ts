@@ -19,12 +19,6 @@
         <translation>Wachtwoord:</translation>
     </message>
     <message>
-        <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
-Please enter your password.</source>
-        <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; heeft beheerdersrechten (root) nodig.
-Geef a.u.b. uw wachtwoord in.</translation>
-    </message>
-    <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; heeft beheerdersrechten nodig.&lt;br&gt;Voer a.u.b. uw wachtwoord in.</translation>
@@ -87,10 +81,6 @@ Argumenten:
         <location filename="../sudo.cpp" line="177"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: geen achtergronddienst gekozen.</translation>
-    </message>
-    <message>
-        <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation type="vanished">%1: waarschuwing: meerdere argumenten ontvangen voor achtergronddienst %2. Worden samengeperst in één: %3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="197"/>

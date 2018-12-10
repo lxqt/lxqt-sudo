@@ -19,12 +19,6 @@
         <translation>Parola:</translation>
     </message>
     <message>
-        <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
-Please enter your password.</source>
-        <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; yetkili kullanıcı hakları gerektiriyor.
-Lütfen yönetici parolanızı giriniz.</translation>
-    </message>
-    <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
         <translation type="unfinished"></translation>
@@ -87,10 +81,6 @@ Parametreler:
         <location filename="../sudo.cpp" line="177"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: arkauç seçilmedi!</translation>
-    </message>
-    <message>
-        <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation type="vanished">%1: uyarı - %2 arka uç için birden fazla argüman var, biriyle çakışıyor: %3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="197"/>

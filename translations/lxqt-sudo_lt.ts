@@ -19,12 +19,6 @@
         <translation>Slaptažodis:</translation>
     </message>
     <message>
-        <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
-Please enter your password.</source>
-        <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; reikalauja administratoriaus teisių.
-Prašome įrašyti savo slaptažodį.</translation>
-    </message>
-    <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; reikalauja administratoriaus teisių.&lt;br&gt;Prašome įrašyti savo slaptažodį.</translation>
@@ -87,10 +81,6 @@ Argumentai:
         <location filename="../sudo.cpp" line="177"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: nepasirinkta vidinė pusė!</translation>
-    </message>
-    <message>
-        <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation type="vanished">%1: įspėjimas - gauti keli argumentai, skirti %2 vidinei pusei, juos sujungiama į vieną: %3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="197"/>

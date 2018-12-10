@@ -19,12 +19,6 @@
         <translation>Κωδικός πρόσβασης:</translation>
     </message>
     <message>
-        <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
-Please enter your password.</source>
-        <translation type="vanished">Το &lt;b&gt;%1&lt;/b&gt; απαιτεί προνόμια διαχειριστή.
-Παρακαλώ εισαγάγετε τον κωδικό πρόσβασης.</translation>
-    </message>
-    <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
         <translation>Το &lt;b&gt;%1&lt;/b&gt; απαιτεί προνόμια διαχειριστή.&lt;br&gt;Παρακαλώ εισαγάγετε τον κωδικό πρόσβασης.</translation>
@@ -87,10 +81,6 @@ Arguments:
         <location filename="../sudo.cpp" line="177"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: δεν έχετε επιλέξει το σύστημα υποστήριξης!</translation>
-    </message>
-    <message>
-        <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation type="vanished">%1: προειδοποίηση - ελήφθησαν πολλαπλά ορίσματα για το σύστημα υποστήριξης %2· διατήρηση του ενός: %3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="197"/>

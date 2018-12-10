@@ -19,12 +19,6 @@
         <translation>ססמה:</translation>
     </message>
     <message>
-        <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
-Please enter your password.</source>
-        <translation type="vanished">ל־&lt;b&gt;%1&lt;/b&gt; נדרשות הרשאות ניהול.
-נא להקליד את הססמה שלך.</translation>
-    </message>
-    <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
         <translation>ל־&lt;b&gt;%1&lt;/b&gt; נדרשות הרשאות ניהוליות.&lt;br&gt;נא להקליד את הססמה שלך.</translation>

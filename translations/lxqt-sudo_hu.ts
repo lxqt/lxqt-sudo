@@ -19,12 +19,6 @@
         <translation>Jelszó:</translation>
     </message>
     <message>
-        <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
-Please enter your password.</source>
-        <translation type="vanished">A &lt;b&gt;%1&lt;/b&gt; rendszergazdai jogokat igényel.
-Meg kell adni a jelszót.</translation>
-    </message>
-    <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
         <translation type="unfinished"></translation>
@@ -88,10 +82,6 @@ paraméterek:
         <location filename="../sudo.cpp" line="177"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: nincs végrehajtó választva!</translation>
-    </message>
-    <message>
-        <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation type="vanished">%1: Több paraméter lett a %2 végrehajtónak megadva, a %3 lesz használva</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="197"/>

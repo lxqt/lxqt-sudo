@@ -19,12 +19,6 @@
         <translation>Hasło:</translation>
     </message>
     <message>
-        <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
-Please enter your password.</source>
-        <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; potrzebuje uprawnień administratora.
-Proszę wprowadź hasło.</translation>
-    </message>
-    <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; wymaga uprawnień administratora.&lt;br&gt;Wprowadź swoje hasło.</translation>
@@ -87,10 +81,6 @@ Argumenty:
         <location filename="../sudo.cpp" line="177"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: nie wybrano backendu!</translation>
-    </message>
-    <message>
-        <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation type="vanished">%1: ostrzeżenie – wiele argumentów dla backendu %2, połączono w jeden: %3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="197"/>

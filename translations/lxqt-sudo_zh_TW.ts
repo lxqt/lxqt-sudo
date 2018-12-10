@@ -19,12 +19,6 @@
         <translation>密碼：</translation>
     </message>
     <message>
-        <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
-Please enter your password.</source>
-        <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; 需要管理員權限。
-請輸入您的密碼。</translation>
-    </message>
-    <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
         <translation type="unfinished"></translation>
@@ -87,10 +81,6 @@ GUI 前端 %2/%3
         <location filename="../sudo.cpp" line="177"/>
         <source>%1: no backend chosen!</source>
         <translation>%1：沒有選擇後端！</translation>
-    </message>
-    <message>
-        <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation type="vanished">%1：警告 - %2 後端得到多項參數，壓縮成一個：%3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="197"/>

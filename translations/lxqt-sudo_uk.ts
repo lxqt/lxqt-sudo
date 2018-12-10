@@ -19,12 +19,6 @@
         <translation>Пароль:</translation>
     </message>
     <message>
-        <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
-Please enter your password.</source>
-        <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; вимагає прав адміністратора.
-Будь ласка, введіть Ваш пароль.</translation>
-    </message>
-    <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
         <translation type="unfinished"></translation>
@@ -87,10 +81,6 @@ Arguments:
         <location filename="../sudo.cpp" line="177"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: не вибрано бекенд!</translation>
-    </message>
-    <message>
-        <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation type="obsolete">%1: увага - отримано багато аргументів для %2 бекенду, що зливаються в один: %3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="197"/>

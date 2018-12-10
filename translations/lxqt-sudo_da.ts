@@ -19,12 +19,6 @@
         <translation>Adgangskode:</translation>
     </message>
     <message>
-        <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
-Please enter your password.</source>
-        <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; behøver administrative rettigheder.
-Indtast venligst din adgangskode.</translation>
-    </message>
-    <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; behøver administrative rettigheder.&lt;br&gt;Indtast venligst din adgangskode.</translation>
@@ -87,10 +81,6 @@ Argumenter:
         <location filename="../sudo.cpp" line="177"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: ingen backend valgt!</translation>
-    </message>
-    <message>
-        <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation type="vanished">%1: advarsel - gik adskillige argumenter til %2-backend, samler dem i ét: %3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="197"/>

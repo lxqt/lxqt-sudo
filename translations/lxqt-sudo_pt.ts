@@ -19,12 +19,6 @@
         <translation>Palavra-passe:</translation>
     </message>
     <message>
-        <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.
-Please enter your password.</source>
-        <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; necessita de ser executado como administrador.
-Por favor digite a sua palavra-passe.</translation>
-    </message>
-    <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
         <translation type="unfinished"></translation>
@@ -87,10 +81,6 @@ Argumentos:
         <location filename="../sudo.cpp" line="177"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: infraestrutura não escolhida!</translation>
-    </message>
-    <message>
-        <source>%1: warning - got multiple arguments for %2 backend, squashing into one: %3</source>
-        <translation type="vanished">%1: aviso - diversos argumentos para a infraestrutura %2, serão unidos em apenas um: %3</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="197"/>
