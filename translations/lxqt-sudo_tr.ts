@@ -98,7 +98,8 @@ Parametreler:
         <location filename="../sudo.cpp" line="259"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation>%1: &apos;%2&apos; çalıştırılamadı: %3</translation>
+        <translation>%1: &apos;%2&apos; çalıştırılamadı: %3
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="282"/>
@@ -114,7 +115,8 @@ Parametreler:
         <location filename="../sudo.cpp" line="321"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation>Child &apos;%1&apos; işlem başarısız!</translation>
+        <translation>Child &apos;%1&apos; işlem başarısız!
+%2</translation>
     </message>
 </context>
 </TS>
