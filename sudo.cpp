@@ -194,7 +194,7 @@ int Sudo::main()
 
     if (-1 == mChildPid)
         QMessageBox(QMessageBox::Critical, mDlg->windowTitle()
-                , tr("Failed to fork: %1").arg(strerror(errno)), QMessageBox::Ok).exec();
+                , tr("Syscall error, failed to fork: %1").arg(strerror(errno)), QMessageBox::Ok).exec();
     else
         return parent();
 
@@ -279,7 +279,7 @@ int Sudo::parent()
     if (0 != fcntl(mPwdFd, F_SETFL, O_NONBLOCK))
     {
         QMessageBox(QMessageBox::Critical, mDlg->windowTitle()
-                , tr("Failed to set non-block: %1").arg(strerror(errno)), QMessageBox::Ok).exec();
+                , tr("Syscall error, failed to bring pty to non-block mode: %1").arg(strerror(errno)), QMessageBox::Ok).exec();
         return 1;
     }
 
@@ -287,7 +287,7 @@ int Sudo::parent()
     if (nullptr == pwd_f)
     {
         QMessageBox(QMessageBox::Critical, mDlg->windowTitle()
-                , tr("Failed to fdopen: %1").arg(strerror(errno)), QMessageBox::Ok).exec();
+                , tr("Syscall error, failed to fdopen pty: %1").arg(strerror(errno)), QMessageBox::Ok).exec();
         return 1;
     }
 
