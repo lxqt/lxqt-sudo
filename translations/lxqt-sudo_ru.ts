@@ -55,8 +55,8 @@ Arguments:
   опции:
     -h|--help      Напечатать эту справку.
     -v|--version   Напечатать информацию о версии.
-    -s|--su        Использовать %3(1) как бэкенд.
-    -d|--sudo      Использовать %2(8) как бэкенд.
+    -s|--su        Использовать %3(1) для повышения привилегий.
+    -d|--sudo      Использовать %2(8) для повышения привилегий.
   command          Запускаемая команда.
   arguments        Дополнительные аргументы для команды.
 
@@ -80,18 +80,19 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="177"/>
         <source>%1: no backend chosen!</source>
-        <translation>%1: бэкенд не выбран!</translation>
+        <translation>%1: метод повышения привилегий не выбран!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="197"/>
         <source>Failed to fork: %1</source>
-        <translation>Не удалось форкнуть: %1</translation>
+        <translation>Не удалось выполнить fork(): %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="240"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exitting!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Обнаружена попытка выполнения привилегированной команды посредства вставки в переменную среды LC_ALL (%2). Завершение!
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="259"/>
