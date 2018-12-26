@@ -66,7 +66,7 @@ lxqt_app_translation_loader(SRCS ${PROJECT_NAME})
 #************************************************
 
 add_executable(lxqt-sudo
-    ${SRCS}
+    ${SRCS} ${UIS}
     ${DESKTOP_FILES}
     ${QM_FILES}
 )
@@ -87,26 +87,9 @@ target_compile_definitions(lxqt-sudo
     PRIVATE "LXQT_VERSION=\"${LXQT_VERSION}\""
 )
 
-add_custom_command(TARGET lxqt-sudo POST_BUILD
-    COMMAND ln -f -s lxqt-sudo "${LINK_LXSU}"
-    WORKING_DIRECTORY .
-    COMMENT "Creating ${LINK_LXSU} symlink"
-)
-
-add_custom_command(TARGET lxqt-sudo POST_BUILD
-    COMMAND ln -f -s lxqt-sudo "${LINK_LXSUDO}"
-    WORKING_DIRECTORY .
-    COMMENT "Creating ${LINK_LXSUDO} symlink"
-)
-
 install(TARGETS
     lxqt-sudo
     RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
-    COMPONENT Runtime
-)
-install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/${LINK_LXSU}" "${CMAKE_CURRENT_BINARY_DIR}/${LINK_LXSUDO}"
-    DESTINATION "${CMAKE_INSTALL_BINDIR}"
     COMPONENT Runtime
 )
 install(FILES
@@ -119,3 +102,12 @@ install(FILES
     DESTINATION "${CMAKE_INSTALL_MANDIR}/man1"
     COMPONENT Runtime
 )
+
+MACRO(install_symlink FILEPATH SYMPATH)
+    install(CODE "message(\"-- Creating symlink: ${SYMPATH} -> ${FILEPATH}\")")
+    install(CODE "execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink
+      \"${FILEPATH}\" \"${SYMPATH}\")")
+ENDMACRO(install_symlink)
+
+install_symlink( lxqt-sudo "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_BINDIR}/${LINK_LXSU}"   )
+install_symlink( lxqt-sudo "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_BINDIR}/${LINK_LXSUDO}" )
