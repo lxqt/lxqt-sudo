@@ -80,7 +80,7 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="177"/>
         <source>%1: no backend chosen!</source>
-        <translation>%1: метод повышения привилегий не выбран!</translation>
+        <translation>%1: вспомогательная программа повышения привилегий не выбрана!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="197"/>
