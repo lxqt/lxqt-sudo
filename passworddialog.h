@@ -40,12 +40,15 @@ class PasswordDialog : public QDialog
 
 public:
     PasswordDialog(const QString & cmd
+            , const QString & backendName
             , QWidget * parent = 0
             , Qt::WindowFlags f = 0);
     ~PasswordDialog();
 
-    virtual void showEvent(QShowEvent * event) override;
     QString password() const;
+
+protected:
+    virtual void showEvent(QShowEvent * event) override;
 
 private:
     QScopedPointer<Ui::PasswordDialog> ui;

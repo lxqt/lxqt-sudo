@@ -50,6 +50,20 @@ public:
     Sudo();
     ~Sudo();
     int main();
+
+    /// A name of the backend for the purpose of the display to the user
+    QString backendName() {
+        return backendName(mBackend);
+    }
+    /// A static version of previous one.
+    /// @returns a backend name for the given \p backEnd.
+    static QString backendName (backend_t backEnd);
+    ///
+    /// @returns a squashed and quoted string of arguments suitable to passsed to shell
+    /// @arg userFriendly  -  if true, performes a smarter quoting (e.g. no quoting for
+    ///                       string with no special characters)
+    QString squashedArgs (bool userFriendly=0) const;
+
 private:
     //parent methods
     int parent();
@@ -62,7 +76,6 @@ private:
     QScopedPointer<PasswordDialog> mDlg;
     QStringList mArgs;
     backend_t mBackend;
-    QString mSquashedArgs;
 
     int mChildPid;
     int mPwdFd;

@@ -117,9 +117,22 @@ namespace
             });
             if (i == ALLOWED_END || key != *i)
             {
-                unsetenv(key.toStdString().c_str());
+                unsetenv(key.toLatin1().data());
             }
         }
+    }
+
+    inline QString quoteShellArg(const QString& arg, bool userFriendly)
+    {
+        QString rv = arg;
+
+        //^ check if thre are any bash special file characters
+        if (!userFriendly || arg.contains(QRegExp("(\\s|[][!\"#$&'()*,;<=>?\\^`{}|~])"))) {
+            rv.replace(QStringLiteral("'"), QStringLiteral("'\\''"));
+            rv.prepend ('\'').append('\'');
+        }
+
+        return rv;
     }
 }
 
@@ -178,9 +191,6 @@ int Sudo::main()
         return 1;
     }
 
-    mArgs.replaceInStrings(QStringLiteral("'"), QStringLiteral("'\\''"));
-    mSquashedArgs = mArgs.replaceInStrings(QRegExp(QStringLiteral("^(.*)$")), "'\\1'").join(QStringLiteral(" "));
-
     mChildPid = forkpty(&mPwdFd, nullptr, nullptr, nullptr);
     if (0 == mChildPid)
     {
@@ -188,7 +198,7 @@ int Sudo::main()
         return 1; // but for sure
     }
 
-    mDlg.reset(new PasswordDialog{mSquashedArgs});
+    mDlg.reset(new PasswordDialog{squashedArgs(/*userFriendly = */ true), backendName()});
     mDlg->setModal(true);
     lxqtApp->setActiveWindow(mDlg.data());
 
@@ -201,6 +211,31 @@ int Sudo::main()
     return 1;
 }
 
+QString Sudo::squashedArgs(bool userFriendly) const
+{
+    QString rv;
+
+    rv = quoteShellArg (mArgs[0], userFriendly);
+    for (auto argP = ++mArgs.begin(); argP != mArgs.end(); ++argP) {
+        rv.append (' ').append(quoteShellArg (*argP, userFriendly));
+    }
+
+    return rv;
+}
+
+QString Sudo::backendName (backend_t backEnd)
+{
+    QString rv;
+    // Remove leading paths in case variables are set with full path
+    switch (backEnd) {
+        case BACK_SU   : rv = su_prog;   break;
+        case BACK_SUDO : rv = sudo_prog; break;
+        //: shouldn't be actually used but keep as short as possible in translations just in case.
+        case BACK_NONE : rv = tr("unset");
+    }
+
+    return rv;
+}
 
 void Sudo::child()
 {
@@ -209,13 +244,9 @@ void Sudo::child()
     std::unique_ptr<char const *[]> params{new char const *[params_cnt]};
     const char ** param_arg = params.get() + 1;
 
-    std::string program;
-    if (BACK_SU == mBackend)
+    std::string program = backendName().toLocal8Bit().data();
+    if (BACK_SUDO == mBackend)
     {
-        program = su_prog.toStdString();
-    } else
-    {
-        program = sudo_prog.toStdString();
         *(param_arg++) = "-E"; //preserve environment
         *(param_arg++) = "/bin/sh";
     }
@@ -226,7 +257,6 @@ void Sudo::child()
     // Note: we force the su/sudo to communicate with us in the simplest
     // locale and then set the locale back for the command
     char const * const env_lc_all = getenv("LC_ALL");
-    setenv("LC_ALL", "C", 1);
     std::string command;
     if (env_lc_all == nullptr)
     {
@@ -245,10 +275,12 @@ void Sudo::child()
         command += "' ";
     }
     command += "exec ";
-    command += mSquashedArgs.toStdString();
+    command += squashedArgs().toLocal8Bit().data();
     *(param_arg++) = command.c_str();
 
     *param_arg = nullptr;
+
+    setenv("LC_ALL", "C", 1);
 
     env_workarounds();
 
@@ -314,7 +346,7 @@ int Sudo::parent()
             {
                 pwd_watcher.reset(nullptr); //stop the notifications events
 
-                QString const & prog = BACK_SU == mBackend ? su_prog : sudo_prog;
+                QString const & prog = backendName();
                 if (last_line.startsWith(QStringLiteral("%1:").arg(prog)))
                 {
                     QMessageBox(QMessageBox::Critical, mDlg->windowTitle()

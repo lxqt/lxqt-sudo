@@ -28,8 +28,11 @@
 #include "passworddialog.h"
 #include "ui_passworddialog.h"
 #include <QIcon>
+#include <QClipboard>
+#include <QToolButton>
 
 PasswordDialog::PasswordDialog(const QString & cmd
+        , const QString & backendName
         , QWidget * parent/* = 0*/
         , Qt::WindowFlags f/* = 0*/)
     : QDialog(parent, f)
@@ -38,7 +41,12 @@ PasswordDialog::PasswordDialog(const QString & cmd
     ui->setupUi(this);
 
     ui->commandL->setText(cmd);
-    ui->descriptionL->setText(tr("<b>%1</b> needs administrative privileges.<br>Please enter your password.").arg(cmd));
+
+    connect(ui->commandCopyBtn, &QToolButton::clicked, [cmd]() {
+        QApplication::clipboard()->setText (cmd);
+    });
+
+    ui->backendL->setText(backendName);
     ui->iconL->setPixmap(QIcon::fromTheme("dialog-password").pixmap(64, 64));
     setWindowIcon(QIcon::fromTheme("security-high"));
 }
@@ -50,6 +58,7 @@ PasswordDialog::~PasswordDialog()
 void PasswordDialog::showEvent(QShowEvent * event)
 {
     ui->errorL->setText(tr("Attempt #%1").arg(++mAttempt));
+    ui->passwordLE->setFocus();
     return QDialog::showEvent(event);
 }
 
