@@ -84,15 +84,24 @@ Argumentos:
     </message>
     <message>
         <location filename="../sudo.cpp" line="197"/>
-        <source>Failed to fork: %1</source>
-        <translation>Fallo al bifurcar: %1</translation>
+        <source>Syscall error, failed to fork: %1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="240"/>
-        <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exitting!
+        <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation>%1: Detectado un intento de inyectar un comando con privilegios vía LC_ALL env(%2). ¡Saliendo!
-</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sudo.cpp" line="282"/>
+        <source>Syscall error, failed to bring pty to non-block mode: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sudo.cpp" line="290"/>
+        <source>Syscall error, failed to fdopen pty: %1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="259"/>
@@ -100,16 +109,6 @@ Argumentos:
 </source>
         <translation>%1: Ha fallado al ejecutar &apos;%2&apos;: %3
 </translation>
-    </message>
-    <message>
-        <location filename="../sudo.cpp" line="282"/>
-        <source>Failed to set non-block: %1</source>
-        <translation>Fallo al intentar no bloquear: %1</translation>
-    </message>
-    <message>
-        <location filename="../sudo.cpp" line="290"/>
-        <source>Failed to fdopen: %1</source>
-        <translation>Fallo en fdopen: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="321"/>
