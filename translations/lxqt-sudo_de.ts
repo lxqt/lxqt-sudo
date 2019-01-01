@@ -16,7 +16,7 @@
     <message>
         <location filename="../passworddialog.ui" line="84"/>
         <source>Password:</source>
-        <translation>Kennwort:</translation>
+        <translation>Passwort:</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="41"/>
