@@ -6,7 +6,7 @@
     <message>
         <location filename="../passworddialog.ui" line="14"/>
         <source>LXQt sudo</source>
-        <translation>LXQt kjør som administrator</translation>
+        <translation>LXQt sudo</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="77"/>
@@ -102,7 +102,7 @@ Argumenter:
     <message>
         <location filename="../sudo.cpp" line="290"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation>Feil med Syscall., Klarte ikke å kjøre fdopen pty: %1</translation>
+        <translation>Feil med Syscall. Klarte ikke å kjøre fdopen pty: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="259"/>
