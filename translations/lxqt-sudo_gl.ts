@@ -85,24 +85,24 @@ Argumentos:
     <message>
         <location filename="../sudo.cpp" line="197"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation>Produciuse un erro de «syscal», non se puido bifurcar: %1</translation>
+        <translation>Produciuse un erro de chamada ao sistema, non foi posíbel crear o subproceso: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="240"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation>%1: Detectouse un intento para inxectar ordes privilexiadas a través de LC_ALL env(%2). Saíndo!
+        <translation>%1: Detectouse un intento de inxectar ordes con privilexios a través de LC_ALL env(%2). Saíndo!
 </translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="282"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation>Produciuse un erro de «syscal», non se puido levar a pty a modo de non bloqueo: %1</translation>
+        <translation>Produciuse un erro de chamada ao sistema, non foi posíbel poñer «pty» en modo desbloqueado: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="290"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation>Produciuse un erro de «syscall», non se puido aplicar fdopen a pty: %1</translation>
+        <translation>Produciuse un erro de chamada ao sistema, non foi posíbel aplicar «fdopen» a «pty»: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="259"/>
