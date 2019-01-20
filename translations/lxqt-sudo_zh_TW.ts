@@ -21,7 +21,7 @@
     <message>
         <location filename="../passworddialog.cpp" line="41"/>
         <source>&lt;b&gt;%1&lt;/b&gt; needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;%1&lt;/b&gt; 需要管理員權限。&lt;br&gt;請輸入您的密碼。</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="52"/>
