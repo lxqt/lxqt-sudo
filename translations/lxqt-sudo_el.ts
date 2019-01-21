@@ -11,27 +11,27 @@
     <message>
         <location filename="../passworddialog.ui" line="42"/>
         <source>Copy command to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Αντιγραφή της εντολής στο πρόχειρο</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Αντιγραφή</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>Η αιτηθείσα ενέργεια απαιτεί προνόμια διαχειριστή.&lt;br&gt;Παρακαλώ εισαγάγετε τον κωδικό πρόσβασης.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
         <source>LXQt sudo backend</source>
-        <translation type="unfinished"></translation>
+        <translation>Σύστημα υποστήριξης sudo LXQt</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
         <source>A program LXQt sudo calls in background to elevate priveledges.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ένα πρόγραμμα το οποίο καλεί το LXQt sudo για την παραχώρηση προνομίων</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../passworddialog.ui" line="133"/>
         <source>Enter password</source>
-        <translation type="unfinished"></translation>
+        <translation>Εισαγάγετε τον κωδικό πρόσβασης</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="60"/>
@@ -116,7 +116,7 @@ Arguments:
         <location filename="../sudo.cpp" line="234"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>ανενεργό</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="270"/>
