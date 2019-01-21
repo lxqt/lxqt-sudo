@@ -6,32 +6,32 @@
     <message>
         <location filename="../passworddialog.ui" line="6"/>
         <source>LXQt sudo</source>
-        <translation>«sudo» doLXQt</translation>
+        <translation>LXQt sudo</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="42"/>
         <source>Copy command to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar a orde no portapapeis</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Copiar</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>A acción solicitada necesita privilexios administrativos.&lt;br&gt;Introduza o seu contrasinal.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
         <source>LXQt sudo backend</source>
-        <translation type="unfinished"></translation>
+        <translation>Infraestrutura do LXQt sudo</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
         <source>A program LXQt sudo calls in background to elevate priveledges.</source>
-        <translation type="unfinished"></translation>
+        <translation>Un programa LXQt sudo chama en segundo plano para elevar os privilexios.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../passworddialog.ui" line="133"/>
         <source>Enter password</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduza o contrasinal</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="60"/>
