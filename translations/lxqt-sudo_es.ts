@@ -11,27 +11,27 @@
     <message>
         <location filename="../passworddialog.ui" line="42"/>
         <source>Copy command to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar el comando al portapapeles</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Copiar</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>La acción solicitada necesita privilegios de administrador.&lt;br&gt;Introduzca la contraseña.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
         <source>LXQt sudo backend</source>
-        <translation type="unfinished"></translation>
+        <translation>Comando de LXQt sudo</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
         <source>A program LXQt sudo calls in background to elevate priveledges.</source>
-        <translation type="unfinished"></translation>
+        <translation>El programa al que llama LXQt sudo internamente para adquirir privilegios.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../passworddialog.ui" line="133"/>
         <source>Enter password</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca la contraseña</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="60"/>
@@ -116,7 +116,7 @@ Argumentos:
         <location filename="../sudo.cpp" line="234"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">indefinido</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="270"/>
