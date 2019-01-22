@@ -6,27 +6,27 @@
     <message>
         <location filename="../passworddialog.ui" line="6"/>
         <source>LXQt sudo</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">LXQt sudo</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="42"/>
         <source>Copy command to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>クリップボードにコピー</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>コピー（&amp;C）</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>この操作は管理者権限が必要です。&lt;br&gt;あなたのパスワードを入力してください。</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
         <source>LXQt sudo backend</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt sudo バックエンド</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
