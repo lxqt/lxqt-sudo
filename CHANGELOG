@@ -1,4 +1,23 @@
 
+lxqt-sudo-0.14.0 / 2019-01-25
+=============================
+
+  * Implementation fixes:
+    - sudo: Force "C" locale for su/sudo
+    - sudo: Prevent malicious attempts for command injection
+    - sudo: Use better child ending logic
+    - sudo: Strip environment - Leave only required environment 
+      variables (for X & locale) to get into the elevated child
+      process.
+    - sudo: Make critical error messages less obscure
+    - ui: Fixed the layout and line-break
+  * Improved cmake scripting
+    - Set cmake_minimum_required to 3.1.0
+  * Moved translations from lxqt-l10n back to lxqt-sudo
+    - Removed obsolete translation fuctionality
+    - Added translation promo in README.md
+  * Translation updates
+
 lxqt-sudo-0.13.0 / 2018-05-21
 =============================
 
@@ -7,8 +26,8 @@ lxqt-sudo-0.13.0 / 2018-05-21
   * fix http -> https
   * Fixed mentions of LXDE
 
-0.12.0 / 2017-10-21
-===================
+lxqt-sudo-0.12.0 / 2017-10-21
+=============================
 
   * Release 0.12.0: Update changelog
   * Set informal patch version
@@ -17,14 +36,14 @@ lxqt-sudo-0.13.0 / 2018-05-21
   * set Qt::AA_UseHighDpiPixmaps to true
   * Bump year
 
-0.11.1 / 2017-01-01
-===================
+lxqt-sudo-0.11.1 / 2017-01-01
+=============================
 
   * Release 0.11.1: Update changelog
   * Make CMakeLists.txt more uniform.
 
-0.11.0 / 2016-09-24
-===================
+lxqt-sudo-0.11.0 / 2016-09-24
+=============================
 
   * Release 0.11.0: Add changelog
   * Add README.md
@@ -36,8 +55,8 @@ lxqt-sudo-0.13.0 / 2018-05-21
   * Updated Russian translation Fix language and typos
   * Add Russian translation
 
-0.10.0 / 2015-11-02
-===================
+lxqt-sudo-0.10.0 / 2015-11-02
+=============================
 
   * Fix LICENSE file
   * Fix starting pcmanfm-qt
@@ -70,8 +89,8 @@ lxqt-sudo-0.13.0 / 2018-05-21
   * German translation
   * lxqt-sudo: licensing
 
-0.9.0 / 2015-06-10
-==================
+lxqt-sudo-0.9.0 / 2015-06-10
+============================
 
   * lxqt-sudo: direct communication with sudo
   * lxqt-sudo: use dialog-password icon
