@@ -11,17 +11,17 @@
     <message>
         <location filename="../passworddialog.ui" line="42"/>
         <source>Copy command to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Befehl in die Zwischenablage kopieren</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kopieren</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die angeforderte Aktion benötigt Administratorrechte.&lt;br&gt;Bitte geben Sie Ihr Passwort ein.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../passworddialog.ui" line="133"/>
         <source>Enter password</source>
-        <translation type="unfinished"></translation>
+        <translation>Passwort eingeben</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="60"/>
@@ -122,7 +122,8 @@ Argumente:
         <location filename="../sudo.cpp" line="270"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Versuch erkannt, einen privilegierten Befehl über LC_ALL env(%2) zu injizieren. Wird beendet!
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="314"/>
