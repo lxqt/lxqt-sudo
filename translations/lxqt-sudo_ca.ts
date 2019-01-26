@@ -11,27 +11,27 @@
     <message>
         <location filename="../passworddialog.ui" line="42"/>
         <source>Copy command to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Copia l&apos;ordre al porta-retalls</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Copia</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;acció sol·licitada necessita privilegis administratius.&lt;br&gt;Introduïu la vostra contrasenya.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
         <source>LXQt sudo backend</source>
-        <translation type="unfinished"></translation>
+        <translation>Dorsal de sudo de LXQt</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
         <source>A program LXQt sudo calls in background to elevate priveledges.</source>
-        <translation type="unfinished"></translation>
+        <translation>Un programa de sudo de LXQt crida en segon pla per elevar privilegis.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../passworddialog.ui" line="133"/>
         <source>Enter password</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduïu la contrasenya</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="60"/>
@@ -110,29 +110,30 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="207"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Error de syscall, ha fallat la bifurcació: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="234"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>sense establir</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="270"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1: s&apos;ha detectat l&apos;intent d&apos;injecció d&apos;ordre privilegiada a través de LC_ALL env(%2). Sortint!
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="314"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Error de syscall, no s&apos;ha pogut portar el pty al mode sense bloqueig: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="322"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Error de syscall, ha fallat fdopen pty: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="291"/>
