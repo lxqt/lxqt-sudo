@@ -82,8 +82,8 @@ Argumentos:
     -v|--version   Muestra la información de versión.
     -s|--su        Use %3(1) como aplicación de fondo.
     -d|--sudo      Use %2(8) como aplicación de fondo.
-  command          El comando a ejecutar.
-  arguments        Argumentos opcionales para el comando.
+  comando          El comando a ejecutar.
+  argumentos        Argumentos opcionales para el comando.
 
 </translation>
     </message>
