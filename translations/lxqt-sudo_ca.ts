@@ -80,8 +80,8 @@ Arguments:
   opció:
     -h|--help      Imprimeix aquesta ajuda.
     -v|--version   Imprimeix la informació de la versió.
-    -s|--su        Utilitza %3(1) com a rerefons.
-    -d|--sudo      Utilitza %2(8) com a rerefons.
+    -s|--su        Utilitza %3(1) com a dorsal.
+    -d|--sudo      Utilitza %2(8) com a dorsal.
   ordre            L&apos;ordre a executar.
   arguments        Els arguments opcionals per a l&apos;ordre.
 
@@ -105,7 +105,7 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="190"/>
         <source>%1: no backend chosen!</source>
-        <translation>%1: no s&apos;ha triat cap rerefons!</translation>
+        <translation>%1: no s&apos;ha triat cap dorsal!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="207"/>
