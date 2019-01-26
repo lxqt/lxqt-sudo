@@ -11,22 +11,22 @@
     <message>
         <location filename="../passworddialog.ui" line="42"/>
         <source>Copy command to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Komutu panoya kopyala</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kopyala</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eylem yönetici yetkisi gerektiriyor. &lt;br&gt;Lütfen parola giriniz.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
         <source>LXQt sudo backend</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQT Sudo arkaucu</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../passworddialog.ui" line="133"/>
         <source>Enter password</source>
-        <translation type="unfinished"></translation>
+        <translation>Parolayı girin</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="60"/>
@@ -110,7 +110,7 @@ Parametreler:
     <message>
         <location filename="../sudo.cpp" line="207"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Sistem çağrı hatası, çatallama başarısız: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="234"/>
