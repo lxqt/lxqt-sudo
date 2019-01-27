@@ -11,47 +11,47 @@
     <message>
         <location filename="../passworddialog.ui" line="42"/>
         <source>Copy command to clipboard</source>
-        <translation></translation>
+        <translation>Chép câu lệnh vào bảng nhớ tạm</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
         <source>&amp;Copy</source>
-        <translation></translation>
+        <translation>&amp;Sao chép</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation></translation>
+        <translation>Thưc hiện hành động này yêu cầu quyền quản trị.&lt;br&gt;Vui lòng nhập mật khẩu.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
         <source>LXQt sudo backend</source>
-        <translation></translation>
+        <translation>Phần phụ trợ cho LXQt sudo</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
         <source>A program LXQt sudo calls in background to elevate priveledges.</source>
-        <translation></translation>
+        <translation>Chương trình mà LXQt sudo gọi ngầm để có quyền quản trị.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
         <source>Command:</source>
-        <translation></translation>
+        <translation>Lệnh:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="126"/>
         <source>Password:</source>
-        <translation></translation>
+        <translation>Mật khẩu:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="133"/>
         <source>Enter password</source>
-        <translation></translation>
+        <translation>Nhập mật khẩu</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Attempt #%1</source>
-        <translation></translation>
+        <translation>Lần thử thứ #%1</translation>
     </message>
 </context>
 <context>
@@ -72,13 +72,27 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation></translation>
+        <translation>Cách dùng: %1 tùy chọn [lệnh [đối mục...]]
+
+Giao diện đồ hoạ cho %2/%3
+
+Các đối mục:
+  tùy chọn:
+    -h|--help      In ra hướng dẫn này.
+    -v|--version   In ra thông tin phiên bản
+    -s|--su        Sử dụng %3(1) cho việc chạy lệnh.
+    -d|--sudo      Sử dụng %2(8) cho việc chạy lệnh.
+  lệnh          Câu lệnh để thực hiện.
+  đối mục        Các đối mục cho câu lệnh. Có thể có hoặc không.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="84"/>
         <source>%1 version %2
 </source>
-        <translation></translation>
+        <translation>%1 phiên bản %2
+</translation>
     </message>
 </context>
 <context>
@@ -86,51 +100,55 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="183"/>
         <source>%1: no command to run provided!</source>
-        <translation></translation>
+        <translation>%1: không có lệnh nào để chạy!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="190"/>
         <source>%1: no backend chosen!</source>
-        <translation></translation>
+        <translation>%1: không có chương trình phụ trợ (backend) nào được chọn!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="207"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation></translation>
+        <translation>Lỗi thực thi lời gọi hệ thống, chia tiến trình thất bại: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="234"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
-        <translation></translation>
+        <translation>bỏ chọn</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="270"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation></translation>
+        <translation>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
+%1: Đã phát hiện sự chèn lệnh với quyền quản trị qua biến môi trường LC_ALL (%2). Chấm dứt thực thi!
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="314"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation></translation>
+        <translation>Lỗi thực thi lời gọi hệ thống, thất bại khi chuyển pty sang chế độ không chặn luồng thực thi: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="322"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation></translation>
+        <translation>Lỗi thực thi lời gọi hệ thống, thất bại khi gọi hàm fdopen() trên pty: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="291"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation></translation>
+        <translation>%1: Thất bại khi cố gắng thực thi &apos;%2&apos;: %3
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="353"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation></translation>
+        <translation>Tiến trình con &apos;%1&apos; failed!
+%2</translation>
     </message>
 </context>
 </TS>
