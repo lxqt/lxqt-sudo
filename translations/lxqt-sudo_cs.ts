@@ -11,7 +11,7 @@
     <message>
         <location filename="../passworddialog.ui" line="42"/>
         <source>Copy command to clipboard</source>
-        <translation>Kopírovat příkaz do schránky</translation>
+        <translation>Zkopírovat příkaz do schránky</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../passworddialog.ui" line="83"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation>Požadovaná činnost vyžaduje oprávnění správce.&lt;br&gt;Zadejte, prosím, své heslo.</translation>
+        <translation>Požadovaná činnost vyžaduje oprávnění na úrovni správce systému.&lt;br&gt;Zadejte své heslo.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../passworddialog.ui" line="109"/>
         <source>A program LXQt sudo calls in background to elevate priveledges.</source>
-        <translation>Program LXQt sudo volá na pozadí pro pozvednutí oprávnění.</translation>
+        <translation>Program, který LXQt sudo volá na pozadí a provádí zvýšení oprávnění.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../passworddialog.ui" line="133"/>
         <source>Enter password</source>
-        <translation>Zadat heslo</translation>
+        <translation>Zadejte heslo</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="60"/>
