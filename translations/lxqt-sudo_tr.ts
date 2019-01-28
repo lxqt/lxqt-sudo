@@ -31,7 +31,7 @@
     <message>
         <location filename="../passworddialog.ui" line="109"/>
         <source>A program LXQt sudo calls in background to elevate priveledges.</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt sudo yetkileri ayarlamak için arka planda çalışan bir programdır.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
@@ -122,12 +122,13 @@ Parametreler:
         <location filename="../sudo.cpp" line="270"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>% 1: LC_ALL env (% 2) ayrıcalıklı komutu aracılığıyla erişim girişiminde bulunuldu. Çıkılıyor!
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="314"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Sistem çağrısı hatası, pty&apos;yi blok olmayan moda getiremedi:% 1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="322"/>
