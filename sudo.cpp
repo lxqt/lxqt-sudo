@@ -89,7 +89,7 @@ namespace
         "DISPLAY"
             , "LANG", "LANGUAGE", "LC_ADDRESS", "LC_ALL", "LC_COLLATE", "LC_CTYPE", "LC_IDENTIFICATION", "LC_MEASUREMENT"
             , "LC_MESSAGES", "LC_MONETARY", "LC_NAME", "LC_NUMERIC", "LC_PAPER", "LC_TELEPHONE", "LC_TIME"
-            , "PATH", "QT_PLATFORM_PLUGIN", "QT_QPA_PLATFORMTHEME", "WAYLAND_DISPLAY", "XAUTHORITY"
+            , "PATH", "QT_PLATFORM_PLUGIN", "QT_QPA_PLATFORMTHEME", "WAYLAND_DISPLAY", "XAUTHLOCALHOSTNAME", "XAUTHORITY"
     };
     static constexpr char const * const * const ALLOWED_END = ALLOWED_VARS + sizeof (ALLOWED_VARS) / sizeof (ALLOWED_VARS[0]);
     struct assert_helper
