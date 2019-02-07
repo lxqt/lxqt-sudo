@@ -11,17 +11,17 @@
     <message>
         <location filename="../passworddialog.ui" line="42"/>
         <source>Copy command to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Salin ke papan klip</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Salin</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tindakan yang diminta memerlukan hak administratif. &lt;br&gt; Silakan masukkan kata sandi Anda.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../passworddialog.ui" line="133"/>
         <source>Enter password</source>
-        <translation type="unfinished"></translation>
+        <translation>Masukkan password</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="60"/>
