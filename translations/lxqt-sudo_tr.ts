@@ -133,7 +133,7 @@ Parametreler:
     <message>
         <location filename="../sudo.cpp" line="322"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Sistem çağrı hatası, fdopen pty başarısız: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="291"/>
