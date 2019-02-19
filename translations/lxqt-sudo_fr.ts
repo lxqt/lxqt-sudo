@@ -11,27 +11,27 @@
     <message>
         <location filename="../passworddialog.ui" line="42"/>
         <source>Copy command to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Copier la commande dans le presse-papier</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Copier</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;action demandée nécessite des privilèges d&apos;administrateur.&lt;br&gt;Veuillez entrer votre mot de passe.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
         <source>LXQt sudo backend</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt sudo en arrière-plan</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
         <source>A program LXQt sudo calls in background to elevate priveledges.</source>
-        <translation type="unfinished"></translation>
+        <translation>Un programme LXQt sudo appelle en arrière-plan pour élever les privilèges.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../passworddialog.ui" line="133"/>
         <source>Enter password</source>
-        <translation type="unfinished"></translation>
+        <translation>Entrer le mot de passe</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="60"/>
@@ -83,7 +83,7 @@ Arguments:
     -s|--su        Utilise %3(1) comme Backend.
     -d|--sudo      Utilise %2(8) comme Backend.
   Commande        Commande à exécuter.
-  Arguments        Arguments de la commande à exécuterl.
+  Arguments        Arguments de la commande à exécuter.
 
 </translation>
     </message>
@@ -91,7 +91,7 @@ Arguments:
         <location filename="../sudo.cpp" line="84"/>
         <source>%1 version %2
 </source>
-        <translation>%1 Version %2
+        <translation>%1 version %2
 </translation>
     </message>
 </context>
@@ -110,42 +110,43 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="207"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur d&apos;appel système, échec de la conversion: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="234"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>non spécifié</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="270"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Tentative détectée d&apos;injection d&apos;une commande privilégiée via LC_ALL env(%2). En sortant!
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="314"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur d&apos;appel système, échec du transfert de pty en mode sans blocage: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="322"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur d&apos;appel système, échec de fdopen pty: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="291"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation>%1: Impossible d&apos;exécuter &apos;%2&apos; :
-%3</translation>
+        <translation>%1: Impossible d&apos;exécuter &apos;%2&apos;: %3
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="353"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation>Echec du processus fils &apos;%1&apos; !
+        <translation>Échec du processus fils &apos;%1&apos; !
 %2</translation>
     </message>
 </context>
