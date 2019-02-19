@@ -18,7 +18,7 @@ To build run `make`, to install `make install` which accepts variable `DESTDIR` 
 
 ### Binary packages
 
-Official binary packages are provided by all major Linux distributions like Arch Linux, Debian (as of Debian stretch), Fedora and openSUSE. Just use your package manager to search for string `lxqt-sudo`.
+Official binary packages are provided by all major Linux distributions like Arch Linux, Debian (as of Debian stretch), Fedora and openSUSE. It's also available on FreeBSD. Just use your package manager to search for string `lxqt-sudo`.
 
 ## Configuration
 
