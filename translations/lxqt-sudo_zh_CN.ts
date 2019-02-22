@@ -110,13 +110,13 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="207"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation>Syscall错误，fork失败：％1</translation>
+        <translation>系统调用错误，引用失败：％1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="234"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>复原</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="270"/>
