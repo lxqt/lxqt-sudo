@@ -31,7 +31,7 @@
     <message>
         <location filename="../passworddialog.ui" line="109"/>
         <source>A program LXQt sudo calls in background to elevate priveledges.</source>
-        <translation>一个LXQt sudo在后台调用以提升权限的程序。</translation>
+        <translation>LXQt sudo在后台调用以提升权限的程序。</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
