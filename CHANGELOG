@@ -1,3 +1,10 @@
+lxqt-sudo-0.14.1 / 2019-02-24
+=============================
+
+  * Dont strip XAUTHLOCALHOSTNAME, it is required for lxqt-sudo to function
+    properly.
+  * Updated translations
+  * Note for packagers: lxqt-sudo now depends on liblxqt >= 0.14.1
 
 lxqt-sudo-0.14.0 / 2019-01-25
 =============================
@@ -6,7 +13,7 @@ lxqt-sudo-0.14.0 / 2019-01-25
     - sudo: Force "C" locale for su/sudo
     - sudo: Prevent malicious attempts for command injection
     - sudo: Use better child ending logic
-    - sudo: Strip environment - Leave only required environment 
+    - sudo: Strip environment - Leave only required environment
       variables (for X & locale) to get into the elevated child
       process.
     - sudo: Make critical error messages less obscure
