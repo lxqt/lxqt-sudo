@@ -6,7 +6,7 @@
     <message>
         <location filename="../passworddialog.ui" line="6"/>
         <source>LXQt sudo</source>
-        <translation>LXQt sudo</translation>
+        <translation>LXQt sudo (superutilisateur)</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="42"/>
