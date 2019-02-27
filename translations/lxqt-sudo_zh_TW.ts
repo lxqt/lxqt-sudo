@@ -11,22 +11,22 @@
     <message>
         <location filename="../passworddialog.ui" line="42"/>
         <source>Copy command to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>複製指令到剪貼簿</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>複製 (&amp;C)</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>此動作需要管理員權限。&lt;br&gt;請輸入您的密碼。</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
         <source>LXQt sudo backend</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt sudo後端</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../passworddialog.ui" line="133"/>
         <source>Enter password</source>
-        <translation type="unfinished"></translation>
+        <translation>輸入密碼</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="60"/>
@@ -116,7 +116,7 @@ GUI 前端 %2/%3
         <location filename="../sudo.cpp" line="234"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>復原</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="270"/>
