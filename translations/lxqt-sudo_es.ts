@@ -80,8 +80,8 @@ Argumentos:
   opción:
     -h|--help      Muestra esta ayuda.
     -v|--version   Muestra la información de versión.
-    -s|--su        Use %3(1) como aplicación de fondo.
-    -d|--sudo      Use %2(8) como aplicación de fondo.
+    -s|--su        Usa %3(1) como aplicación de fondo.
+    -d|--sudo      Usa %2(8) como aplicación de fondo.
   comando          El comando a ejecutar.
   argumentos        Argumentos opcionales para el comando.
 
@@ -133,13 +133,13 @@ Argumentos:
     <message>
         <location filename="../sudo.cpp" line="322"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation>Error de llamada al sistema, no se ha podido hacer fdopen pty: %1</translation>
+        <translation>Error de llamada al sistema, no se ha podido hacer fdopen de pty: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="291"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation>%1: Ha fallado al ejecutar &apos;%2&apos;: %3
+        <translation>%1: Error al ejecutar &apos;%2&apos;: %3
 </translation>
     </message>
     <message>
