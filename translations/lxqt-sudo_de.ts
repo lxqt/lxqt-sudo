@@ -31,7 +31,7 @@
     <message>
         <location filename="../passworddialog.ui" line="109"/>
         <source>A program LXQt sudo calls in background to elevate priveledges.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein Programm, das von LXQT sudo zur Rechteausweitung aufgerufen wird.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
@@ -110,7 +110,7 @@ Argumente:
     <message>
         <location filename="../sudo.cpp" line="207"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler beim Systemaufruf, Fork fehlgeschlagen: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="234"/>
@@ -128,12 +128,12 @@ Argumente:
     <message>
         <location filename="../sudo.cpp" line="314"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler beim Systemaufruf, konnte Pseudoterminal nicht in nicht-blockierenden Modus versetzen: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="322"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler beim Systemaufruf, konnte fdopen nicht auf Pseudoterminal ausführen: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="291"/>
