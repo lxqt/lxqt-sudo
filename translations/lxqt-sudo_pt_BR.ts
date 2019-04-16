@@ -31,7 +31,7 @@
     <message>
         <location filename="../passworddialog.ui" line="109"/>
         <source>A program LXQt sudo calls in background to elevate priveledges.</source>
-        <translation type="unfinished"></translation>
+        <translation>Um programa chama LXQt sudo em segundo plano para elevar privilégios.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
@@ -133,19 +133,21 @@ Parâmetros:
     <message>
         <location filename="../sudo.cpp" line="322"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Erro de chamada do sistema, falha ao fdopen pty: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="291"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Falhou ao exec &apos;%2&apos;: %3
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="353"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Processo filho &apos;%1&apos; falhou!
+%2</translation>
     </message>
 </context>
 </TS>
