@@ -116,7 +116,7 @@ Parametre:
         <location filename="../sudo.cpp" line="234"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
-        <translation>unset</translation>
+        <translation>nenastavené</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="270"/>
