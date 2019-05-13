@@ -46,6 +46,7 @@
 #include <fcntl.h>
 #include <iostream>
 #include <thread>
+#include <sstream>
 
 namespace
 {
@@ -102,24 +103,27 @@ namespace
     };
     assert_helper h;
 
-    inline void env_workarounds()
+    inline std::string env_workarounds()
     {
         std::cerr << LXQTSUDO << ": Stripping child environment except for: ";
-        std::copy(ALLOWED_VARS, ALLOWED_END - 1, std::ostream_iterator<const char *>{std::cerr, ", "});
-        std::cerr << *(ALLOWED_END - 1) << '\n'; // printing the last separately to avoid trailing comma
+        std::ostringstream left_env_params;
+        std::copy(ALLOWED_VARS, ALLOWED_END - 1, std::ostream_iterator<const char *>{left_env_params, ","});
+        left_env_params << *(ALLOWED_END - 1); // printing the last separately to avoid trailing comma
+        std::cerr << left_env_params.str() << '\n';
         // cleanup environment, because e.g.:
         // - pcmanfm-qt will not start if the DBUS_SESSION_BUS_ADDRESS is preserved
         // - Qt apps may change user's config files permissions if the XDG_* are preserved
         for (auto const & key : QProcessEnvironment::systemEnvironment().keys())
         {
             auto const & i = std::lower_bound(ALLOWED_VARS, ALLOWED_END, key, [] (char const * const a, QString const & b) {
-                return b > a;
-            });
+                    return b > a;
+                    });
             if (i == ALLOWED_END || key != *i)
             {
                 unsetenv(key.toLatin1().data());
             }
         }
+        return left_env_params.str();
     }
 
     inline QString quoteShellArg(const QString& arg, bool userFriendly)
@@ -245,10 +249,23 @@ void Sudo::child()
     const char ** param_arg = params.get() + 1;
 
     std::string program = backendName().toLocal8Bit().data();
-    if (BACK_SUDO == mBackend)
+
+    std::string preserve_env_param;
+    switch (mBackend)
     {
-        *(param_arg++) = "-E"; //preserve environment
-        *(param_arg++) = "/bin/sh";
+        case BACK_SUDO:
+            preserve_env_param = "--preserve-env=";
+
+            preserve_env_param += env_workarounds();
+
+            *(param_arg++) = preserve_env_param.c_str(); //preserve environment
+            *(param_arg++) = "/bin/sh";
+            break;
+        case BACK_SU:
+        case BACK_NONE:
+            env_workarounds();
+            break;
+
     }
     *(param_arg++) = "-c"; //run command
 
@@ -281,8 +298,6 @@ void Sudo::child()
     *param_arg = nullptr;
 
     setenv("LC_ALL", "C", 1);
-
-    env_workarounds();
 
     setsid(); //session leader
     execvp(params[0], const_cast<char **>(params.get()));
