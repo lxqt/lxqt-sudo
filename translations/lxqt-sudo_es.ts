@@ -116,13 +116,13 @@ Argumentos:
         <location filename="../sudo.cpp" line="234"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
-        <translation type="unfinished">indefinido</translation>
+        <translation>indefinido</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="270"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation>%1: Se ha detectado un intento de inyectar un comando con privilegios mediante LC_ALL env(%2). ¡Cancelado!
+        <translation>%1: Se ha detectado un intento de inyectar un comando con privilegios mediante LC_ALL env(%2). ¡Saliendo!
 </translation>
     </message>
     <message>
