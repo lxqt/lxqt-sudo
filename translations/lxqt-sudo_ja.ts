@@ -6,7 +6,7 @@
     <message>
         <location filename="../passworddialog.ui" line="6"/>
         <source>LXQt sudo</source>
-        <translation type="unfinished">LXQt sudo</translation>
+        <translation>LXQt sudo</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="42"/>
@@ -16,7 +16,7 @@
     <message>
         <location filename="../passworddialog.ui" line="45"/>
         <source>&amp;Copy</source>
-        <translation>コピー（&amp;C）</translation>
+        <translation>コピー(&amp;C)</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
@@ -91,7 +91,8 @@ Arguments:
         <location filename="../sudo.cpp" line="84"/>
         <source>%1 version %2
 </source>
-        <translation>%1 バージョン %2</translation>
+        <translation>%1 バージョン %2
+</translation>
     </message>
 </context>
 <context>
@@ -121,7 +122,8 @@ Arguments:
         <location filename="../sudo.cpp" line="270"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation>%1: LC_ALL env(%2)によって特権コマンドを実行しようとしました。終了します。</translation>
+        <translation>%1: LC_ALL env(%2)によって特権コマンドを実行しようとしました。終了します！
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="314"/>
