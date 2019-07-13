@@ -51,7 +51,7 @@
     <message>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Attempt #%1</source>
-        <translation>%1回目の確認</translation>
+        <translation>確認 %1 回</translation>
     </message>
 </context>
 <context>
