@@ -110,7 +110,7 @@ Argumenty:
     <message>
         <location filename="../sudo.cpp" line="207"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd wywołania systemowego, nieudany fork: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="234"/>
