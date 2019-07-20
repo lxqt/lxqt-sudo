@@ -74,7 +74,7 @@ Arguments:
 </source>
         <translation>使用法: %1 option [command [arguments...]]
 
-%2/%3のGUIフロントエンド
+%2/%3 の GUI フロントエンド
 
 引数:
   option:
@@ -83,7 +83,7 @@ Arguments:
     -s|--su        バックエンドに %3(1) を使用します。
     -d|--sudo      バックエンドに %2(8) を使用します｡
   command          実行するコマンド。
-  arguments        コマンドのオプション引数
+  arguments        コマンドのオプション引数。
 
 </translation>
     </message>
@@ -146,7 +146,7 @@ Arguments:
         <location filename="../sudo.cpp" line="353"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation>子プロセス&apos;%1&apos; に失敗しました！
+        <translation>子プロセス &apos;%1&apos; に失敗しました！
 %2</translation>
     </message>
 </context>
