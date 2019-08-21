@@ -150,6 +150,7 @@ Sudo::Sudo()
         mBackend = BACK_SU;
     else if (app_lxsudo == cmd || app_master == cmd)
         mBackend = BACK_SUDO;
+    mRet = mPwdFd = mChildPid = 0;
 }
 
 Sudo::~Sudo()
