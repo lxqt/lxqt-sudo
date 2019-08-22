@@ -122,7 +122,8 @@ Argumenty:
         <location filename="../sudo.cpp" line="270"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Wykryto próbę zainicjowania uprzywilejowanej komendy za pomocą środowiska LC_ALL (%2). Wyjście!
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="314"/>
