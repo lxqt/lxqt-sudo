@@ -128,12 +128,12 @@ GUI 前端 %2/%3
     <message>
         <location filename="../sudo.cpp" line="314"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation type="unfinished">系統調用錯誤，無法將pty調整為非阻止模式：%1</translation>
+        <translation>系統調用錯誤，無法將pty調整為非區塊模式：%1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="322"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation type="unfinished">系統調用錯誤，開啓pty失敗：%1</translation>
+        <translation>系統調用錯誤，開啓(fdopen) pty失敗：%1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="291"/>
