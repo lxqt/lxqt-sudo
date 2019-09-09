@@ -26,12 +26,12 @@
     <message>
         <location filename="../passworddialog.ui" line="106"/>
         <source>LXQt sudo backend</source>
-        <translation>Výkonná část pro LXQt sudo</translation>
+        <translation>Vykonávající část pro LXQt sudo</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
         <source>A program LXQt sudo calls in background to elevate priveledges.</source>
-        <translation>Program, který LXQt sudo volá na pozadí a provádí zvýšení oprávnění.</translation>
+        <translation>Program, který LXQt sudo volá na pozadí a ten provádí zvýšení oprávnění.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
@@ -80,8 +80,8 @@ Argumenty:
   volba:
     -h|--help      Zobrazí tuto nápovědu.
     -v|--version   Zobrazí informace o verzi.
-    -s|--su        Použít %3(1) jako podpůrnou vrstvu.
-    -d|--sudo      Použít %2(8) jako podpůrnou vrstvu.
+    -s|--su        Použít %3(1) jako vykonávající část.
+    -d|--sudo      Použít %2(8) jako vykonávající část.
   command          Příkaz ke spuštění.
   arguments        Volitelné argumenty pro příkaz.
 
@@ -105,7 +105,7 @@ Argumenty:
     <message>
         <location filename="../sudo.cpp" line="190"/>
         <source>%1: no backend chosen!</source>
-        <translation>%1: nevybrána žádná podpůrná vrstva!</translation>
+        <translation>%1: nevybrána žádná vykonávající část!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="207"/>
@@ -116,7 +116,7 @@ Argumenty:
         <location filename="../sudo.cpp" line="234"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
-        <translation>nenastaveno</translation>
+        <translation>nenast.</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="270"/>
