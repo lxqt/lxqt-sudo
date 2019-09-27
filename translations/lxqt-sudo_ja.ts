@@ -13,7 +13,7 @@
         <location filename="../passworddialog.ui" line="42"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="173"/>
         <source>Copy command to clipboard</source>
-        <translation>クリップボードにコピー</translation>
+        <translation>クリップボードにコピーします</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
@@ -25,7 +25,7 @@
         <location filename="../passworddialog.ui" line="83"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="176"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation>この操作は管理者権限が必要です。&lt;br&gt;あなたのパスワードを入力してください。</translation>
+        <translation>この操作は管理者権限が必要です。&lt;br&gt;あなたのパスワードを入力し下さい。</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
@@ -37,7 +37,7 @@
         <location filename="../passworddialog.ui" line="109"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="181"/>
         <source>A program LXQt sudo calls in background to elevate privileges.</source>
-        <translation type="unfinished"></translation>
+        <translation>プログラム LXQt sudo は権限を上げるためにバックグラウンドで呼び出されます。</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
@@ -55,12 +55,12 @@
         <location filename="../passworddialog.ui" line="133"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="186"/>
         <source>Enter password</source>
-        <translation>パスワードを入力</translation>
+        <translation>パスワードを入力します</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Attempt #%1</source>
-        <translation>確認 %1 回</translation>
+        <translation>確認 %1 回目</translation>
     </message>
 </context>
 <context>
