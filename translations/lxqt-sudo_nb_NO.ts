@@ -25,7 +25,7 @@
         <location filename="../passworddialog.ui" line="83"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="176"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation>Den forespurte handlingen krever administrative privilegier.&lt;br&gt;Vennligst tast inn ditt passord.</translation>
+        <translation>Den forespurte handlingen krever administrative tillatelser.&lt;br&gt;Vennligst tast inn ditt passord.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
@@ -37,7 +37,7 @@
         <location filename="../passworddialog.ui" line="109"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="181"/>
         <source>A program LXQt sudo calls in background to elevate privileges.</source>
-        <translation type="unfinished"></translation>
+        <translation>Et program LXQT sudo kontakter i bakgrunnen for å heve tillatelser.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
@@ -81,7 +81,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation>Bruk: %1 valg [kommandd [argumenter...]]
+        <translation>Bruk: %1 valg [kommando [argumenter...]]
 
 GUI-visning for %2/%3
 
@@ -109,7 +109,7 @@ Argumenter:
     <message>
         <location filename="../sudo.cpp" line="189"/>
         <source>%1: no command to run provided!</source>
-        <translation>%1: ingen kommando å kjøre!</translation>
+        <translation>%1: ingen kommando å kjøre oppgitt!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="196"/>
@@ -125,13 +125,13 @@ Argumenter:
         <location filename="../sudo.cpp" line="240"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
-        <translation>fjern</translation>
+        <translation>nullstill</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="289"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation>%1: Oppdaget et forsøk på å legge inn en priviligert kommando via LC_ALL env (%2). Avslutter!
+        <translation>%1: Oppdaget et forsøk på å legge inn en kommando som krever høye tillatelser via LC_ALL env (%2). Avslutter!
 </translation>
     </message>
     <message>
