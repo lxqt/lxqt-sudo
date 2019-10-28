@@ -137,24 +137,26 @@ Argumentit:
     <message>
         <location filename="../sudo.cpp" line="331"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation>Järjestelmäkutsun virhe, pty:n asettaminen ei-estävään tilaan epäonnistui: %1 </translation>
+        <translation>Järjestelmäkutsun virhe, pty:n asettaminen ei-estävään tilaan epäonnistui: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="339"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation>Järjestelmäkutsun virhe, fdopen pty:lle epäonnistui: %1 </translation>
+        <translation>Järjestelmäkutsun virhe, fdopen pty:lle epäonnistui: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="308"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation></translation>
+        <translation>%1: &apos;%2&apos; suorittaminen epäonnistui: %3
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="370"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation></translation>
+        <translation>Lapsiprosessi &apos;%1&apos; epäonnistui!
+%2</translation>
     </message>
 </context>
 </TS>
