@@ -60,7 +60,7 @@
     <message>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Attempt #%1</source>
-        <translation></translation>
+        <translation>Yritys #%1</translation>
     </message>
 </context>
 <context>
@@ -81,13 +81,27 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation></translation>
+        <translation>Käyttö: %1 valitsin [komento [argumentit...]]
+
+%2/%3 GUI front-end
+
+Argumentit:
+  Valitsimet:
+    -h|--help      Näyttää tämän ohjeen.
+    -v|--version   Näyttää versiotiedot.
+    -s|--su        Käytä %3(1) back-endinä.
+    -d|--sudo      Käytä %2(8) back-endinä.
+  command          Komento joka suoritetaan.
+  arguments        Valinnaiset argumentit komennolle.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="86"/>
         <source>%1 version %2
 </source>
-        <translation></translation>
+        <translation>%1 versio %2
+</translation>
     </message>
 </context>
 <context>
@@ -95,17 +109,17 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="189"/>
         <source>%1: no command to run provided!</source>
-        <translation></translation>
+        <translation>%1: suoritettavaa komentoa ei syötetty!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="196"/>
         <source>%1: no backend chosen!</source>
-        <translation></translation>
+        <translation>%1: back-end ei ole valittuna!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="213"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation>Järjestelmäkutsun virhe, forkkaus epäonnistui: %1 </translation>
+        <translation>Järjestelmäkutsun virhe, forkkaus epäonnistui: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="240"/>
@@ -117,7 +131,7 @@ Arguments:
         <location filename="../sudo.cpp" line="289"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation>% 1: Tunnistettu yritys syöttää komento pääkäyttäjänä LC_ALL env(%2) :n kautta. Keskeytetään!
+        <translation>%1: Tunnistettu yritys syöttää komento pääkäyttäjänä LC_ALL env(%2):n kautta. Toiminto keskeytetään!
 </translation>
     </message>
     <message>
