@@ -13,7 +13,7 @@
         <location filename="../passworddialog.ui" line="42"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="173"/>
         <source>Copy command to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopioi komento leikepöydälle</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
@@ -25,13 +25,13 @@
         <location filename="../passworddialog.ui" line="83"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="176"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>Valittu toimenpide edellyttää pääkäyttäjän oikeuksia.&lt;br&gt;Jos sinulla on oikeudet, syötä salasanasi.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="178"/>
         <source>LXQt sudo backend</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt sudo -taustajärjestelmä</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
@@ -105,19 +105,20 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="213"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Järjestelmäkutsun virhe, forkkaus epäonnistui: %1 </translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="240"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>määrittämätön</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="289"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>% 1: Tunnistettu yritys syöttää komento pääkäyttäjänä LC_ALL env(%2) :n kautta. Keskeytetään!
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="331"/>
