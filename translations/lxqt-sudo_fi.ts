@@ -19,7 +19,7 @@
         <location filename="../passworddialog.ui" line="45"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="175"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kopioi</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
@@ -37,7 +37,7 @@
         <location filename="../passworddialog.ui" line="109"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="181"/>
         <source>A program LXQt sudo calls in background to elevate privileges.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ohjelma jota LXQt sudo kutsuu taustalla käyttöoikeuksien kohottamiseksi.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
@@ -55,7 +55,7 @@
         <location filename="../passworddialog.ui" line="133"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="186"/>
         <source>Enter password</source>
-        <translation type="unfinished"></translation>
+        <translation>Syötä salasana</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="60"/>
