@@ -137,12 +137,12 @@ Argumentit:
     <message>
         <location filename="../sudo.cpp" line="331"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Järjestelmäkutsun virhe, pty:n asettaminen ei-estävään tilaan epäonnistui: %1 </translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="339"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Järjestelmäkutsun virhe, fdopen pty:lle epäonnistui: %1 </translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="308"/>
