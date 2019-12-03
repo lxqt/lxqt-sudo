@@ -31,13 +31,13 @@
         <location filename="../passworddialog.ui" line="106"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="178"/>
         <source>LXQt sudo backend</source>
-        <translation>LXQt sudo バックエンド</translation>
+        <translation>LXQt sudo のバックエンドです</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="181"/>
         <source>A program LXQt sudo calls in background to elevate privileges.</source>
-        <translation>プログラム LXQt sudo は権限を上げるためにバックグラウンドで呼び出されます。</translation>
+        <translation>権限を上げるために、プログラム「LXQt sudo」がバックグラウンドで呼び出します。</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
