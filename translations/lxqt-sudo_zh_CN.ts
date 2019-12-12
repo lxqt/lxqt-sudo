@@ -37,7 +37,7 @@
         <location filename="../passworddialog.ui" line="109"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="181"/>
         <source>A program LXQt sudo calls in background to elevate privileges.</source>
-        <translation type="unfinished"></translation>
+        <translation>在后台调用sudo以提升特权。</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
@@ -137,12 +137,12 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="331"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Syscall错误，无法将pty设置为非阻止模式：％1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="339"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Syscall错误，无法打开pty：％1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="308"/>
