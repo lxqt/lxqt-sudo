@@ -13,19 +13,19 @@
         <location filename="../passworddialog.ui" line="42"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="173"/>
         <source>Copy command to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Parancsok másolása vágólapra</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="175"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Másolás</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="176"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>A kért művelethez rendszergazdai jogosultságokra van szükség. &lt;br&gt; Kérjük, írja be a jelszavát.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
@@ -61,7 +61,7 @@
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Attempt #%1</source>
         <translatorcomment>Próba #%1</translatorcomment>
-        <translation></translation>
+        <translation>Próba #%1</translation>
     </message>
 </context>
 <context>
@@ -148,7 +148,7 @@ paraméterek:
         <location filename="../sudo.cpp" line="308"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation>%1: A  %2:%3 végrehajtása sikertelen
+        <translation>%1: A(z)  %2:%3 végrehajtása sikertelen
 </translation>
     </message>
     <message>
