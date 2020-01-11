@@ -120,13 +120,13 @@ paraméterek:
     <message>
         <location filename="../sudo.cpp" line="213"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rendszerhívás hiba, nem történt elágazás: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="240"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">nincs</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="289"/>
