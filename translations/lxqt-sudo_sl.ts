@@ -7,60 +7,60 @@
         <location filename="../passworddialog.ui" line="6"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="171"/>
         <source>LXQt sudo</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt sudo</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="42"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="173"/>
         <source>Copy command to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiraj ukaz v odložišče</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="175"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kopiraj</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="176"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dejanje zahteva administratorske pravice.&lt;br&gt;Prosimo, vnesite vaše geslo.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="178"/>
         <source>LXQt sudo backend</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt sudo zaledje</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="181"/>
         <source>A program LXQt sudo calls in background to elevate privileges.</source>
-        <translation type="unfinished"></translation>
+        <translation>Program, ki ga okolje LXQt zažene za dvig privilegijev.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="183"/>
         <source>Command:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukaz:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="126"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="184"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Geslo:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="133"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="186"/>
         <source>Enter password</source>
-        <translation type="unfinished"></translation>
+        <translation>Vnesite geslo</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Attempt #%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Poskus #%1</translation>
     </message>
 </context>
 <context>
@@ -81,13 +81,27 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uporaba: %1 opcija [ukaz [argumenti...]]
+
+Grafični obrazec za %2/%3
+
+Argumenti:
+  opcija:
+    -h|--help      Izpiši to pomoč.
+    -v|--version   Izpiši različico programa.
+    -s|--su        Uporabi zaledje %3(1).
+    -d|--sudo      Uporabi zaledje %2(8).
+  ukaz          Command to run.
+  argumenti        Neobvezni argumenti za ukaz.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="86"/>
         <source>%1 version %2
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1 različica %2
+</translation>
     </message>
 </context>
 <context>
@@ -95,12 +109,12 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="189"/>
         <source>%1: no command to run provided!</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: ni podanega ukaza za zagon!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="196"/>
         <source>%1: no backend chosen!</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: ni izbranega zaledja!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="213"/>
