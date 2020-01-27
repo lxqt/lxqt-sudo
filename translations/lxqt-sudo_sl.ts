@@ -81,7 +81,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished">Uporaba: %1 opcija [ukaz [argumenti...]]
+        <translation>Uporaba: %1 opcija [ukaz [argumenti…]]
 
 Grafični obrazec za %2/%3
 
@@ -91,8 +91,8 @@ Argumenti:
     -v|--version   Izpiši različico programa.
     -s|--su        Uporabi zaledje %3(1).
     -d|--sudo      Uporabi zaledje %2(8).
-  ukaz          Command to run.
-  argumenti        Neobvezni argumenti za ukaz.
+  ukaz             Ukaz, ki naj se zažene.
+  argumenti        Morebitni argumenti za ukaz.
 
 </translation>
     </message>
