@@ -25,7 +25,7 @@
         <location filename="../passworddialog.ui" line="83"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="176"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation>Thưc hiện hành động này yêu cầu quyền quản trị.&lt;br&gt;Vui lòng nhập mật khẩu.</translation>
+        <translation>Thực hiện hành động này yêu cầu quyền quản trị.&lt;br&gt;Vui lòng nhập mật khẩu.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
@@ -37,7 +37,7 @@
         <location filename="../passworddialog.ui" line="109"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="181"/>
         <source>A program LXQt sudo calls in background to elevate privileges.</source>
-        <translation type="unfinished"></translation>
+        <translation>Một chương trình LXQt gọi sudo ở nền để đánh giá quyền hạn.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
@@ -131,8 +131,7 @@ Các đối mục:
         <location filename="../sudo.cpp" line="289"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
-%1: Đã phát hiện sự chèn lệnh với quyền quản trị qua biến môi trường LC_ALL (%2). Chấm dứt thực thi!
+        <translation>%1: Đã phát hiện chèn lệnh với quyền quản trị qua biến môi trường LC_ALL (%2). Chấm dứt thực thi!
 </translation>
     </message>
     <message>
