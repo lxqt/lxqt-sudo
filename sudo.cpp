@@ -39,7 +39,7 @@
 #include <QProcessEnvironment>
 #include <QTimer>
 #include <QRegularExpression>
-#if defined(__Q_OS_LINUX__)
+#if defined(Q_OS_LINUX)
 #include <pty.h>
 #else
 #include <errno.h>
