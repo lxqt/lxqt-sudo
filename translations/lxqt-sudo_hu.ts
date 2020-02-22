@@ -132,12 +132,13 @@ paraméterek:
         <location filename="../sudo.cpp" line="289"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1: Észlelt próbálkozás, hogy egy kiemelt parancsot próbált futtatni az LC_ALL env(%2). Bezárás!
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="331"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rendszerhívás hiba, nem sikerült megnyitni a pszeudoterminált non-block módban: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="339"/>
