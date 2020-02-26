@@ -19,7 +19,7 @@
         <location filename="../passworddialog.ui" line="45"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="175"/>
         <source>&amp;Copy</source>
-        <translation>Kopírovať</translation>
+        <translation>&amp;Kopírovať</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
