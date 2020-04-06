@@ -37,7 +37,7 @@
         <location filename="../passworddialog.ui" line="109"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="181"/>
         <source>A program LXQt sudo calls in background to elevate privileges.</source>
-        <translation>Ένα πρόγραμμα το οποίο καλεί το LXQt sudo για την παραχώρηση προνομίων.</translation>
+        <translation>Ένα πρόγραμμα που καλείται από το LXQt sudo για την παραχώρηση προνομίων.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
@@ -81,18 +81,18 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation>Χρήση: %1 επιλογή [εντολή ορίσματα...]]
+        <translation>Χρήση: %1 επιλογή [εντολή [ορίσματα...]]]
 
-περιβάλλον συστήματος υποστήριξης για το %2/%3
+Γραφικό περιβάλλον για το %2/%3
 
 Ορίσματα:
   επιλογή:
-    -h|--help      Εκτύπωση της βοήθειας.
-    -v|--version   Εκτύπωση της έκδοσης.
-    -s|--su        Χρήση του %3(1) ως σύστημα υποστήριξης.
-    -d|--sudo      Χρήση του %2(8) ως σύστημα υποστήριξης.
-  εντολή          Εντολή προς εκτέλεση.
-  ορίσματα        Προαιρετικά ορίσματα της εντολής.
+    -h|--help      Ενφάνιση της βοήθειας.
+    -v|--version   Εωφάνιση της έκδοσης.
+    -s|--su        Χρήση του %3(1) ως backend.
+    -d|--sudo      Χρήση του %2(8) ως backend.
+  εντολή           Εντολή προς εκτέλεση.
+  ορίσματα         Προαιρετικά ορίσματα της εντολής.
 
 </translation>
     </message>
@@ -109,17 +109,17 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="189"/>
         <source>%1: no command to run provided!</source>
-        <translation>%1: δεν παρείχατε κάποια εντολή προς εκτέλεση!</translation>
+        <translation>%1: δε δόθηκε κάποια εντολή προς εκτέλεση!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="196"/>
         <source>%1: no backend chosen!</source>
-        <translation>%1: δεν έχετε επιλέξει το σύστημα υποστήριξης!</translation>
+        <translation>%1: δεν επιλέξατε το backend!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="213"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation>Σφάλμα Syscall, αποτυχία δικράνωσης: %1</translation>
+        <translation>Σφάλμα κλήσης συστήματος, αποτυχία δημιουργίας νέας διεργασίας: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="240"/>
@@ -131,17 +131,18 @@ Arguments:
         <location filename="../sudo.cpp" line="289"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation>%1: Εντοπίστηκε απόπειρα έγχυσης προνομιούχας εντολής μέσω του LC_ALL env(%2). Εγκατάλειψη!</translation>
+        <translation>%1: Εντοπίστηκε απόπειρα έγχυσης προνομιούχας εντολής μέσω του LC_ALL env(%2). Εγκατάλειψη!
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="331"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation>Σφάλμα Syscall, αποτυχία διάθεσης του pty σε ανεμπόδιστη λειτουργία: %1</translation>
+        <translation>Σφάλμα κλήσης συστήματος, αποτυχία διάθεσης του pty σε non-blocking λειτουργία: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="339"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation>Σφάλμα Syscall, αποτυχία του fdopen pty: %1</translation>
+        <translation>Σφάλμα κλήσης συστήματος, αποτυχία κλήσης της fdopen για το pty: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="308"/>
@@ -154,7 +155,7 @@ Arguments:
         <location filename="../sudo.cpp" line="370"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation>Η θυγατρική διεργασία «%1» απέτυχε!
+        <translation>Η διεργασία παιδί «%1» απέτυχε!
 %2</translation>
     </message>
 </context>
