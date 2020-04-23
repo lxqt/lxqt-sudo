@@ -125,7 +125,7 @@ Argumente:
         <location filename="../sudo.cpp" line="240"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>ungesetzt</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="289"/>
