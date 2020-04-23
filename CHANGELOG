@@ -1,3 +1,9 @@
+lxqt-sudo-0.15.0 / 2020-04-23
+=============================
+  * sudo: Fix (re)setting HOME with sudo backend.
+  * sudo: Add TERM to allowed/preserved env vars.
+  * Build on NetBSD.
+
 lxqt-sudo-0.14.1 / 2019-02-24
 =============================
 
