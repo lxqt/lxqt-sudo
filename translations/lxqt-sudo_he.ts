@@ -81,7 +81,20 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation></translation>
+        <translation>שימוש: %1 option [command [arguments...]]
+
+GUI frontend for %2/%3
+
+Arguments:
+  אפשרויות:
+    -h|--help      Print this help.
+    -v|--version   הדפסת מידע הגרסה.
+    -s|--su        שימוש ב־%3(1) כמגשר עורפי.
+    -d|--sudo      שימוש ב־%2(8) כמגשר עורפי.
+  command          פקודה להרצה.
+  arguments        Optional arguments for command.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="86"/>
@@ -95,12 +108,12 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="189"/>
         <source>%1: no command to run provided!</source>
-        <translation></translation>
+        <translation>%1: לא סופקה פקודה להרצה!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="196"/>
         <source>%1: no backend chosen!</source>
-        <translation></translation>
+        <translation>%1: לא נבחר מגשר עורפי!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="213"/>
