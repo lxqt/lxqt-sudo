@@ -7,7 +7,7 @@
         <location filename="../passworddialog.ui" line="6"/>
         <location filename="../obj-x86_64-linux-gnu/lxqt-sudo_autogen/include/ui_passworddialog.h" line="171"/>
         <source>LXQt sudo</source>
-        <translation>sudo di LXQt</translation>
+        <translation>LXQt sudo</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="42"/>
