@@ -109,12 +109,12 @@ Argumenten:
     <message>
         <location filename="../sudo.cpp" line="189"/>
         <source>%1: no command to run provided!</source>
-        <translation>%1: geen uit te voeren opdracht opgegeven.</translation>
+        <translation>%1: geen uit te voeren opdracht opgegeven!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="196"/>
         <source>%1: no backend chosen!</source>
-        <translation>%1: geen achtergronddienst gekozen.</translation>
+        <translation>%1: geen achtergronddienst gekozen!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="213"/>
