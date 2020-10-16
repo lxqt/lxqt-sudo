@@ -33,8 +33,10 @@ lxqt-sudo comes with a man page explaining the syntax very well so running `man 
 By default `sudo` is used as backend, the choice can be enforced by command line options `--su[do]` or by using symbolic links `lxsu` and `lxsudo` which belong to regular installations of lxqt-sudo.   
 
 
-### Translation (Weblate)
+### Translations
 
-<a href="https://weblate.lxqt.org/projects/lxqt/lxqt-sudo/">
-<img src="https://weblate.lxqt.org/widgets/lxqt/-/lxqt-sudo/multi-auto.svg" alt="Translation status" />
+Translations can be done in [LXQt-Weblate/powermanagement](https://translate.lxqt-project.org/projects/lxqt-configuration/lxqt-powermanagment-battery-info/) and [LXQt-Weblate/config-powermanagement](https://translate.lxqt-project.org/projects/lxqt-configuration/lxqt-powermanagment/)
+
+<a href="https://translate.lxqt-project.org/projects/lxqt-configuration/lxqt-powermanagment/">
+<img src="https://translate.lxqt-project.org/widgets/lxqt-configuration/-/lxqt-powermanagment/multi-auto.svg" alt="Translation status" />
 </a>
