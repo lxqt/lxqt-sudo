@@ -16,7 +16,7 @@ option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" O
 
 # Minimum Versions
 set(LXQT_MINIMUM_VERSION "0.15.0")
-set(QT_MINIMUM_VERSION "5.10.0")
+set(QT_MINIMUM_VERSION "5.12.0")
 
 find_package(Qt5Widgets ${QT_MINIMUM_VERSION} REQUIRED)
 find_package(lxqt ${LXQT_MINIMUM_VERSION} REQUIRED)
