@@ -15,7 +15,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
 
 # Minimum Versions
-set(LXQT_MINIMUM_VERSION "0.15.0")
+set(LXQT_MINIMUM_VERSION "0.16.0")
 set(QT_MINIMUM_VERSION "5.12.0")
 
 find_package(Qt5Widgets ${QT_MINIMUM_VERSION} REQUIRED)
