@@ -8,9 +8,9 @@ lxqt-sudo is a graphical front-end of commands `sudo` and `su` respectively. As 
 
 ### Compiling source code
 
-Runtime dependencies are qtbase, sudo (su should be installed by default on all *ix operating systems) and [liblxqt](https://github.com/lxqt/liblxqt).   
+Runtime dependencies are qtbase, sudo (su should be installed by default on all \*ix operating systems) and [liblxqt](https://github.com/lxqt/liblxqt).   
 Installing at least one icon theme according to the [XDG Icon Theme Specification](https://www.freedesktop.org/wiki/Specifications/icon-theme-spec/) like e. g. "Oxygen Icons" is recommended to have the GUI display icons.   
-Additional build dependencies are CMake and optionally Git to pull latest VCS checkouts. The localization files were outsourced to repository [lxqt-l10n](https://github.com/lxqt/lxqt-l10n) so the corresponding dependencies are needed, too. Please refer to this repository's `README.md` for further information.   
+Additional build dependencies are CMake and optionally Git to pull latest VCS checkouts.   
 
 Code configuration is handled by CMake. CMake variable `CMAKE_INSTALL_PREFIX` has to be set to `/usr` on most operating systems.   
 
