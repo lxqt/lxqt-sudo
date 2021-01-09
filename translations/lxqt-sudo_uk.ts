@@ -51,7 +51,7 @@
     <message>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Attempt #%1</source>
-        <translation>Спроба #%1 </translation>
+        <translation>Спроба #%1</translation>
     </message>
 </context>
 <context>
