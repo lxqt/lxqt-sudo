@@ -100,12 +100,12 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="195"/>
         <source>%1: no command to run provided!</source>
-        <translation>%1: 実行するコマンドが指定されてません!</translation>
+        <translation>%1: 実行するコマンドが指定されてません！</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="202"/>
         <source>%1: no backend chosen!</source>
-        <translation>%1: バックエンドが選択されていません!</translation>
+        <translation>%1: バックエンドが選択されていません！</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="219"/>
