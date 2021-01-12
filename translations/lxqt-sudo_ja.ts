@@ -11,7 +11,7 @@
     <message>
         <location filename="../passworddialog.ui" line="42"/>
         <source>Copy command to clipboard</source>
-        <translation>クリップボードにコピーします</translation>
+        <translation>コマンドをクリップボードへコピーします</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
