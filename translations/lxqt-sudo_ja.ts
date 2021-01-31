@@ -105,7 +105,7 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="202"/>
         <source>%1: no backend chosen!</source>
-        <translation>%1: バックエンドが選択されていません！</translation>
+        <translation>%1: バックエンドを選択していません！</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="219"/>
