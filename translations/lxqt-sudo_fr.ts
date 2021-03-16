@@ -72,18 +72,18 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation>Usage: %1 Option [Commande [Arguments...]]
+        <translation>Usage : %1 option [commande [arguments...]]
 
 Interface graphique pour %2/%3
 
 Arguments:
-  Option:
+  option:
     -h|--help      Affiche cette aide.
     -v|--version   Affiche la version.
-    -s|--su        Utilise %3(1) comme Backend.
-    -d|--sudo      Utilise %2(8) comme Backend.
-  Commande        Commande à exécuter.
-  Arguments        Arguments de la commande à exécuter.
+    -s|--su        Utiliser %3(1) comme backend.
+    -d|--sudo      Utiliser %2(8) comme backend.
+  command        Commande à exécuter.
+  arguments        Arguments optionnels pour la commande.
 
 </translation>
     </message>
@@ -100,12 +100,12 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="195"/>
         <source>%1: no command to run provided!</source>
-        <translation>%1: aucune commande à exécuter n&apos;a été spécifiée !</translation>
+        <translation>%1: aucune commande n&apos;a été spécifiée !</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="202"/>
         <source>%1: no backend chosen!</source>
-        <translation>%1: aucun Backend n&apos;a été choisi !</translation>
+        <translation>%1 : aucun Backend n&apos;a été choisi !</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="219"/>
@@ -133,7 +133,7 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="345"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation>Erreur d&apos;appel système, échec de fdopen pty: %1</translation>
+        <translation type="unfinished">Erreur d&apos;appel système, échec de fdopen pty: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="314"/>
