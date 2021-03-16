@@ -100,7 +100,7 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="195"/>
         <source>%1: no command to run provided!</source>
-        <translation>%1 : aucune commande n&apos;a été spécifiée !</translation>
+        <translation>%1: aucune commande n&apos;a été spécifiée !</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="202"/>
@@ -110,7 +110,7 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="219"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation>Erreur d&apos;appel système, échec de la conversion : %1</translation>
+        <translation>Erreur d&apos;appel système, échec de la conversion: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="246"/>
@@ -122,24 +122,24 @@ Arguments:
         <location filename="../sudo.cpp" line="295"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation>%1 : Tentative détectée d&apos;injection d&apos;une commande privilégiée via LC_ALL env(%2). En sortant !
+        <translation>%1: Tentative détectée d&apos;injection d&apos;une commande privilégiée via LC_ALL env(%2). En sortant!
 </translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="337"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation>Erreur d&apos;appel système, échec du transfert de pty en mode sans blocage : %1</translation>
+        <translation>Erreur d&apos;appel système, échec du transfert de pty en mode sans blocage: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="345"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation type="unfinished">Erreur d&apos;appel système, échec de fdopen pty : %1</translation>
+        <translation type="unfinished">Erreur d&apos;appel système, échec de fdopen pty: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="314"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation>%1 : Impossible d&apos;exécuter &apos;%2&apos; : %3
+        <translation>%1: Impossible d&apos;exécuter &apos;%2&apos;: %3
 </translation>
     </message>
     <message>
