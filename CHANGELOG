@@ -1,3 +1,7 @@
+lxqt-sudo-0.17.0 / 2021-04-15
+=============================
+  * Handled Qt5.15's deprecations.
+
 lxqt-sudo-0.16.0 / 2020-11-01
 =============================
   * Use QFlags default constructor.
