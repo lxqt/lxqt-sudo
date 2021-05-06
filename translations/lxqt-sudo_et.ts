@@ -72,13 +72,27 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Kasutus: %1 suvand [käsk [argumendid...]]
+
+Graafiline liides %2/%3 jaoks
+
+Argumendid:
+  suvand:
+    -h|--help      Kuva see abiteave.
+    -v|--version   Kuva versiooniteave.
+    -s|--su        Kasuta taustarakendust %3(1).
+    -d|--sudo      Kasuta taustarakendust %2(8).
+  command          Käivitatav käsk.
+  arguments        Käsu võimalikud argumendid.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="92"/>
         <source>%1 version %2
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1 versioon %2
+</translation>
     </message>
 </context>
 <context>
@@ -96,7 +110,7 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="219"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Süteemiviga protsessi kõrvalharu loomisel: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="246"/>
@@ -108,17 +122,18 @@ Arguments:
         <location filename="../sudo.cpp" line="295"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Tuvastasin katse käivitada suuremate õigustega käsku LC_ALL env(%2) kaudu. Lõpetan töö!
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="337"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Süsteemiviga, kus ei õnnestunud pty&apos;d seadistada mitteblokeerivasse olekusse: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="345"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Süsteemiviga, kus ei teha „fdopen pty“: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="314"/>
