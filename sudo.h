@@ -44,6 +44,7 @@ public:
         BACK_NONE
             , BACK_SUDO
             , BACK_SU
+            , BACK_DOAS
     };
 
 public:

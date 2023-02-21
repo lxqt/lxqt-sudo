@@ -61,9 +61,11 @@ namespace
     const QString app_version{QStringLiteral(LXQT_VERSION)};
     const QString app_lxsu{QStringLiteral(LXQTSUDO_LXSU)};
     const QString app_lxsudo{QStringLiteral(LXQTSUDO_LXSUDO)};
+    const QString app_lxdoas{QStringLiteral(LXQTSUDO_LXDOAS)};
 
     const QString su_prog{QStringLiteral(LXQTSUDO_SU)};
     const QString sudo_prog{QStringLiteral(LXQTSUDO_SUDO)};
+    const QString doas_prog{QStringLiteral(LXQTSUDO_DOAS)};
     const QString pwd_prompt_end{QStringLiteral(": ")};
     const QChar nl{QLatin1Char('\n')};
 
@@ -73,15 +75,16 @@ namespace
             QTextStream(stderr) << err << '\n';
         QTextStream(stdout)
             << QObject::tr("Usage: %1 option [command [arguments...]]\n\n"
-                    "GUI frontend for %2/%3\n\n"
+                    "GUI frontend for %2/%3/%4\n\n"
                     "Arguments:\n"
                     "  option:\n"
                     "    -h|--help      Print this help.\n"
                     "    -v|--version   Print version information.\n"
                     "    -s|--su        Use %3(1) as backend.\n"
                     "    -d|--sudo      Use %2(8) as backend.\n"
+                    "    -a|--doas      Use %4(1) as backend.\n"
                     "  command          Command to run.\n"
-                    "  arguments        Optional arguments for command.\n\n").arg(app_master).arg(sudo_prog).arg(su_prog);
+                    "  arguments        Optional arguments for command.\n\n").arg(app_master).arg(sudo_prog).arg(su_prog).arg(doas_prog);
         if (!err.isEmpty())
             QMessageBox(QMessageBox::Critical, app_master, err, QMessageBox::Ok).exec();
     }
@@ -155,6 +158,8 @@ Sudo::Sudo()
     mArgs.removeAt(0);
     if (app_lxsu == cmd)
         mBackend = BACK_SU;
+    else if (app_lxdoas == cmd)
+        mBackend = BACK_DOAS;
     else if (app_lxsudo == cmd || app_master == cmd)
         mBackend = BACK_SUDO;
     mRet = mPwdFd = mChildPid = 0;
@@ -185,6 +190,10 @@ int Sudo::main()
         } else if (QStringLiteral("-d") == arg1 || QStringLiteral("--sudo") == arg1)
         {
             mBackend = BACK_SUDO;
+            mArgs.removeAt(0);
+        } else if (QStringLiteral("-a") == arg1 || QStringLiteral("--doas") == arg1)
+        {
+            mBackend = BACK_DOAS;
             mArgs.removeAt(0);
         }
     }
@@ -242,6 +251,7 @@ QString Sudo::backendName (backend_t backEnd)
     switch (backEnd) {
         case BACK_SU   : rv = su_prog;   break;
         case BACK_SUDO : rv = sudo_prog; break;
+        case BACK_DOAS : rv = doas_prog; break;
         //: shouldn't be actually used but keep as short as possible in translations just in case.
         case BACK_NONE : rv = tr("unset");
     }
@@ -251,8 +261,22 @@ QString Sudo::backendName (backend_t backEnd)
 
 void Sudo::child()
 {
-    int params_cnt = 3 //1. su/sudo & "shell command" & last nullptr
-        + (BACK_SU == mBackend ? 1 : 3); //-c for su | -E /bin/sh -c for sudo
+    int params_cnt = 3; //su/sudo & "shell command" & last nullptr
+    switch (mBackend)
+    {
+        case BACK_SU:
+            params_cnt += 1; // -c for su
+            break;
+        case BACK_SUDO:
+            params_cnt += 3; // --preserve-env=... /bin/sh -c for sudo
+            break;
+        case BACK_DOAS:
+            params_cnt += 2; // /bin/sh -c for sudo
+            break;
+        case BACK_NONE:
+            break;
+    }
+
     std::unique_ptr<char const *[]> params{new char const *[params_cnt]};
     const char ** param_arg = params.get() + 1;
 
@@ -269,6 +293,9 @@ void Sudo::child()
             *(param_arg++) = preserve_env_param.c_str(); //preserve environment
             *(param_arg++) = "/bin/sh";
             break;
+        case BACK_DOAS:
+            *(param_arg++) = "/bin/sh";
+            [[fallthrough]];
         case BACK_SU:
         case BACK_NONE:
             env_workarounds();
