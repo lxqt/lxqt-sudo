@@ -36,12 +36,12 @@
     <message>
         <location filename="../passworddialog.ui" line="119"/>
         <source>Command:</source>
-        <translation>Comanda :</translation>
+        <translation>Comanda&#xa0;:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="126"/>
         <source>Password:</source>
-        <translation>Senhal :</translation>
+        <translation>Senhal&#xa0;:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="133"/>
@@ -131,7 +131,7 @@ Arguments:
         <location filename="../sudo.cpp" line="376"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation>Fracàs del processús filh « %1 » !
+        <translation>Fracàs del processús filh «&#xa0;%1&#xa0;»&#xa0;!
 %2</translation>
     </message>
 </context>
