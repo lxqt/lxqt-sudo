@@ -29,6 +29,7 @@ include(LXQtCompilerSettings NO_POLICY_SCOPE)
 
 set ( LINK_LXSU "lxsu")
 set ( LINK_LXSUDO "lxsudo")
+set ( LINK_LXDOAS "lxdoas")
 
 set ( HDRS
     passworddialog.h
@@ -81,32 +82,35 @@ target_link_libraries(lxqt-sudo
 target_compile_definitions(lxqt-sudo
     PRIVATE "LXQTSUDO_SUDO=\"sudo\""
     PRIVATE "LXQTSUDO_SU=\"su\""
+    PRIVATE "LXQTSUDO_DOAS=\"doas\""
     PRIVATE "LXQTSUDO=\"lxqt-sudo\""
     PRIVATE "LXQTSUDO_LXSU=\"${LINK_LXSU}\""
     PRIVATE "LXQTSUDO_LXSUDO=\"${LINK_LXSUDO}\""
+    PRIVATE "LXQTSUDO_LXDOAS=\"${LINK_LXDOAS}\""
     PRIVATE "LXQT_VERSION=\"${LXQT_VERSION}\""
 )
 
-add_custom_command(TARGET lxqt-sudo POST_BUILD
-    COMMAND ln -f -s lxqt-sudo "${LINK_LXSU}"
-    WORKING_DIRECTORY .
-    COMMENT "Creating ${LINK_LXSU} symlink"
-)
-
-add_custom_command(TARGET lxqt-sudo POST_BUILD
-    COMMAND ln -f -s lxqt-sudo "${LINK_LXSUDO}"
-    WORKING_DIRECTORY .
-    COMMENT "Creating ${LINK_LXSUDO} symlink"
-)
+foreach(LINK IN ITEMS ${LINK_LXSU} ${LINK_LXSUDO} ${LINK_LXDOAS})
+    add_custom_command(TARGET lxqt-sudo POST_BUILD
+        COMMAND ln -f -s lxqt-sudo "${LINK}"
+        WORKING_DIRECTORY .
+        COMMENT "Creating ${LINK} symlink"
+    )
+    install(FILES
+        "${CMAKE_CURRENT_BINARY_DIR}/${LINK}"
+        DESTINATION "${CMAKE_INSTALL_BINDIR}"
+        COMPONENT Runtime
+    )
+    install(FILES
+        "man/${LINK}.1"
+        DESTINATION "${CMAKE_INSTALL_MANDIR}/man1"
+        COMPONENT Runtime
+    )
+endforeach()
 
 install(TARGETS
     lxqt-sudo
     RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
-    COMPONENT Runtime
-)
-install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/${LINK_LXSU}" "${CMAKE_CURRENT_BINARY_DIR}/${LINK_LXSUDO}"
-    DESTINATION "${CMAKE_INSTALL_BINDIR}"
     COMPONENT Runtime
 )
 install(FILES
@@ -115,7 +119,7 @@ install(FILES
     COMPONENT Runtime
 )
 install(FILES
-    man/lxqt-sudo.1 "man/${LINK_LXSU}.1" "man/${LINK_LXSUDO}.1"
+    man/lxqt-sudo.1
     DESTINATION "${CMAKE_INSTALL_MANDIR}/man1"
     COMPONENT Runtime
 )
