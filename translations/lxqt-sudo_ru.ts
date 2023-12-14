@@ -21,7 +21,7 @@
     <message>
         <location filename="../passworddialog.ui" line="83"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation>Запрошенное действие требует привилегий администратора.&lt;br&gt;Пожалуйста, введите свой пароль.</translation>
+        <translation>Запрашиваемое действие требует привилегий администратора.&lt;br&gt;Пожалуйста, введите свой пароль.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
