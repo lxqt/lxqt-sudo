@@ -389,6 +389,7 @@ int Sudo::parent()
 
     QString last_line;
     QScopedPointer<QSocketNotifier> pwd_watcher{new QSocketNotifier{mPwdFd, QSocketNotifier::Read}};
+    int inhibit_count = 0;
     auto reader = [&]
         {
             QString line = child_str.readAll();
@@ -417,7 +418,21 @@ int Sudo::parent()
                         return;
                     }
                 }
-                QTextStream{stderr, QIODevice::WriteOnly} << line;
+                if (inhibit_count > 0)
+                {
+                    if (inhibit_count < line.count())
+                    {
+                        QTextStream{stderr, QIODevice::WriteOnly} << line.right(line.count() - inhibit_count);
+                        inhibit_count = 0;
+                    } else
+                    {
+                        inhibit_count -= line.count();
+                    }
+                } else
+                {
+                    QTextStream{stderr, QIODevice::WriteOnly} << line;
+                }
+
                 //assuming text oriented output
                 QStringList lines = line.split(nl, Qt::SkipEmptyParts);
                 last_line = lines.isEmpty() ? QString() : lines.back();
@@ -425,7 +440,23 @@ int Sudo::parent()
 
         };
 
+    QTextStream stdin_str(stdin);
+    QScopedPointer<QSocketNotifier> stdin_watcher{new QSocketNotifier{STDIN_FILENO, QSocketNotifier::Read}};
+    auto writer = [&]
+    {
+        QString line = stdin_str.readLine();
+        if (line.isEmpty()) {
+            stdin_watcher.reset(nullptr); //stop the notification events
+        } else
+        {
+            inhibit_count += line.count() + 2;
+            child_str << line.append(nl);
+            child_str.flush();
+        }
+    };
+
     QObject::connect(pwd_watcher.data(), &QSocketNotifier::activated, reader);
+    QObject::connect(stdin_watcher.data(), &QSocketNotifier::activated, writer);
 
     std::unique_ptr<std::thread> child_waiter;
     QTimer::singleShot(0, [&child_waiter, this] {
