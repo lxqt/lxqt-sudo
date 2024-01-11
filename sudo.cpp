@@ -68,6 +68,7 @@ namespace
     const QString doas_prog{QStringLiteral(LXQTSUDO_DOAS)};
     const QString pwd_prompt_end{QStringLiteral(": ")};
     const QChar nl{QLatin1Char('\n')};
+    constexpr int term_eol_size = 2;
 
     void usage(QString const & err = QString())
     {
@@ -374,12 +375,15 @@ int Sudo::parent()
     }
 
     QTextStream child_str{pwd_f};
+    // pseudoterminal echoes everything written into it's input; we don't want duplicating input
+    int inhibit_count = 0;
 
     QObject::connect(mDlg.data(), &QDialog::finished, [&] (int result)
         {
             if (QDialog::Accepted == result)
             {
-                child_str << mDlg->password().append(nl);
+                inhibit_count = term_eol_size; // now echoing is off, only terminal's eol
+                child_str << mDlg->password() << nl;
                 child_str.flush();
             } else
             {
@@ -388,8 +392,8 @@ int Sudo::parent()
         });
 
     QString last_line;
+    QTextStream stderr_str{stderr, QIODevice::WriteOnly};
     QScopedPointer<QSocketNotifier> pwd_watcher{new QSocketNotifier{mPwdFd, QSocketNotifier::Read}};
-    int inhibit_count = 0;
     auto reader = [&]
         {
             QString line = child_str.readAll();
@@ -422,7 +426,8 @@ int Sudo::parent()
                 {
                     if (inhibit_count < line.count())
                     {
-                        QTextStream{stderr, QIODevice::WriteOnly} << line.right(line.count() - inhibit_count);
+                        stderr_str << line.right(line.count() - inhibit_count);
+                        stderr_str.flush();
                         inhibit_count = 0;
                     } else
                     {
@@ -430,7 +435,8 @@ int Sudo::parent()
                     }
                 } else
                 {
-                    QTextStream{stderr, QIODevice::WriteOnly} << line;
+                    stderr_str << line;
+                    stderr_str.flush();
                 }
 
                 //assuming text oriented output
@@ -440,7 +446,7 @@ int Sudo::parent()
 
         };
 
-    QTextStream stdin_str(stdin);
+    QTextStream stdin_str{stdin, QIODevice::ReadOnly};
     QScopedPointer<QSocketNotifier> stdin_watcher{new QSocketNotifier{STDIN_FILENO, QSocketNotifier::Read}};
     auto writer = [&]
     {
@@ -449,8 +455,8 @@ int Sudo::parent()
             stdin_watcher.reset(nullptr); //stop the notification events
         } else
         {
-            inhibit_count += line.count() + 2;
-            child_str << line.append(nl);
+            inhibit_count += line.count() + term_eol_size;
+            child_str << line << nl;
             child_str.flush();
         }
     };
