@@ -68,6 +68,7 @@ namespace
     const QString doas_prog{QStringLiteral(LXQTSUDO_DOAS)};
     const QString pwd_prompt_end{QStringLiteral(": ")};
     const QChar nl{QLatin1Char('\n')};
+    constexpr int term_eol_size = 2;
 
     void usage(QString const & err = QString())
     {
@@ -374,12 +375,14 @@ int Sudo::parent()
     }
 
     QTextStream child_str{pwd_f};
+    // pseudoterminal echoes everything written into it's input; we don't want duplicating input
+    int inhibit_count = 0;
 
     QObject::connect(mDlg.data(), &QDialog::finished, [&] (int result)
         {
             if (QDialog::Accepted == result)
             {
-                child_str << mDlg->password().append(nl);
+                child_str << mDlg->password() << nl;
                 child_str.flush();
             } else
             {
@@ -388,8 +391,9 @@ int Sudo::parent()
         });
 
     QString last_line;
+    QString const & error_check = QStringLiteral("%1:").arg(backendName());
+    QTextStream stderr_str{stderr, QIODevice::WriteOnly};
     QScopedPointer<QSocketNotifier> pwd_watcher{new QSocketNotifier{mPwdFd, QSocketNotifier::Read}};
-    int inhibit_count = 0;
     auto reader = [&]
         {
             QString line = child_str.readAll();
@@ -397,11 +401,10 @@ int Sudo::parent()
             {
                 pwd_watcher.reset(nullptr); //stop the notifications events
 
-                QString const & prog = backendName();
-                if (last_line.startsWith(QStringLiteral("%1:").arg(prog)))
+                if (last_line.startsWith(error_check))
                 {
                     QMessageBox(QMessageBox::Critical, mDlg->windowTitle()
-                            , tr("Child '%1' process failed!\n%2").arg(prog).arg(last_line), QMessageBox::Ok).exec();
+                            , tr("Child '%1' process failed!\n%2").arg(backendName()).arg(last_line), QMessageBox::Ok).exec();
                 }
             } else
             {
@@ -415,14 +418,14 @@ int Sudo::parent()
                     if (!(ECHO & tios.c_lflag))
                     {
                         mDlg->show();
-                        return;
                     }
                 }
                 if (inhibit_count > 0)
                 {
                     if (inhibit_count < line.count())
                     {
-                        QTextStream{stderr, QIODevice::WriteOnly} << line.right(line.count() - inhibit_count);
+                        stderr_str << line.right(line.count() - inhibit_count);
+                        stderr_str.flush();
                         inhibit_count = 0;
                     } else
                     {
@@ -430,17 +433,25 @@ int Sudo::parent()
                     }
                 } else
                 {
-                    QTextStream{stderr, QIODevice::WriteOnly} << line;
+                    stderr_str << line;
+                    stderr_str.flush();
                 }
 
-                //assuming text oriented output
-                QStringList lines = line.split(nl, Qt::SkipEmptyParts);
-                last_line = lines.isEmpty() ? QString() : lines.back();
+                //assuming text oriented output; find the last non-empty line
+                auto i = line.crbegin(), i_end = line.crbegin(), i_crend = line.crend();
+                do {
+                    i_end = i + 1;
+                    i = std::find(i_end, i_crend, nl);
+                } while (i != i_crend && std::distance(i, i_end) == 0);
+
+                last_line.clear();
+                last_line.reserve(std::distance(i, i_end));
+                std::for_each(i.base(), i_end.base(), [&last_line](decltype (*i.base()) val) { last_line.append(val); });
             }
 
         };
 
-    QTextStream stdin_str(stdin);
+    QTextStream stdin_str{stdin, QIODevice::ReadOnly};
     QScopedPointer<QSocketNotifier> stdin_watcher{new QSocketNotifier{STDIN_FILENO, QSocketNotifier::Read}};
     auto writer = [&]
     {
@@ -449,8 +460,8 @@ int Sudo::parent()
             stdin_watcher.reset(nullptr); //stop the notification events
         } else
         {
-            inhibit_count += line.count() + 2;
-            child_str << line.append(nl);
+            inhibit_count += line.count() + term_eol_size;
+            child_str << line << nl;
             child_str.flush();
         }
     };
