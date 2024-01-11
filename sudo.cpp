@@ -382,7 +382,6 @@ int Sudo::parent()
         {
             if (QDialog::Accepted == result)
             {
-                inhibit_count = term_eol_size; // now echoing is off, only terminal's eol
                 child_str << mDlg->password() << nl;
                 child_str.flush();
             } else
@@ -392,6 +391,7 @@ int Sudo::parent()
         });
 
     QString last_line;
+    QString const & error_check = QStringLiteral("%1:").arg(backendName());
     QTextStream stderr_str{stderr, QIODevice::WriteOnly};
     QScopedPointer<QSocketNotifier> pwd_watcher{new QSocketNotifier{mPwdFd, QSocketNotifier::Read}};
     auto reader = [&]
@@ -401,11 +401,10 @@ int Sudo::parent()
             {
                 pwd_watcher.reset(nullptr); //stop the notifications events
 
-                QString const & prog = backendName();
-                if (last_line.startsWith(QStringLiteral("%1:").arg(prog)))
+                if (last_line.startsWith(error_check))
                 {
                     QMessageBox(QMessageBox::Critical, mDlg->windowTitle()
-                            , tr("Child '%1' process failed!\n%2").arg(prog).arg(last_line), QMessageBox::Ok).exec();
+                            , tr("Child '%1' process failed!\n%2").arg(backendName()).arg(last_line), QMessageBox::Ok).exec();
                 }
             } else
             {
@@ -419,7 +418,6 @@ int Sudo::parent()
                     if (!(ECHO & tios.c_lflag))
                     {
                         mDlg->show();
-                        return;
                     }
                 }
                 if (inhibit_count > 0)
@@ -439,9 +437,16 @@ int Sudo::parent()
                     stderr_str.flush();
                 }
 
-                //assuming text oriented output
-                QStringList lines = line.split(nl, Qt::SkipEmptyParts);
-                last_line = lines.isEmpty() ? QString() : lines.back();
+                //assuming text oriented output; find the last non-empty line
+                auto i = line.crbegin(), i_end = line.crbegin(), i_crend = line.crend();
+                do {
+                    i_end = i + 1;
+                    i = std::find(i_end, i_crend, nl);
+                } while (i != i_crend && std::distance(i, i_end) == 0);
+
+                last_line.clear();
+                last_line.reserve(std::distance(i, i_end));
+                std::for_each(i.base(), i_end.base(), [&last_line](decltype (*i.base()) val) { last_line.append(val); });
             }
 
         };
