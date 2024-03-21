@@ -222,7 +222,7 @@ int Sudo::main()
 
     mDlg.reset(new PasswordDialog{squashedArgs(/*userFriendly = */ true), backendName()});
     mDlg->setModal(true);
-    lxqtApp->setActiveWindow(mDlg.data());
+    mDlg.data()->activateWindow();
 
     if (-1 == mChildPid)
         QMessageBox(QMessageBox::Critical, mDlg->windowTitle()
@@ -422,14 +422,14 @@ int Sudo::parent()
                 }
                 if (inhibit_count > 0)
                 {
-                    if (inhibit_count < line.count())
+                    if (inhibit_count < line.size())
                     {
-                        stderr_str << line.right(line.count() - inhibit_count);
+                        stderr_str << line.right(line.size() - inhibit_count);
                         stderr_str.flush();
                         inhibit_count = 0;
                     } else
                     {
-                        inhibit_count -= line.count();
+                        inhibit_count -= line.size();
                     }
                 } else
                 {
@@ -460,7 +460,7 @@ int Sudo::parent()
             stdin_watcher.reset(nullptr); //stop the notification events
         } else
         {
-            inhibit_count += line.count() + term_eol_size;
+            inhibit_count += line.size() + term_eol_size;
             child_str << line << nl;
             child_str.flush();
         }
