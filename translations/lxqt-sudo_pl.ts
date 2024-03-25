@@ -26,7 +26,7 @@
     <message>
         <location filename="../passworddialog.ui" line="106"/>
         <source>LXQt sudo backend</source>
-        <translation>Back-end LXQt sudo</translation>
+        <translation>Backend LXQt sudo</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
@@ -74,14 +74,14 @@ Arguments:
 </source>
         <translation>Użycie: %1 opcja [komenda [argumenty…]]
 
-Graficzny front-end dla %2/%3
+Graficzny frontend dla %2/%3
 
 Argumenty:
   opcja:
-    -h|--help      Wyświetla tą informację.
+    -h|--help      Wyświetla tę informację.
     -v|--version   Wyświetla informacje o wersji.
-    -s|--su        Używa %3(1) jako back-end.
-    -d|--sudo      Używa %2(8) jako back-end.
+    -s|--su        Używa %3(1) jako backendu.
+    -d|--sudo      Używa %2(8) jako backendu.
   command          Polecenie do uruchomienia.
   arguments        Dodatkowe argumenty dla polecenia.
 
