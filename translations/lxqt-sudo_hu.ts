@@ -117,7 +117,7 @@ paraméterek:
         <location filename="../sudo.cpp" line="246"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
-        <translation type="unfinished">nincs</translation>
+        <translation>nincs</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="295"/>
@@ -129,7 +129,7 @@ paraméterek:
     <message>
         <location filename="../sudo.cpp" line="337"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation type="unfinished">Rendszerhívás hiba, nem sikerült megnyitni a pszeudoterminált non-block módban: %1</translation>
+        <translation>Rendszerhívás hiba, nem sikerült a pszeudoterminált(pty) non-block módra állitani: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="345"/>

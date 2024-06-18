@@ -26,7 +26,7 @@
     <message>
         <location filename="../passworddialog.ui" line="106"/>
         <source>LXQt sudo backend</source>
-        <translation>LXQt sudo бекенд</translation>
+        <translation>Бекенд за LXQt sudo</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
@@ -110,7 +110,7 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="219"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation>Syscall error, failed to fork: %1</translation>
+        <translation>Syscall грешка, неуспешно разклоняване: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="246"/>
@@ -122,18 +122,18 @@ Arguments:
         <location filename="../sudo.cpp" line="295"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
+        <translation>%1: Засечен е опит за въвеждане на привилегирована команда чрез LC_ALL env(%2). Изход!
 </translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="337"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation>Syscall error, failed to bring pty to non-block mode: %1</translation>
+        <translation>Syscall грешка, не успя да се приведе pty в неблоков режим: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="345"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation>Syscall error, failed to fdopen pty: %1</translation>
+        <translation>Syscall грешка, неуспешно fdopen pty: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="314"/>
