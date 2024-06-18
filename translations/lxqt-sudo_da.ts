@@ -6,12 +6,12 @@
     <message>
         <location filename="../passworddialog.ui" line="6"/>
         <source>LXQt sudo</source>
-        <translation>LXQt sudo</translation>
+        <translation>LXQt Sudo</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="42"/>
         <source>Copy command to clipboard</source>
-        <translation>Kopiér kommando til udklipsholder</translation>
+        <translation>Kopiér kommando til Udklipsholder</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
@@ -21,17 +21,17 @@
     <message>
         <location filename="../passworddialog.ui" line="83"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation>Den anmodede handling behøver administrative rettigheder.&lt;br&gt;Indtast venligst din adgangskode.</translation>
+        <translation>Den anmodede handling kræver administrative rettigheder.&lt;br&gt;Indtast venligst din adgangskode.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
         <source>LXQt sudo backend</source>
-        <translation>LXQt sudo-backend</translation>
+        <translation>LXQt Sudo-backend</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
         <source>A program LXQt sudo calls in background to elevate privileges.</source>
-        <translation>Et program som LXQt sudo kalder i baggrunden for at ophøje rettigheder.</translation>
+        <translation>Et program som LXQt sudo kalder i baggrunden for at ophøjede rettigheder.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
@@ -74,7 +74,7 @@ Arguments:
 </source>
         <translation>Anvendelse: %1 valgmulighed [kommando [argumenter...]]
 
-Grafisk brugerflade til %2/%3
+Grafisk brugergrænseflade til %2/%3
 
 Argumenter:
   valgmulighed:
@@ -100,17 +100,17 @@ Argumenter:
     <message>
         <location filename="../sudo.cpp" line="195"/>
         <source>%1: no command to run provided!</source>
-        <translation>%1: ingen angivet kommando som skal køres!</translation>
+        <translation>%1: Ingen angivet kommando som skal køres!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="202"/>
         <source>%1: no backend chosen!</source>
-        <translation>%1: ingen backend valgt!</translation>
+        <translation>%1: Ingen backend valgt!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="219"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation>Fejl ved syscall, kunne ikke forke: %1</translation>
+        <translation>Fejl ved syscall, kunne ikke forgrene: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="246"/>
@@ -139,7 +139,7 @@ Argumenter:
         <location filename="../sudo.cpp" line="314"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation>%1: kunne ikke exec &apos;%2&apos;: %3
+        <translation>%1: kunne ikke udføre &apos;%2&apos;: %3
 </translation>
     </message>
     <message>
