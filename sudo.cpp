@@ -98,10 +98,10 @@ namespace
 
     //Note: array must be sorted to allow usage of binary search
     static constexpr char const * const ALLOWED_VARS[] = {
-        "DISPLAY"
+        "DISPLAY", "GDK_DPI_SCALE", "GDK_SCALE", "GTK_CSD", "GTK_OVERLAY_SCROLLING"
             , "LANG", "LANGUAGE", "LC_ADDRESS", "LC_ALL", "LC_COLLATE", "LC_CTYPE", "LC_IDENTIFICATION", "LC_MEASUREMENT"
             , "LC_MESSAGES", "LC_MONETARY", "LC_NAME", "LC_NUMERIC", "LC_PAPER", "LC_TELEPHONE", "LC_TIME"
-            , "PATH", "QT_PLATFORM_PLUGIN", "QT_QPA_PLATFORMTHEME", "TERM", "WAYLAND_DISPLAY", "XAUTHLOCALHOSTNAME", "XAUTHORITY"
+            , "PATH", "QT_PLATFORM_PLUGIN", "QT_QPA_PLATFORMTHEME", "QT_SCALE_FACTOR", "TERM", "WAYLAND_DISPLAY", "XAUTHLOCALHOSTNAME", "XAUTHORITY"
     };
     static constexpr char const * const * const ALLOWED_END = ALLOWED_VARS + sizeof (ALLOWED_VARS) / sizeof (ALLOWED_VARS[0]);
     struct assert_helper
