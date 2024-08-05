@@ -11,7 +11,7 @@
     <message>
         <location filename="../passworddialog.ui" line="42"/>
         <source>Copy command to clipboard</source>
-        <translation>Kopier kommando til utklippsboken</translation>
+        <translation>Kopier kommando til utklippstavlen</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
