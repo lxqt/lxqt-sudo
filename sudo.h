@@ -81,6 +81,7 @@ private:
     int mChildPid;
     int mPwdFd;
     int mRet;
+    bool mPreserveEnv = false;
 };
 
 #endif //SUDO_H
