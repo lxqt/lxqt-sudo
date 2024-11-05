@@ -1,3 +1,7 @@
+lxqt-sudo-2.1.0 / 2024-11-05
+=============================
+ * Add new env vars for `sudo`.
+
 lxqt-sudo-2.0.0 / 2024-04-17
 =============================
  * Allow bidirectional communication with launched process.
