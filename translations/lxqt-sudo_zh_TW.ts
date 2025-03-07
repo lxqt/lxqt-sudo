@@ -16,7 +16,7 @@
     <message>
         <location filename="../passworddialog.ui" line="45"/>
         <source>&amp;Copy</source>
-        <translation>複製 (&amp;C)</translation>
+        <translation>複製(&amp;C)</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
@@ -122,13 +122,13 @@ GUI 前端 %2/%3
         <location filename="../sudo.cpp" line="295"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation>%1：檢測到嘗試通過LC_ALL env（％2）注入特權命令。退出！
+        <translation>%1：檢測到嘗試經由 LC_ALL env(％2) 注入特權指令。退出中！
 </translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="337"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation>系統調用錯誤，無法將pty調整為非區塊模式：%1</translation>
+        <translation>系統呼叫錯誤，無法將 pty 作為非區塊模式：%1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="345"/>
