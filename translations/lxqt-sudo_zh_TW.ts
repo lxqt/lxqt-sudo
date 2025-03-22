@@ -26,7 +26,7 @@
     <message>
         <location filename="../passworddialog.ui" line="106"/>
         <source>LXQt sudo backend</source>
-        <translation>LXQt sudo後端</translation>
+        <translation>LXQt sudo 後端</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
@@ -78,8 +78,8 @@ GUI 前端 %2/%3
 
 參數：
   選項：
-    -h|--help     顯示此幫助訊息。
-    -v|--version  顯示版本訊息。
+    -h|--help     顯示此說明資訊。
+    -v|--version  顯示版本資訊。
     -s|--su       使用 %3(1) 當後端。
     -d|--sudo     使用 %2(8) 當後端。
   指令            要執行的指令。
@@ -110,13 +110,13 @@ GUI 前端 %2/%3
     <message>
         <location filename="../sudo.cpp" line="219"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation>系統調用錯誤，復刻%1失敗</translation>
+        <translation>系統呼叫錯誤，複刻引用失敗：%1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="246"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
-        <translation>復原</translation>
+        <translation>尚未設定</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="295"/>
@@ -128,12 +128,12 @@ GUI 前端 %2/%3
     <message>
         <location filename="../sudo.cpp" line="337"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation>系統呼叫錯誤，無法將 pty 作為非區塊模式：%1</translation>
+        <translation>系統呼叫錯誤，無法將 pty 帶入非阻擋模式：%1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="345"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation>系統調用錯誤，開啓(fdopen) pty失敗：%1</translation>
+        <translation>系統呼叫錯誤，開啓 pty 失敗： %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="314"/>
@@ -146,7 +146,7 @@ GUI 前端 %2/%3
         <location filename="../sudo.cpp" line="376"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation>子執行序&apos;%1&apos;執行失敗！
+        <translation>分支 &apos;%1&apos; 程序失敗！
 %2</translation>
     </message>
 </context>
