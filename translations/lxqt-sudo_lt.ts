@@ -57,10 +57,10 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../sudo.cpp" line="75"/>
+        <location filename="../sudo.cpp" line="78"/>
         <source>Usage: %1 option [command [arguments...]]
 
-GUI frontend for %2/%3
+GUI frontend for %2/%3/%4
 
 Arguments:
   option:
@@ -68,27 +68,15 @@ Arguments:
     -v|--version   Print version information.
     -s|--su        Use %3(1) as backend.
     -d|--sudo      Use %2(8) as backend.
+    -a|--doas      Use %4(1) as backend.
   command          Command to run.
   arguments        Optional arguments for command.
 
 </source>
-        <translation>Naudojimas: %1 parametras [komanda [argumentai...]]
-
-Grafinė naudotojo sąsaja, skirta %2/%3
-
-Argumentai:
-  parametras:
-    -h|--help      Išvesti šią pagalbą.
-    -v|--version   Išvesti versijos informacija.
-    -s|--su        Naudoti %3(1) kaip vidinę sąsają.
-    -d|--sudo      Naudoti %2(8) kaip vidinę sąsają.
-  command          Komanda, kurią vykdyti.
-  arguments        Pasirinktini argumentai komandai.
-
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="92"/>
+        <location filename="../sudo.cpp" line="96"/>
         <source>%1 version %2
 </source>
         <translation>%1 versija %2
@@ -98,52 +86,52 @@ Argumentai:
 <context>
     <name>Sudo</name>
     <message>
-        <location filename="../sudo.cpp" line="195"/>
+        <location filename="../sudo.cpp" line="205"/>
         <source>%1: no command to run provided!</source>
         <translation>%1: nepateikta komanda, kurią vykdyti!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="202"/>
+        <location filename="../sudo.cpp" line="212"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: nepasirinkta vidinė sąsaja!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="219"/>
+        <location filename="../sudo.cpp" line="229"/>
         <source>Syscall error, failed to fork: %1</source>
         <translation>Syscall klaida, nepavyko atšakoti: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="246"/>
+        <location filename="../sudo.cpp" line="257"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
         <translation>atstatyti</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="295"/>
+        <location filename="../sudo.cpp" line="323"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
         <translation>%1: Aptiktas bandymas įskiepyti privilegijuotą komandą per LC_ALL env(%2). Išeinama!
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="337"/>
+        <location filename="../sudo.cpp" line="365"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
         <translation>Syscall klaida, nepavyko pristatyti pty į neblokavimo veikseną: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="345"/>
+        <location filename="../sudo.cpp" line="373"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
         <translation>Syscall klaida, nepavyko atlikti fdopen pty: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="314"/>
+        <location filename="../sudo.cpp" line="342"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
         <translation>%1: Nepavyko įvykdyti „%2“: %3
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="376"/>
+        <location filename="../sudo.cpp" line="407"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
         <translation>Vyksnis „%1“ patyrė nesėkmę!

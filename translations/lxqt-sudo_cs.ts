@@ -57,10 +57,10 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../sudo.cpp" line="75"/>
+        <location filename="../sudo.cpp" line="78"/>
         <source>Usage: %1 option [command [arguments...]]
 
-GUI frontend for %2/%3
+GUI frontend for %2/%3/%4
 
 Arguments:
   option:
@@ -68,27 +68,15 @@ Arguments:
     -v|--version   Print version information.
     -s|--su        Use %3(1) as backend.
     -d|--sudo      Use %2(8) as backend.
+    -a|--doas      Use %4(1) as backend.
   command          Command to run.
   arguments        Optional arguments for command.
 
 </source>
-        <translation>Použití: %1 volba [příkaz [argumenty…]]
-
-Grafická nadstavba pro %2/%3
-
-Argumenty:
-  volba:
-    -h|--help      Zobrazí tuto nápovědu.
-    -v|--version   Zobrazí informace o verzi.
-    -s|--su        Použít %3(1) jako vykonávající část.
-    -d|--sudo      Použít %2(8) jako vykonávající část.
-  command          Příkaz ke spuštění.
-  arguments        Volitelné argumenty pro příkaz.
-
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="92"/>
+        <location filename="../sudo.cpp" line="96"/>
         <source>%1 version %2
 </source>
         <translation>%1 verze %2
@@ -98,52 +86,52 @@ Argumenty:
 <context>
     <name>Sudo</name>
     <message>
-        <location filename="../sudo.cpp" line="195"/>
+        <location filename="../sudo.cpp" line="205"/>
         <source>%1: no command to run provided!</source>
         <translation>%1: nezadán žádný příkaz ke spuštění!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="202"/>
+        <location filename="../sudo.cpp" line="212"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: nevybrána žádná vykonávající část!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="219"/>
+        <location filename="../sudo.cpp" line="229"/>
         <source>Syscall error, failed to fork: %1</source>
         <translation>Chyba systémového volání, nepodařilo se provést větvení (fork): %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="246"/>
+        <location filename="../sudo.cpp" line="257"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
         <translation>nenast</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="295"/>
+        <location filename="../sudo.cpp" line="323"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
         <translation>%1: Zjištěn pokus o vpravení privilegovaného příkazu prostřednictvím proměnné prostředí LC_ALL env(%2). Ukončuje se!
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="337"/>
+        <location filename="../sudo.cpp" line="365"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
         <translation>Chyba systémového volání, nepodařilo se přepnout pty do neblokujího režimu: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="345"/>
+        <location filename="../sudo.cpp" line="373"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
         <translation>Chyba systémového volání, nepodařilo se provést fdopen pty: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="314"/>
+        <location filename="../sudo.cpp" line="342"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
         <translation>%1: Nepodařilo se spustit „%2“: %3
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="376"/>
+        <location filename="../sudo.cpp" line="407"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
         <translation>Nezdar v podřízeném procesu „%1“!
