@@ -57,10 +57,10 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../sudo.cpp" line="75"/>
+        <location filename="../sudo.cpp" line="78"/>
         <source>Usage: %1 option [command [arguments...]]
 
-GUI frontend for %2/%3
+GUI frontend for %2/%3/%4
 
 Arguments:
   option:
@@ -68,27 +68,15 @@ Arguments:
     -v|--version   Print version information.
     -s|--su        Use %3(1) as backend.
     -d|--sudo      Use %2(8) as backend.
+    -a|--doas      Use %4(1) as backend.
   command          Command to run.
   arguments        Optional arguments for command.
 
 </source>
-        <translation>Uso: %1 opzione [comando [argomenti...]]
-
-Frontend grafico per  %2/%3
-
-Argomenti:
-··opzioni:
-··· -h|--help     Mostra questo aiuto.
-····-v|--version   Mostra versione.
-····-s|--su        Usa %3(1) come backend.
-····-d|--sudo      Usa %2(8) come backend.
-··command          Comando da eseguire.
-··arguments        Argomenti opzionali per il comando.
-
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="92"/>
+        <location filename="../sudo.cpp" line="96"/>
         <source>%1 version %2
 </source>
         <translation>%1 versione %2
@@ -98,52 +86,52 @@ Argomenti:
 <context>
     <name>Sudo</name>
     <message>
-        <location filename="../sudo.cpp" line="195"/>
+        <location filename="../sudo.cpp" line="205"/>
         <source>%1: no command to run provided!</source>
         <translation>%1: non è stato fornito alcun comando da eseguire!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="202"/>
+        <location filename="../sudo.cpp" line="212"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: selezionato nessun backend!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="219"/>
+        <location filename="../sudo.cpp" line="229"/>
         <source>Syscall error, failed to fork: %1</source>
         <translation>Errore Syscall, fork fallito: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="246"/>
+        <location filename="../sudo.cpp" line="257"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
         <translation>non settato</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="295"/>
+        <location filename="../sudo.cpp" line="323"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
         <translation>%1: Rilevato tentativo di immissione comando privilegiato via LC_ALL env(%2). Uscita!
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="337"/>
+        <location filename="../sudo.cpp" line="365"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
         <translation>Errore syscall, fallimento nel portare pty alla modalità non-block: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="345"/>
+        <location filename="../sudo.cpp" line="373"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
         <translation>Errore syscall, errore durante fdopen pty: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="314"/>
+        <location filename="../sudo.cpp" line="342"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
         <translation>%1: Esecuzione di &apos;%2&apos; fallita: %3
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="376"/>
+        <location filename="../sudo.cpp" line="407"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
         <translation>Processo figlio %1 non riuscito!
