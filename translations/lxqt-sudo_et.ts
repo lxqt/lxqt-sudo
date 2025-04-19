@@ -73,7 +73,21 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Kasutus: %1 valik [käsk [argumendid...]]
+
+Graafiline kasutajaliides rakendustele: %2/%3/%4
+
+Argumendid:
+  valik:
+    -h|--help      Näita seda abiteavet.
+    -v|--version   Näita versiooniteavet.
+    -s|--su        Kasuta taustateenusena: %3(1).
+    -d|--sudo      Kasuta taustateenusena: %2(8).
+    -a|--doas      Kasuta taustateenusena: %4(1).
+  käsk          Käivitatav käsk.
+  argumendid        Käsu täiendavad argumendid.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="96"/>
