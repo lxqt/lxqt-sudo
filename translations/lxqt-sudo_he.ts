@@ -73,7 +73,21 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>שימוש: %1 option [command [arguments...]]
+
+ממשק חזותי עבור %2/%3/%4
+
+ארגומנטים:
+  option:
+    ‎-h|--help      הדפסת העזרה הזאת.
+    ‎-v|--version   הצגת פרטי גרסה.
+    ‎-s|--su        להשתמש ב־%3(1) כמנגנון.
+    ‎-d|--sudo      להשתמש ב־%2(8) כמנגנון.
+    ‎-a|--doas      להשתמש ב־%4(1) כמנגנון.
+  command          פקודה להרצה.
+  arguments        ארגומנטים לפקודה כרשות.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="96"/>

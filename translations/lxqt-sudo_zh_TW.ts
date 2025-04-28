@@ -73,7 +73,21 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>用法： %1 option [command [arguments...]]
+
+GUI frontend for %2/%3/%4
+
+Arguments:
+  option:
+    -h|--help      顯示說明。
+    -v|--version   顯示版本資訊。
+    -s|--su        Use %3(1) as backend.
+    -d|--sudo      Use %2(8) as backend.
+    -a|--doas      Use %4(1) as backend.
+  command          Command to run.
+  arguments        Optional arguments for command.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="96"/>
