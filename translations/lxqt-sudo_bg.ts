@@ -73,7 +73,21 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Използване: %1 опция [команда [аргументи...]]
+
+Графичен интерфейс за %2/%3/%4
+
+Аргументи:
+  опции:
+    -h|--help      Отпечатване на тази помощ.
+    -v|--version   Отпечатване на информация за версията.
+    -s|--su        Използване на  %3(1) като бекенд.
+    -d|--sudo      Използване на %2(8) като бекенд.
+    -a|--doas      Използване на %4(1) като бекенд.
+  command          Команда за изпълнение.
+  arguments        Незадължителни аргументи на командата.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="96"/>

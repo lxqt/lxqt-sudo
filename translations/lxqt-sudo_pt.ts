@@ -73,7 +73,21 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Utilização: %1 opção [comando [argumentos...]]
+
+Interface GUI para %2/%3/%4
+
+Argumentos:
+  opção:
+    -h|--help Mostra esta ajuda.
+    -v|--version Mostra informações sobre a versão.
+    -s|--su Utiliza %3(1) como backend.
+    -d|--sudo Utiliza %2(8) como backend.
+    -a|--doas Utiliza %4(1) como backend.
+  command Comando a ser executado.
+  arguments Argumentos opcionais para o comando.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="96"/>

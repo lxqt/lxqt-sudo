@@ -73,7 +73,21 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Gebruik: %1 optie [opdracht [aanvullende opties…]]
+
+Een schil voor %2/%3/%4
+
+Aanvullende opties:
+  optie:
+    -h|--help      Toon dit hulpbbericht.
+    -v|--version   Toon de versie-informatie.
+    -s|--su        Gebruik %3(1) als backend.
+    -d|--sudo      Gebruik %2(8) als backend.
+    -a|--doas      Gebruik %4(1) als backend.
+  command          De uit te voeren opdracht.
+  arguments        De aanvullende opdrachtopties (optioneel).
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="96"/>
