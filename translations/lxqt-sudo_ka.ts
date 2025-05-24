@@ -73,7 +73,21 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>გამოყენება: %1 პარამეტრი [ბრძანება [არგუმენტები...]]
+
+GUI წინაბოლო პროგრამისთვის %2/%3/%4
+
+არგუმენტები:
+  პარამეტრები:
+    -h|--help      ამ დახმარების გამოტანა.
+    -v|--version   ვერსიის ინფორმაციის გამოტანა.
+    -s|--su        %3(1)-ის გამოყენება უკანაბოლოს სახით.
+    -d|--sudo      %2(8)-ის გამოყენება უკანაბოლოს სახით.
+    -a|--doas      %4(1)-ის გამოყენება უკანაბოლოს სახით.
+  ბრძანება          გასაშვები ბრძანება.
+  არგუმენტები        არასავალდებულო არგუმენტები ბრძანებისთვის.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="96"/>

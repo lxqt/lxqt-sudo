@@ -73,7 +73,21 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Cú pháp: %1 tùy-chọn [câu-lệnh [tham-số...]]
+
+Ứng dụng GUI cho %2/%3/%4
+
+Tham số:
+  tùy-chọn:
+    -h|--help      In trợ giúp.
+    -v|--version   In thông tin phiên bản.
+    -s|--su        Sử dụng %3(1) như backend.
+    -d|--sudo      Sử dụng %2(8) như backend.
+    -a|--doas      Sử dụng %4(1) như backend.
+  câu-lệnh          Câu lệnh sẽ chạy.
+  tham-số        Các tham số tùy chọn cho câu lệnh chỉ định.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="96"/>
