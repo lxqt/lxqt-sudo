@@ -73,7 +73,21 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>使用方法: %1 オプション [コマンド [引数...]]
+
+%2/%3/%4 の GUI フロントエンド
+
+引数:
+  オプション:
+    -h|--help このヘルプを表示します。
+    -v|--version バージョン情報を表示します。
+    -s|--su %3(1) をバックエンドとして使用します。
+    -d|--sudo %2(8) をバックエンドとして使用します。
+    -a|--doas %4(1) をバックエンドとして使用します。
+  command 実行するコマンド。
+  arguments コマンドのオプション引数。
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="96"/>

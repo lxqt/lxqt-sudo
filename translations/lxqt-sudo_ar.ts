@@ -73,7 +73,21 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>الاستخدام: خيار %1 [أمر [وسيطات...]]
+
+واجهة المستخدم الرسومية لـ %2/%3/%4
+
+الوسيطات:
+الخيار:
+-h|--help ا     طبع هذه التعليمات.
+-v|--version اطبع معلومات الإصدار.
+-s|--su            استخدم %3(1) كواجهة خلفية.
+-d|--sudo      استخدم %2(8) كواجهة خلفية.
+-a|--doas      استخدم %4(1) كواجهة خلفية.
+command   أمر للتنفيذ.
+وسيطات      وسيطات اختيارية للأمر.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="96"/>
