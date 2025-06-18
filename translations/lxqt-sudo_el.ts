@@ -73,7 +73,22 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Χρήση: %1 επιλογή [εντολή [ορίσματα...]]
+
+Γραφικό περιβάλλον για %2/%3/%4
+
+Ορίσματα:
+  επιλογή:
+    -h|--help      Εμφάνιση αυτής της βοήθειας.
+    -v|--version   Εμφάνιση πληροφοριών έκδοσης.
+    -s|--su        Χρήση του %3(1) ως υποσύστημα.
+    -d|--sudo      Χρήση του %2(8) ως υποσύστημα.
+    -a|--doas      Χρήση του %4(1) ως υποσύστημα.
+
+εντολή   Η εντολή που θα εκτελεστεί.
+ορίσματα  Προαιρετικά ορίσματα για την εντολή.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="96"/>
