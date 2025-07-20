@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="lt">
+<TS version="2.1" language="eu">
 <context>
     <name>PasswordDialog</name>
     <message>
         <location filename="../passworddialog.ui" line="6"/>
         <source>LXQt sudo</source>
-        <translation>LXQt sudo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="42"/>
         <source>Copy command to clipboard</source>
-        <translation>Kopijuoti komandą į iškarpinę</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
         <source>&amp;Copy</source>
-        <translation>&amp;Kopijuoti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation>Užklaustam veiksmui reikia administratoriaus teisių.&lt;br&gt;Įveskite savo slaptažodį.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
         <source>LXQt sudo backend</source>
-        <translation>LXQt sudo vidinė sąsaja</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
         <source>A program LXQt sudo calls in background to elevate privileges.</source>
-        <translation>Programa, kurią LXQt sudo išviečia fone, kad įgautų papildomų teisių.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
         <source>Command:</source>
-        <translation>Komanda:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="126"/>
         <source>Password:</source>
-        <translation>Slaptažodis:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="133"/>
         <source>Enter password</source>
-        <translation>Įveskite slaptažodį</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Attempt #%1</source>
-        <translation>Bandymas #%1</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -73,28 +73,13 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation>Naudojimas: %1 parametras [komanda [argumentai...]]
-
-Grafinė naudotojo sąsaja, skirta %2/%3/%4
-
-Argumentai:
-  parametras:
-    -h|--help      Rodyti šią pagalbą.
-    -v|--version   Rodyti informaciją apie versiją.
-    -s|--su        Naudoti %3(1) kaip vidinę sąsają.
-    -d|--sudo      Naudoti %2(8) kaip vidinę sąsają.
-    -a|--doas      Naudoti %4(1) kaip vidinę sąsają.
-  command          Komanda, kurią vykdyti.
-  arguments        Pasirinktini komandos argumentai.
-
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="96"/>
         <source>%1 version %2
 </source>
-        <translation>%1 versija %2
-</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -102,54 +87,51 @@ Argumentai:
     <message>
         <location filename="../sudo.cpp" line="205"/>
         <source>%1: no command to run provided!</source>
-        <translation>%1: nepateikta komanda, kurią vykdyti!</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="212"/>
         <source>%1: no backend chosen!</source>
-        <translation>%1: nepasirinkta vidinė sąsaja!</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="229"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation>Syscall klaida, nepavyko atšakoti: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="257"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
-        <translation>atstatyti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="323"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation>%1: Aptiktas bandymas įskiepyti privilegijuotą komandą per LC_ALL env(%2). Išeinama!
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="365"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation>Syscall klaida, nepavyko pristatyti pty į neblokavimo veikseną: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="373"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation>Syscall klaida, nepavyko atlikti fdopen pty: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="342"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation>%1: Nepavyko įvykdyti „%2“: %3
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="407"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation>Vyksnis „%1“ patyrė nesėkmę!
-%2</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

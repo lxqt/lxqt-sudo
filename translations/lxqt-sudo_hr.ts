@@ -73,7 +73,21 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Upotreba: %1 opcija [naredba [argumenti ...]]
+
+GUI frontend for %2/%3/%4
+
+Argumenti:
+  opcije:
+    -h|--help      Ispiši ovu pomoć.
+    -v|--version   Ispiši podatke verzije.
+    -s|--su        Koristi %3(1) kao pozadinski sustav.
+    -d|--sudo      Koristi %2(8) kao pozadinski sustav.
+    -a|--doas      Koristi %4(1) kao pozadinski sustav.
+  command          Naredba koja se želi pokrenuti.
+  arguments        Opcionalni argumenti za naredbu.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="96"/>
