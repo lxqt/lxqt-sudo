@@ -84,6 +84,7 @@ namespace
                     "    -s|--su        Use %3(1) as backend.\n"
                     "    -d|--sudo      Use %2(8) as backend.\n"
                     "    -a|--doas      Use %4(1) as backend.\n"
+                    "    -E|--keep-env  Preserve all existing environment variables.\n"
                     "  command          Command to run.\n"
                     "  arguments        Optional arguments for command.\n\n").arg(app_master).arg(sudo_prog).arg(su_prog).arg(doas_prog);
         if (!err.isEmpty())
@@ -114,8 +115,13 @@ namespace
     };
     assert_helper h;
 
-    inline std::string env_workarounds()
+    inline std::string env_workarounds(bool preserveEnv)
     {
+        if (preserveEnv) {
+            std::cerr << LXQTSUDO << ": Preserving all environment variables.\n";
+            return "";
+        }
+
         std::cerr << LXQTSUDO << ": Stripping child environment except for: ";
         std::ostringstream left_env_params;
         std::copy(ALLOWED_VARS, ALLOWED_END - 1, std::ostream_iterator<const char *>{left_env_params, ","});
@@ -195,6 +201,10 @@ int Sudo::main()
         } else if (QStringLiteral("-a") == arg1 || QStringLiteral("--doas") == arg1)
         {
             mBackend = BACK_DOAS;
+            mArgs.removeAt(0);
+        } else if (QStringLiteral("-E") == arg1 || QStringLiteral("--keep-env") == arg1)
+        {
+            mPreserveEnv = true;
             mArgs.removeAt(0);
         }
     }
@@ -287,11 +297,11 @@ void Sudo::child()
     switch (mBackend)
     {
         case BACK_SUDO:
-            preserve_env_param = "--preserve-env=";
-
-            preserve_env_param += env_workarounds();
-
-            *(param_arg++) = preserve_env_param.c_str(); //preserve environment
+            if(!mPreserveEnv) {
+                preserve_env_param = "--preserve-env=";
+                preserve_env_param += env_workarounds(mPreserveEnv);
+                *(param_arg++) = preserve_env_param.c_str(); //preserve environment
+            }
             *(param_arg++) = "/bin/sh";
             break;
         case BACK_DOAS:
@@ -299,7 +309,7 @@ void Sudo::child()
             [[fallthrough]];
         case BACK_SU:
         case BACK_NONE:
-            env_workarounds();
+            env_workarounds(mPreserveEnv);
             break;
 
     }
