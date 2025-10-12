@@ -73,7 +73,21 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Použití: %1 volba [příkaz [argumenty…]]
+
+Nadstavba (grafické uživ. rozhraní) pro %2/%3/%4
+
+Argumenty:
+  volba:
+    -h|--help      Vypsat tuto nápovědu.
+    -v|--version   Vypsat informaci o verzi.
+    -s|--su        Použít %3(1) coby vykonávající část.
+    -d|--sudo      Použít %2(8) coby vykonávající část.
+    -a|--doas      Použít %4(1) coby vykonávající část.
+  command          Příkaz, který spustit.
+  arguments        Volitelné argumenty pro příkaz.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="96"/>
@@ -116,7 +130,7 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="365"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation>Chyba systémového volání, nepodařilo se přepnout pty do neblokujího režimu: %1</translation>
+        <translation>Chyba systémového volání, nepodařilo se přepnout pty do neblokujícího režimu: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="373"/>
