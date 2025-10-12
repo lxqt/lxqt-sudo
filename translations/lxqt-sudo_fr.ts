@@ -73,7 +73,21 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Utilisation : %1 option [commande [arguments...]]
+
+Interface graphique pour %2/%3/%4
+
+Arguments :
+  option :
+    -h|--help      Affiche cette aide.
+    -v|--version   Affiche les informations de version.
+    -s|--su        Utilise %3(1) comme backend.
+    -d|--sudo      Utilise %2(8) comme backend.
+    -a|--doas      Utilise %4(1) comme backend.
+  commande         Commande à exécuter.
+  arguments        Arguments optionnels pour la commande.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="96"/>
@@ -88,17 +102,17 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="205"/>
         <source>%1: no command to run provided!</source>
-        <translation>%1&#x202f;: aucune commande n&apos;a été spécifiée&#x202f;!</translation>
+        <translation>%1 : aucune commande n&apos;a été spécifiée !</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="212"/>
         <source>%1: no backend chosen!</source>
-        <translation>%1&#x202f;: aucun Backend n&apos;a été choisi&#x202f;!</translation>
+        <translation>%1 : aucun Backend n&apos;a été choisi !</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="229"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation>Erreur d&apos;appel système, échec de la conversion&#x202f;: %1</translation>
+        <translation>Erreur d&apos;appel système, échec de la conversion : %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="257"/>
@@ -110,24 +124,24 @@ Arguments:
         <location filename="../sudo.cpp" line="323"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation>%1&#x202f;: Tentative détectée d&apos;injection d&apos;une commande privilégiée via LC_ALL env(%2). En sortant&#x202f;!
+        <translation>%1 : Tentative détectée d&apos;injection d&apos;une commande privilégiée via LC_ALL env(%2). En sortant !
 </translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="365"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation>Erreur d&apos;appel système, échec du transfert de pty en mode sans blocage&#x202f;: %1</translation>
+        <translation>Erreur d&apos;appel système, échec du transfert de pty en mode sans blocage : %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="373"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation>Erreur d&apos;appel système, échec de fdopen pty&#xa0;: %1</translation>
+        <translation>Erreur d&apos;appel système, échec de fdopen pty : %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="342"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation>%1&#x202f;: Impossible d&apos;exécuter &apos;%2&apos;&#x202f;: %3
+        <translation>%1 : Impossible d&apos;exécuter &apos;%2&apos; : %3
 </translation>
     </message>
     <message>
