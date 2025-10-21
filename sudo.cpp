@@ -81,6 +81,7 @@ namespace
                     "  option:\n"
                     "    -h|--help      Print this help.\n"
                     "    -v|--version   Print version information.\n"
+                    "    -q|--quiet     Make %1 less verbose.\n"
                     "    -s|--su        Use %3(1) as backend.\n"
                     "    -d|--sudo      Use %2(8) as backend.\n"
                     "    -a|--doas      Use %4(1) as backend.\n"
@@ -114,13 +115,13 @@ namespace
     };
     assert_helper h;
 
-    inline std::string env_workarounds()
+    inline std::string env_workarounds(bool quiet)
     {
-        std::cerr << LXQTSUDO << ": Stripping child environment except for: ";
         std::ostringstream left_env_params;
         std::copy(ALLOWED_VARS, ALLOWED_END - 1, std::ostream_iterator<const char *>{left_env_params, ","});
         left_env_params << *(ALLOWED_END - 1); // printing the last separately to avoid trailing comma
-        std::cerr << left_env_params.str() << '\n';
+        if (!quiet)
+            std::cerr << LXQTSUDO << ": Stripping child environment except for: " << left_env_params.str() << '\n';
         // cleanup environment, because e.g.:
         // - pcmanfm-qt will not start if the DBUS_SESSION_BUS_ADDRESS is preserved
         // - Qt apps may change user's config files permissions if the XDG_* are preserved
@@ -154,6 +155,7 @@ namespace
 Sudo::Sudo()
     : mArgs{lxqtApp->arguments()}
     , mBackend{BACK_NONE}
+    , mQuiet{false}
 {
     QString cmd = QFileInfo(mArgs[0]).fileName();
     mArgs.removeAt(0);
@@ -184,6 +186,10 @@ int Sudo::main()
         {
             version();
             return 0;
+        } else if (QStringLiteral("-q") == arg1 || QStringLiteral("--quiet") == arg1)
+        {
+            mQuiet = true;
+            mArgs.removeAt(0);
         } else if (QStringLiteral("-s") == arg1 || QStringLiteral("--su") == arg1)
         {
             mBackend = BACK_SU;
@@ -289,7 +295,7 @@ void Sudo::child()
         case BACK_SUDO:
             preserve_env_param = "--preserve-env=";
 
-            preserve_env_param += env_workarounds();
+            preserve_env_param += env_workarounds(mQuiet);
 
             *(param_arg++) = preserve_env_param.c_str(); //preserve environment
             *(param_arg++) = "/bin/sh";
@@ -299,7 +305,7 @@ void Sudo::child()
             [[fallthrough]];
         case BACK_SU:
         case BACK_NONE:
-            env_workarounds();
+            env_workarounds(mQuiet);
             break;
 
     }

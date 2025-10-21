@@ -77,6 +77,7 @@ private:
     QScopedPointer<PasswordDialog> mDlg;
     QStringList mArgs;
     backend_t mBackend;
+    bool mQuiet;
 
     int mChildPid;
     int mPwdFd;
