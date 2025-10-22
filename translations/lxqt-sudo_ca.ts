@@ -73,7 +73,21 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Ús: %1 opció [ordre [arguments...]]
+
+Interfície gràfica d&apos;usuari per a %2/%3/%4
+
+Arguments:
+opció:
+-h|--help      Imprimeix aquesta ajuda.
+-v|--version      Imprimeix informació sobre la versió.
+-s|--su      Utilitza %3(1) com a aplicació de fons.
+-d|--sudo      Utilitza %2(8) com a aplicació de fons.
+-a|--doas      Utilitza %4(1) com a aplicació de fons.
+ordre       Ordre a executar.
+arguments      Arguments opcionals per a l&apos;ordre.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="96"/>
