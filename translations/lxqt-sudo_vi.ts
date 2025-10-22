@@ -66,6 +66,7 @@ Arguments:
   option:
     -h|--help      Print this help.
     -v|--version   Print version information.
+    -q|--quiet     Make %1 less verbose.
     -s|--su        Use %3(1) as backend.
     -d|--sudo      Use %2(8) as backend.
     -a|--doas      Use %4(1) as backend.
@@ -73,7 +74,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation>Cú pháp: %1 tùy-chọn [câu-lệnh [tham-số...]]
+        <translation type="unfinished">Cú pháp: %1 tùy-chọn [câu-lệnh [tham-số...]]
 
 Ứng dụng GUI cho %2/%3/%4
 
@@ -81,6 +82,7 @@ Tham số:
   tùy-chọn:
     -h|--help      In trợ giúp.
     -v|--version   In thông tin phiên bản.
+    -q|--quiet     Make %1 less verbose.
     -s|--su        Sử dụng %3(1) như backend.
     -d|--sudo      Sử dụng %2(8) như backend.
     -a|--doas      Sử dụng %4(1) như backend.
@@ -90,7 +92,7 @@ Tham số:
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="96"/>
+        <location filename="../sudo.cpp" line="97"/>
         <source>%1 version %2
 </source>
         <translation>%1 phiên bản %2
@@ -100,52 +102,52 @@ Tham số:
 <context>
     <name>Sudo</name>
     <message>
-        <location filename="../sudo.cpp" line="205"/>
+        <location filename="../sudo.cpp" line="211"/>
         <source>%1: no command to run provided!</source>
         <translation>%1: không có lệnh nào để chạy!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="212"/>
+        <location filename="../sudo.cpp" line="218"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: không có chương trình phụ trợ (backend) nào được chọn!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="229"/>
+        <location filename="../sudo.cpp" line="235"/>
         <source>Syscall error, failed to fork: %1</source>
         <translation>Lỗi thực thi lời gọi hệ thống, chia tiến trình thất bại: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="257"/>
+        <location filename="../sudo.cpp" line="263"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
         <translation>bỏ chọn</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="323"/>
+        <location filename="../sudo.cpp" line="329"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
         <translation>%1: Đã phát hiện chèn lệnh với quyền quản trị qua biến môi trường LC_ALL (%2). Chấm dứt thực thi!
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="365"/>
+        <location filename="../sudo.cpp" line="371"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
         <translation>Lỗi thực thi lời gọi hệ thống, thất bại khi chuyển pty sang chế độ không chặn luồng thực thi: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="373"/>
+        <location filename="../sudo.cpp" line="379"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
         <translation>Lỗi thực thi lời gọi hệ thống, thất bại khi gọi hàm fdopen() trên pty: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="342"/>
+        <location filename="../sudo.cpp" line="348"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
         <translation>%1: Thất bại khi cố gắng thực thi &apos;%2&apos;: %3
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="407"/>
+        <location filename="../sudo.cpp" line="413"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
         <translation>Tiến trình con &apos;%1&apos; failed!

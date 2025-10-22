@@ -66,6 +66,7 @@ Arguments:
   option:
     -h|--help      Print this help.
     -v|--version   Print version information.
+    -q|--quiet     Make %1 less verbose.
     -s|--su        Use %3(1) as backend.
     -d|--sudo      Use %2(8) as backend.
     -a|--doas      Use %4(1) as backend.
@@ -73,7 +74,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation>Χρήση: %1 επιλογή [εντολή [ορίσματα...]]
+        <translation type="unfinished">Χρήση: %1 επιλογή [εντολή [ορίσματα...]]
 
 Γραφικό περιβάλλον για %2/%3/%4
 
@@ -81,17 +82,18 @@ Arguments:
   επιλογή:
     -h|--help      Εμφάνιση αυτής της βοήθειας.
     -v|--version   Εμφάνιση πληροφοριών έκδοσης.
+    -q|--quiet     Make %1 less verbose.
     -s|--su        Χρήση του %3(1) ως υποσύστημα.
     -d|--sudo      Χρήση του %2(8) ως υποσύστημα.
     -a|--doas      Χρήση του %4(1) ως υποσύστημα.
 
-εντολή   Η εντολή που θα εκτελεστεί.
-ορίσματα  Προαιρετικά ορίσματα για την εντολή.
+εντολή&#x2003;&#x2003;&#x2003;Η εντολή που θα εκτελεστεί.
+ορίσματα&#x2003;&#x2003;Προαιρετικά ορίσματα για την εντολή.
 
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="96"/>
+        <location filename="../sudo.cpp" line="97"/>
         <source>%1 version %2
 </source>
         <translation>%1 έκδοση %2
@@ -101,52 +103,52 @@ Arguments:
 <context>
     <name>Sudo</name>
     <message>
-        <location filename="../sudo.cpp" line="205"/>
+        <location filename="../sudo.cpp" line="211"/>
         <source>%1: no command to run provided!</source>
         <translation>%1: δε δόθηκε κάποια εντολή προς εκτέλεση!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="212"/>
+        <location filename="../sudo.cpp" line="218"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: δεν επιλέξατε το backend!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="229"/>
+        <location filename="../sudo.cpp" line="235"/>
         <source>Syscall error, failed to fork: %1</source>
         <translation>Σφάλμα κλήσης συστήματος, αποτυχία δημιουργίας νέας διεργασίας: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="257"/>
+        <location filename="../sudo.cpp" line="263"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
         <translation>ανενεργό</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="323"/>
+        <location filename="../sudo.cpp" line="329"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
         <translation>%1: Εντοπίστηκε απόπειρα έγχυσης προνομιούχας εντολής μέσω του LC_ALL env(%2). Εγκατάλειψη!
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="365"/>
+        <location filename="../sudo.cpp" line="371"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
         <translation>Σφάλμα κλήσης συστήματος, αποτυχία διάθεσης του pty σε non-blocking λειτουργία: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="373"/>
+        <location filename="../sudo.cpp" line="379"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
         <translation>Σφάλμα κλήσης συστήματος, αποτυχία κλήσης της fdopen για το pty: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="342"/>
+        <location filename="../sudo.cpp" line="348"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
         <translation>%1: Αποτυχία εκτέλεσης του «%2»: «%3»
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="407"/>
+        <location filename="../sudo.cpp" line="413"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
         <translation>Η διεργασία παιδί «%1» απέτυχε!

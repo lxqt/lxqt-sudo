@@ -75,13 +75,14 @@ Arguments:
   option:
     -h|--help      Print this help.
     -v|--version   Print version information.
+    -q|--quiet     Make %1 less verbose.
     -s|--su        Use %3(1) as backend.
     -d|--sudo      Use %2(8) as backend.
   command          Command to run.
   arguments        Optional arguments for command.
 
 </source>
-        <translation>Usu: %1 opción  [comandu [argumentos...]]
+        <translation type="unfinished">Usu: %1 opción  [comandu [argumentos...]]
 
 Frontal GUI pa %2/%3
 
@@ -89,6 +90,7 @@ Argumentos:
   optción:
     -h|--help      Amuesa esta ayuda.
     -v|--version   Amuesa la información de la versión.
+    -q|--quiet     Make %1 less verbose.
     -s|--su        Usa %3(1) como backend.
     -d|--sudo      Usa %2(8) como backend.
   comandu          Comandu a executar.
