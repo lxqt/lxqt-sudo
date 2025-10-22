@@ -74,7 +74,21 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">
+        Enkozesa entuufu eri: %1 kawayiro [kiragiro [agumenti...]]
+Obufugiro bwa %2/%3 obulabika
+Agumenti:
+  kawayiro:
+    -h|--help      Kaleetera lxqt-sudo okukoma ku kuwandika obuyambi buno.
+    -v|--version   Kaleetera lxqt-sudo okukoma ku kulaga olwandika lwa yo.
+    -q|--quiet     Make %1 less verbose.
+    -s|--su        Kaleetera lxqt-sudo okukozesa %3(1) okutuukiriza omulimu gwa yo.
+    -d|--sudo      Kaleetera lxqt-sudo okukozesa %2(8) okutuukiriza omulimu gwa yo.
+    -a|--doas      Use %4(1) as backend.
+  kiragiro          ekiragiro lxqt-sudo ky&apos;eba etandika.
+  agumenti        Agumenti ezisobola okuwebwa ekiragiro.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="97"/>
