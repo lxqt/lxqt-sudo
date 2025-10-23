@@ -66,6 +66,7 @@ Arguments:
   option:
     -h|--help      Print this help.
     -v|--version   Print version information.
+    -q|--quiet     Make %1 less verbose.
     -s|--su        Use %3(1) as backend.
     -d|--sudo      Use %2(8) as backend.
     -a|--doas      Use %4(1) as backend.
@@ -73,7 +74,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation>Upotreba: %1 opcija [naredba [argumenti ...]]
+        <translation type="unfinished">Upotreba: %1 opcija [naredba [argumenti ...]]
 
 GUI frontend for %2/%3/%4
 
@@ -81,6 +82,7 @@ Argumenti:
   opcije:
     -h|--help      Ispiši ovu pomoć.
     -v|--version   Ispiši podatke verzije.
+    -q|--quiet     Make %1 less verbose.
     -s|--su        Koristi %3(1) kao pozadinski sustav.
     -d|--sudo      Koristi %2(8) kao pozadinski sustav.
     -a|--doas      Koristi %4(1) kao pozadinski sustav.
@@ -90,7 +92,7 @@ Argumenti:
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="96"/>
+        <location filename="../sudo.cpp" line="97"/>
         <source>%1 version %2
 </source>
         <translation>%1 verzija %2
@@ -100,52 +102,52 @@ Argumenti:
 <context>
     <name>Sudo</name>
     <message>
-        <location filename="../sudo.cpp" line="205"/>
+        <location filename="../sudo.cpp" line="211"/>
         <source>%1: no command to run provided!</source>
         <translation>%1: nijedna naredba za pokretanje nije zadana!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="212"/>
+        <location filename="../sudo.cpp" line="218"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: nije odabran niti jedan pozadinski sustav!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="229"/>
+        <location filename="../sudo.cpp" line="235"/>
         <source>Syscall error, failed to fork: %1</source>
         <translation>Greška poziva sustava, neuspjelo kopiranje: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="257"/>
+        <location filename="../sudo.cpp" line="263"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
         <translation>nepostavljeno</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="323"/>
+        <location filename="../sudo.cpp" line="329"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
         <translation>%1: Otkriven je pokušaj dodavanja privilegirane naredbe putem LC_ALL env(% 2). Program se zatvara!
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="365"/>
+        <location filename="../sudo.cpp" line="371"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
         <translation>Greška poziva sustava, neuspjelo postavljanje pty-a u neblokirajući način: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="373"/>
+        <location filename="../sudo.cpp" line="379"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
         <translation>Greška poziva sustava, neuspjelo fdopen pty: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="342"/>
+        <location filename="../sudo.cpp" line="348"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
         <translation>%1: Neuspjelo izvršavanje „%2”: %3
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="407"/>
+        <location filename="../sudo.cpp" line="413"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
         <translation>Neuspio podređeni „%1” proces!

@@ -57,38 +57,41 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../sudo.cpp" line="75"/>
+        <location filename="../sudo.cpp" line="78"/>
         <source>Usage: %1 option [command [arguments...]]
 
-GUI frontend for %2/%3
+GUI frontend for %2/%3/%4
 
 Arguments:
   option:
     -h|--help      Print this help.
     -v|--version   Print version information.
+    -q|--quiet     Make %1 less verbose.
     -s|--su        Use %3(1) as backend.
     -d|--sudo      Use %2(8) as backend.
+    -a|--doas      Use %4(1) as backend.
   command          Command to run.
   arguments        Optional arguments for command.
 
 </source>
-        <translation>Enkozesa entuufu eri: %1 kawayiro [kiragiro [agumenti...]]
-
+        <translation type="unfinished">
+        Enkozesa entuufu eri: %1 kawayiro [kiragiro [agumenti...]]
 Obufugiro bwa %2/%3 obulabika
-
 Agumenti:
   kawayiro:
     -h|--help      Kaleetera lxqt-sudo okukoma ku kuwandika obuyambi buno.
     -v|--version   Kaleetera lxqt-sudo okukoma ku kulaga olwandika lwa yo.
+    -q|--quiet     Make %1 less verbose.
     -s|--su        Kaleetera lxqt-sudo okukozesa %3(1) okutuukiriza omulimu gwa yo.
     -d|--sudo      Kaleetera lxqt-sudo okukozesa %2(8) okutuukiriza omulimu gwa yo.
+    -a|--doas      Use %4(1) as backend.
   kiragiro          ekiragiro lxqt-sudo ky&apos;eba etandika.
   agumenti        Agumenti ezisobola okuwebwa ekiragiro.
 
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="92"/>
+        <location filename="../sudo.cpp" line="97"/>
         <source>%1 version %2
 </source>
         <translation>%1 luwandika %2
@@ -98,52 +101,52 @@ Agumenti:
 <context>
     <name>Sudo</name>
     <message>
-        <location filename="../sudo.cpp" line="195"/>
+        <location filename="../sudo.cpp" line="211"/>
         <source>%1: no command to run provided!</source>
         <translation>%1: kubulako ekiragiro ekiba kikolebwako!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="202"/>
+        <location filename="../sudo.cpp" line="218"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: lxqt-sudo tennaba kulonderwa puloguramu gy&apos;eba ekozesa!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="219"/>
+        <location filename="../sudo.cpp" line="235"/>
         <source>Syscall error, failed to fork: %1</source>
         <translation>Kiremya, ekiragiro ekya sisitemu kiremedwa okwekolamu koppi: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="246"/>
+        <location filename="../sudo.cpp" line="263"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
         <translation>tegekurula</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="295"/>
+        <location filename="../sudo.cpp" line="329"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
         <translation>%1: Nkwatirizza ekigeza okuyitira mu LC_ALL env(%2) okutandika ekiragiro n&apos;obuyinza obw&apos;enjawulo. Nkoma!
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="337"/>
+        <location filename="../sudo.cpp" line="371"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
         <translation>Kiremya, ekiragiro kya sisitemu kiremedwa okutegeka pty obutakigaana kukola ku birala: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="345"/>
+        <location filename="../sudo.cpp" line="379"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
         <translation>Kiremya, ekiragiro kya sisitemu kiremeredwa mu kukozesa fdopen okubikkula pty: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="314"/>
+        <location filename="../sudo.cpp" line="348"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
         <translation>%1: Nemedwa okutandika &apos;%2&apos;: %3
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="376"/>
+        <location filename="../sudo.cpp" line="413"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
         <translation>Koppi y&apos;omulimu &apos;%1&apos; egaanye!

@@ -66,6 +66,7 @@ Arguments:
   option:
     -h|--help      Print this help.
     -v|--version   Print version information.
+    -q|--quiet     Make %1 less verbose.
     -s|--su        Use %3(1) as backend.
     -d|--sudo      Use %2(8) as backend.
     -a|--doas      Use %4(1) as backend.
@@ -73,7 +74,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation>Ús: %1 opció [ordre [arguments...]]
+        <translation type="unfinished">Ús: %1 opció [ordre [arguments...]]
 
 Interfície gràfica d&apos;usuari per a %2/%3/%4
 
@@ -81,6 +82,7 @@ Arguments:
 opció:
 -h|--help      Imprimeix aquesta ajuda.
 -v|--version      Imprimeix informació sobre la versió.
+    -q|--quiet     Make %1 less verbose.
 -s|--su      Utilitza %3(1) com a aplicació de fons.
 -d|--sudo      Utilitza %2(8) com a aplicació de fons.
 -a|--doas      Utilitza %4(1) com a aplicació de fons.
@@ -90,7 +92,7 @@ arguments      Arguments opcionals per a l&apos;ordre.
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="96"/>
+        <location filename="../sudo.cpp" line="97"/>
         <source>%1 version %2
 </source>
         <translation>%1 versió %2
@@ -100,52 +102,52 @@ arguments      Arguments opcionals per a l&apos;ordre.
 <context>
     <name>Sudo</name>
     <message>
-        <location filename="../sudo.cpp" line="205"/>
+        <location filename="../sudo.cpp" line="211"/>
         <source>%1: no command to run provided!</source>
         <translation>%1: no s&apos;ha proporcionat cap ordre a executar!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="212"/>
+        <location filename="../sudo.cpp" line="218"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: no s&apos;ha triat cap dorsal!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="229"/>
+        <location filename="../sudo.cpp" line="235"/>
         <source>Syscall error, failed to fork: %1</source>
         <translation>Error de syscall, ha fallat la bifurcació: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="257"/>
+        <location filename="../sudo.cpp" line="263"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
         <translation>sense establir</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="323"/>
+        <location filename="../sudo.cpp" line="329"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
         <translation>%1: s&apos;ha detectat l&apos;intent d&apos;injecció d&apos;ordre privilegiada a través de LC_ALL env(%2). Sortint!
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="365"/>
+        <location filename="../sudo.cpp" line="371"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
         <translation>Error de syscall, no s&apos;ha pogut portar el pty al mode sense bloqueig: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="373"/>
+        <location filename="../sudo.cpp" line="379"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
         <translation>Error de syscall, ha fallat fdopen pty: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="342"/>
+        <location filename="../sudo.cpp" line="348"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
         <translation>%1: L&apos;exec ha fallat &apos;%2&apos;: %3
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="407"/>
+        <location filename="../sudo.cpp" line="413"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
         <translation>El procés fill &apos;%1&apos; ha fallat!

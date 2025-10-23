@@ -66,6 +66,7 @@ Arguments:
   option:
     -h|--help      Print this help.
     -v|--version   Print version information.
+    -q|--quiet     Make %1 less verbose.
     -s|--su        Use %3(1) as backend.
     -d|--sudo      Use %2(8) as backend.
     -a|--doas      Use %4(1) as backend.
@@ -73,7 +74,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation>사용법: %1 옵션 [명령어 [인자...]]
+        <translation type="unfinished">사용법: %1 옵션 [명령어 [인자...]]
 
 %2/%3/%4에 대한 GUI 프런트엔드
 
@@ -81,6 +82,7 @@ Arguments:
   옵션:
     -h|--help      이 도움말을 출력합니다.
     -v|--version   버전 정보를 출력합니다.
+    -q|--quiet     Make %1 less verbose.
     -s|--su        백엔드로 %3(1)을 사용합니다.
     -d|--sudo      백엔드로 %2(8)을 사용합니다.
     -a|--doas      백엔드로 %4(1)을 사용합니다.
@@ -90,7 +92,7 @@ Arguments:
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="96"/>
+        <location filename="../sudo.cpp" line="97"/>
         <source>%1 version %2
 </source>
         <translation>%1 버전 %2
@@ -100,52 +102,52 @@ Arguments:
 <context>
     <name>Sudo</name>
     <message>
-        <location filename="../sudo.cpp" line="205"/>
+        <location filename="../sudo.cpp" line="211"/>
         <source>%1: no command to run provided!</source>
         <translation>%1: 실행할 명령이 제공되지 않았습니다!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="212"/>
+        <location filename="../sudo.cpp" line="218"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: 선택한 백엔드가 없습니다!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="229"/>
+        <location filename="../sudo.cpp" line="235"/>
         <source>Syscall error, failed to fork: %1</source>
         <translation>시스템 호출 오류, 분기 실패: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="257"/>
+        <location filename="../sudo.cpp" line="263"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
         <translation>설정해제</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="323"/>
+        <location filename="../sudo.cpp" line="329"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
         <translation>%1: LC_ALL env(%2)을 통해 권한 있는 명령을 삽입하려는 시도가 감지되었습니다. 종료중입니다!
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="365"/>
+        <location filename="../sudo.cpp" line="371"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
         <translation>시스템 호출 오류, pty를 비차단 모드로 전환하지 못했습니다: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="373"/>
+        <location filename="../sudo.cpp" line="379"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
         <translation>시스템 호출 오류, pty를 fdopen하지 못했습니다: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="342"/>
+        <location filename="../sudo.cpp" line="348"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
         <translation>%1: &apos;%2&apos; 실행 실패: %3
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="407"/>
+        <location filename="../sudo.cpp" line="413"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
         <translation>하위 &apos;%1&apos; 프로세스가 실패했습니다!

@@ -66,6 +66,7 @@ Arguments:
   option:
     -h|--help      Print this help.
     -v|--version   Print version information.
+    -q|--quiet     Make %1 less verbose.
     -s|--su        Use %3(1) as backend.
     -d|--sudo      Use %2(8) as backend.
     -a|--doas      Use %4(1) as backend.
@@ -73,7 +74,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation>Utilisation : %1 option [commande [arguments...]]
+        <translation type="unfinished">Utilisation : %1 option [commande [arguments...]]
 
 Interface graphique pour %2/%3/%4
 
@@ -81,6 +82,7 @@ Arguments :
   option :
     -h|--help      Affiche cette aide.
     -v|--version   Affiche les informations de version.
+    -q|--quiet     Make %1 less verbose.
     -s|--su        Utilise %3(1) comme backend.
     -d|--sudo      Utilise %2(8) comme backend.
     -a|--doas      Utilise %4(1) comme backend.
@@ -90,7 +92,7 @@ Arguments :
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="96"/>
+        <location filename="../sudo.cpp" line="97"/>
         <source>%1 version %2
 </source>
         <translation>%1 version %2
@@ -100,52 +102,52 @@ Arguments :
 <context>
     <name>Sudo</name>
     <message>
-        <location filename="../sudo.cpp" line="205"/>
+        <location filename="../sudo.cpp" line="211"/>
         <source>%1: no command to run provided!</source>
-        <translation>%1 : aucune commande n&apos;a été spécifiée !</translation>
+        <translation>%1&#x202f;: aucune commande n&apos;a été spécifiée&#x202f;!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="212"/>
+        <location filename="../sudo.cpp" line="218"/>
         <source>%1: no backend chosen!</source>
-        <translation>%1 : aucun Backend n&apos;a été choisi !</translation>
+        <translation>%1&#x202f;: aucun Backend n&apos;a été choisi&#x202f;!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="229"/>
+        <location filename="../sudo.cpp" line="235"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation>Erreur d&apos;appel système, échec de la conversion : %1</translation>
+        <translation>Erreur d&apos;appel système, échec de la conversion&#x202f;: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="257"/>
+        <location filename="../sudo.cpp" line="263"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
         <translation>non spécifié</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="323"/>
+        <location filename="../sudo.cpp" line="329"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation>%1 : Tentative détectée d&apos;injection d&apos;une commande privilégiée via LC_ALL env(%2). En sortant !
+        <translation>%1&#x202f;: Tentative détectée d&apos;injection d&apos;une commande privilégiée via LC_ALL env(%2). En sortant&#x202f;!
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="365"/>
+        <location filename="../sudo.cpp" line="371"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation>Erreur d&apos;appel système, échec du transfert de pty en mode sans blocage : %1</translation>
+        <translation>Erreur d&apos;appel système, échec du transfert de pty en mode sans blocage&#x202f;: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="373"/>
+        <location filename="../sudo.cpp" line="379"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation>Erreur d&apos;appel système, échec de fdopen pty : %1</translation>
+        <translation>Erreur d&apos;appel système, échec de fdopen pty&#xa0;: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="342"/>
+        <location filename="../sudo.cpp" line="348"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation>%1 : Impossible d&apos;exécuter &apos;%2&apos; : %3
+        <translation>%1&#x202f;: Impossible d&apos;exécuter &apos;%2&apos;&#x202f;: %3
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="407"/>
+        <location filename="../sudo.cpp" line="413"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
         <translation>Échec du processus fils &apos;%1&apos; !

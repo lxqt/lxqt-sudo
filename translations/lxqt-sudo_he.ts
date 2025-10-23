@@ -66,6 +66,7 @@ Arguments:
   option:
     -h|--help      Print this help.
     -v|--version   Print version information.
+    -q|--quiet     Make %1 less verbose.
     -s|--su        Use %3(1) as backend.
     -d|--sudo      Use %2(8) as backend.
     -a|--doas      Use %4(1) as backend.
@@ -73,7 +74,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation>שימוש: %1 option [command [arguments...]]
+        <translation type="unfinished">שימוש: %1 option [command [arguments...]]
 
 ממשק חזותי עבור %2/%3/%4
 
@@ -81,6 +82,7 @@ Arguments:
   option:
     ‎-h|--help      הדפסת העזרה הזאת.
     ‎-v|--version   הצגת פרטי גרסה.
+    -q|--quiet     Make %1 less verbose.
     ‎-s|--su        להשתמש ב־%3(1) כמנגנון.
     ‎-d|--sudo      להשתמש ב־%2(8) כמנגנון.
     ‎-a|--doas      להשתמש ב־%4(1) כמנגנון.
@@ -90,7 +92,7 @@ Arguments:
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="96"/>
+        <location filename="../sudo.cpp" line="97"/>
         <source>%1 version %2
 </source>
         <translation></translation>
@@ -99,51 +101,51 @@ Arguments:
 <context>
     <name>Sudo</name>
     <message>
-        <location filename="../sudo.cpp" line="205"/>
+        <location filename="../sudo.cpp" line="211"/>
         <source>%1: no command to run provided!</source>
         <translation>%1: לא סופקה פקודה להרצה!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="212"/>
+        <location filename="../sudo.cpp" line="218"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: לא נבחר מגשר עורפי!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="229"/>
+        <location filename="../sudo.cpp" line="235"/>
         <source>Syscall error, failed to fork: %1</source>
         <translation>שגיאת קריאת מערכת, הפיצול נכשל: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="257"/>
+        <location filename="../sudo.cpp" line="263"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
         <translation>לא הוגדר</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="323"/>
+        <location filename="../sudo.cpp" line="329"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
         <translation>%1: התגלה ניסיון להזריק פקודה עם הרשאות על דרך משתנה הסביבה LC_ALL ‏(%2). התכנית תיסגר!
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="365"/>
+        <location filename="../sudo.cpp" line="371"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
         <translation>שגיאת קריאת מערכת, הבאת ה־pty למצב נוגד חסימות נכשל: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="373"/>
+        <location filename="../sudo.cpp" line="379"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
         <translation>שגיאת קריאת מערכת, הפעלת fdopen על pty נכשלה: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="342"/>
+        <location filename="../sudo.cpp" line="348"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="407"/>
+        <location filename="../sudo.cpp" line="413"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
         <translation></translation>

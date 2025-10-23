@@ -66,6 +66,7 @@ Arguments:
   option:
     -h|--help      Print this help.
     -v|--version   Print version information.
+    -q|--quiet     Make %1 less verbose.
     -s|--su        Use %3(1) as backend.
     -d|--sudo      Use %2(8) as backend.
     -a|--doas      Use %4(1) as backend.
@@ -73,7 +74,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation>Kasutus: %1 valik [käsk [argumendid...]]
+        <translation type="unfinished">Kasutus: %1 valik [käsk [argumendid...]]
 
 Graafiline kasutajaliides rakendustele: %2/%3/%4
 
@@ -81,6 +82,7 @@ Argumendid:
   valik:
     -h|--help      Näita seda abiteavet.
     -v|--version   Näita versiooniteavet.
+    -q|--quiet     Make %1 less verbose.
     -s|--su        Kasuta taustateenusena: %3(1).
     -d|--sudo      Kasuta taustateenusena: %2(8).
     -a|--doas      Kasuta taustateenusena: %4(1).
@@ -90,7 +92,7 @@ Argumendid:
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="96"/>
+        <location filename="../sudo.cpp" line="97"/>
         <source>%1 version %2
 </source>
         <translation>%1 versioon %2
@@ -100,52 +102,52 @@ Argumendid:
 <context>
     <name>Sudo</name>
     <message>
-        <location filename="../sudo.cpp" line="205"/>
+        <location filename="../sudo.cpp" line="211"/>
         <source>%1: no command to run provided!</source>
         <translation>%1: ei leidunud käsku, mida käivitada!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="212"/>
+        <location filename="../sudo.cpp" line="218"/>
         <source>%1: no backend chosen!</source>
         <translation>%1: taustarakendus on valimata!</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="229"/>
+        <location filename="../sudo.cpp" line="235"/>
         <source>Syscall error, failed to fork: %1</source>
         <translation>Süteemiviga protsessi kõrvalharu loomisel: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="257"/>
+        <location filename="../sudo.cpp" line="263"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
         <translation>määratlemata</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="323"/>
+        <location filename="../sudo.cpp" line="329"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
         <translation>%1: Tuvastasin katse käivitada suuremate õigustega käsku LC_ALL env(%2) kaudu. Lõpetan töö!
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="365"/>
+        <location filename="../sudo.cpp" line="371"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
         <translation>Süsteemiviga, kus ei õnnestunud pty&apos;d seadistada mitteblokeerivasse olekusse: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="373"/>
+        <location filename="../sudo.cpp" line="379"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
         <translation>Süsteemiviga, kus ei teha „fdopen pty“: %1</translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="342"/>
+        <location filename="../sudo.cpp" line="348"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
         <translation>%1: „%2“ käivitamine ei õnnestunud: %3
 </translation>
     </message>
     <message>
-        <location filename="../sudo.cpp" line="407"/>
+        <location filename="../sudo.cpp" line="413"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
         <translation>„%1“ järglasprotsessi tegevus ei õnnestunud!
