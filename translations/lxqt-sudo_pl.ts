@@ -74,7 +74,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished">Użycie: %1 opcja [polecenie [argumenty...]]
+        <translation>Użycie: %1 opcja [polecenie [argumenty...]]
 
 Interfejs graficzny użytkownika dla %2/%3/%4
 
@@ -82,7 +82,7 @@ Argumenty:
   opcja:
     -h|--help      Wyświetl tę pomoc.
     -v|--version   Wyświetl informacje o wersji.
-    -q|--quiet     Make %1 less verbose.
+    -q|--quiet     Uczyń %1 mniej gadatliwym.
     -s|--su        Użyj %3(1) jako backendu.
     -d|--sudo      Użyj %2(8) jako backendu.
     -a|--doas      Użyj %4(1) jako backendu.
