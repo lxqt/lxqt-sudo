@@ -74,7 +74,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished">Gebruik: %1 optie [opdracht [aanvullende opties…]]
+        <translation>Gebruik: %1 optie [opdracht [aanvullende opties…]]
 
 Een schil voor %2/%3/%4
 

@@ -74,7 +74,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished">Použití: %1 volba [příkaz [argumenty…]]
+        <translation>Použití: %1 volba [příkaz [argumenty…]]
 
 Nadstavba (grafické uživ. rozhraní) pro %2/%3/%4
 
