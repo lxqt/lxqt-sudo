@@ -74,7 +74,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished">שימוש: %1 option [command [arguments...]]
+        <translation>שימוש: %1 option [command [arguments...]]
 
 ממשק חזותי עבור %2/%3/%4
 
@@ -82,7 +82,7 @@ Arguments:
   option:
     ‎-h|--help      הדפסת העזרה הזאת.
     ‎-v|--version   הצגת פרטי גרסה.
-    -q|--quiet     Make %1 less verbose.
+    ‎-q|--quiet     לגרום ל־%1 להפחית ברמת הפירוט.
     ‎-s|--su        להשתמש ב־%3(1) כמנגנון.
     ‎-d|--sudo      להשתמש ב־%2(8) כמנגנון.
     ‎-a|--doas      להשתמש ב־%4(1) כמנגנון.

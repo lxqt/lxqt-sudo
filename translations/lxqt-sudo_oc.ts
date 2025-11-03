@@ -26,22 +26,22 @@
     <message>
         <location filename="../passworddialog.ui" line="106"/>
         <source>LXQt sudo backend</source>
-        <translation type="unfinished"></translation>
+        <translation>interfàcia de rèireplan de sudo LXQt</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
         <source>A program LXQt sudo calls in background to elevate privileges.</source>
-        <translation type="unfinished"></translation>
+        <translation>Un programa que LXQt sudo crida en rèireplan per elevar los privilègis.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
         <source>Command:</source>
-        <translation>Comanda&#xa0;:</translation>
+        <translation>Comanda :</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="126"/>
         <source>Password:</source>
-        <translation>Senhal&#xa0;:</translation>
+        <translation>Senhal :</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="133"/>
@@ -133,7 +133,7 @@ Arguments:
         <location filename="../sudo.cpp" line="413"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation>Fracàs del processús filh «&#xa0;%1&#xa0;»&#xa0;!
+        <translation>Fracàs del processús filh « %1 » !
 %2</translation>
     </message>
 </context>

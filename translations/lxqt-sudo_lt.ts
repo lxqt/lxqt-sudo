@@ -74,7 +74,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished">Naudojimas: %1 parametras [komanda [argumentai...]]
+        <translation>Naudojimas: %1 parametras [komanda [argumentai...]]
 
 Grafinė naudotojo sąsaja, skirta %2/%3/%4
 
@@ -82,7 +82,7 @@ Argumentai:
   parametras:
     -h|--help      Rodyti šią pagalbą.
     -v|--version   Rodyti informaciją apie versiją.
-    -q|--quiet     Make %1 less verbose.
+    -q|--quiet     Paversti %1 ne tokiu išsamiu.
     -s|--su        Naudoti %3(1) kaip vidinę sąsają.
     -d|--sudo      Naudoti %2(8) kaip vidinę sąsają.
     -a|--doas      Naudoti %4(1) kaip vidinę sąsają.

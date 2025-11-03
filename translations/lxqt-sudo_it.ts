@@ -74,20 +74,20 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished">Utilizzo: %1 opzione [comando [argomenti...]]
+        <translation>Utilizzo: %1 opzione [comando [argomenti...]]
 
 Interfaccia GUI per %2/%3/%4
 
 Argomenti:
-opzione:
--h|--help         Stampa questa guida.
--v|--version   Stampa le informazioni sulla versione.
-    -q|--quiet     Make %1 less verbose.
--s|--su              Utilizza %3(1) come backend.
--d|--sudo        Utilizza %2(8) come backend.
--a|--doas         Utilizza %4(1) come backend.
-comando      Comando da eseguire.
-argomenti     Argomenti facoltativi per il comando.
+  opzione:
+    -h|--help        Stampa questa guida.
+    -v|--version     Stampa le informazioni sulla versione.
+    -q|--quiet       Rendi %1 meno prolisso.
+    -s|--su          Utilizza %3(1) come backend.
+    -d|--sudo        Utilizza %2(8) come backend.
+    -a|--doas        Utilizza %4(1) come backend.
+  comando       Comando da eseguire.
+  argomenti     Argomenti facoltativi per il comando.
 
 </translation>
     </message>

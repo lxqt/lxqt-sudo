@@ -74,7 +74,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished">Kasutus: %1 valik [käsk [argumendid...]]
+        <translation>Kasutus: %1 valik [käsk [argumendid...]]
 
 Graafiline kasutajaliides rakendustele: %2/%3/%4
 

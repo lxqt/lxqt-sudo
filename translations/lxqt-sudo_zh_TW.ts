@@ -74,7 +74,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished">用法： %1 option [command [arguments...]]
+        <translation>用法： %1 option [command [arguments...]]
 
 GUI frontend for %2/%3/%4
 
