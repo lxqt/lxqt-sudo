@@ -74,7 +74,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished">Användning: %1 flaggor [kommando [argument...]]
+        <translation>Användning: %1 flaggor [kommando [argument...]]
 
 Grafiskt användargränssnitt för %2/%3/%4
 
