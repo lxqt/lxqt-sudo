@@ -74,17 +74,18 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished">
-        Enkozesa entuufu eri: %1 kawayiro [kiragiro [agumenti...]]
+        <translation>Enkozesa entuufu eri: %1 kawayiro [kiragiro [agumenti...]]
+
 Obufugiro bwa %2/%3 obulabika
+
 Agumenti:
   kawayiro:
     -h|--help      Kaleetera lxqt-sudo okukoma ku kuwandika obuyambi buno.
     -v|--version   Kaleetera lxqt-sudo okukoma ku kulaga olwandika lwa yo.
-    -q|--quiet     Make %1 less verbose.
+    -q|--quiet     Kakendeeza obubaka obuva mu %1.
     -s|--su        Kaleetera lxqt-sudo okukozesa %3(1) okutuukiriza omulimu gwa yo.
     -d|--sudo      Kaleetera lxqt-sudo okukozesa %2(8) okutuukiriza omulimu gwa yo.
-    -a|--doas      Use %4(1) as backend.
+    -a|--doas      Kategeka %4(1) nga ye puloguramu ey&apos;oku musingi.
   kiragiro          ekiragiro lxqt-sudo ky&apos;eba etandika.
   agumenti        Agumenti ezisobola okuwebwa ekiragiro.
 

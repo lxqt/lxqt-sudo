@@ -74,7 +74,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished">사용법: %1 옵션 [명령어 [인자...]]
+        <translation>사용법: %1 옵션 [명령어 [인자...]]
 
 %2/%3/%4에 대한 GUI 프런트엔드
 
@@ -82,12 +82,12 @@ Arguments:
   옵션:
     -h|--help      이 도움말을 출력합니다.
     -v|--version   버전 정보를 출력합니다.
-    -q|--quiet     Make %1 less verbose.
+    -q|--quiet     %1의 출력 정보를 간략히 합니다.
     -s|--su        백엔드로 %3(1)을 사용합니다.
     -d|--sudo      백엔드로 %2(8)을 사용합니다.
     -a|--doas      백엔드로 %4(1)을 사용합니다.
-  command          실행할 명령입니다.
-  arguments        명령에 대한 선택적 인자입니다.
+  command          실행할 명령어입니다.
+  arguments        명령어에 대한 선택적 인자입니다.
 
 </translation>
     </message>
