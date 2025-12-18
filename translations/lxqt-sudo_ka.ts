@@ -74,7 +74,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished">გამოყენება: %1 პარამეტრი [ბრძანება [არგუმენტები...]]
+        <translation>გამოყენება: %1 პარამეტრი [ბრძანება [არგუმენტები...]]
 
 GUI წინაბოლო პროგრამისთვის %2/%3/%4
 

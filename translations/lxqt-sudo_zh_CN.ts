@@ -74,7 +74,22 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>用法: %1 选项 [命令 [参数...]]
+
+%2/%3/%4 的 GUI 前端
+
+参数:
+  选项:
+    -h|--help      输出这个帮助。 
+    -v|--version   输出版本信息。
+    -q|--quiet     使 %1 输出简短。
+    -s|--su        使用 %3(1) 作为后端。
+    -d|--sudo      使用 %2(8) 作为后端。
+    -a|--doas      使用 %4(1) 作为后端。
+  command          要运行的命令。
+  arguments        命令的可选参数。
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="97"/>
