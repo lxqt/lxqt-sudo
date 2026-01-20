@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru">
+<TS version="2.1" language="kk">
 <context>
     <name>PasswordDialog</name>
     <message>
         <location filename="../passworddialog.ui" line="6"/>
         <source>LXQt sudo</source>
-        <translation></translation>
+        <translation>LXQt sudo</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="42"/>
         <source>Copy command to clipboard</source>
-        <translation>Скопировать команду в буфер обмена</translation>
+        <translation>Команданы алмасу буферіне көшіріп алу</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
         <source>&amp;Copy</source>
-        <translation>&amp;Копировать</translation>
+        <translation>&amp;Көшіріп алу</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation>Запрашиваемое действие требует привилегий администратора.&lt;br&gt;Пожалуйста, введите свой пароль.</translation>
+        <translation>Сұралған әрекетке әкімшілік рұқсаттар қажет.&lt;br&gt;Парольді енгізіңіз.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
         <source>LXQt sudo backend</source>
-        <translation>Вспомогательная программа LXQt sudo</translation>
+        <translation>LXQt sudo бэкенді</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
         <source>A program LXQt sudo calls in background to elevate privileges.</source>
-        <translation>Программа, которую LXQt sudo использует для повышения привилегий.</translation>
+        <translation>LXQt sudo рұқсаттарды арттыру үшін фонда шақыратын бағдарлама.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
@@ -46,12 +46,12 @@
     <message>
         <location filename="../passworddialog.ui" line="133"/>
         <source>Enter password</source>
-        <translation>Введите пароль</translation>
+        <translation>Парольді енгізіңіз</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Attempt #%1</source>
-        <translation>Попытка № %1</translation>
+        <translation>№%1 талпыныс</translation>
     </message>
 </context>
 <context>
@@ -74,28 +74,27 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation>Использование: %1 параметр [команда [аргументы...]]
+        <translation>Қолданылуы: %1 опция [команда [аргументтер...]]
 
-Графический интерфейс для %2/%3/%4
+%2/%3/%4 үшін графикалық интерфейс
 
-Аргументы:
-  параметр:
-    -h|--help      Показать эту подсказку.
-    -v|--version   Показать информацию о версии.
-    -q|--quiet     Уменьшить подробности %1.
-    -s|--su        Использовать %3(1) для бэкенда.
-    -d|--sudo      Использовать %2(8) для бэкенда.
-    -a|--doas      Использовать %4(1) для бэкенда.
-  команда          Команда для исполнения.
-  аргументы        Необязательные аргументы для команды.
-
+Аргументтер:
+  опция:
+    -h|--help      Осы көмекті шығару.
+    -v|--version   Нұсқа туралы ақпаратты шығару.
+    -q|--quiet     %1 хабарламаларын азайту.
+    -s|--su        Бэкенд ретінде %3(1) қолдану.
+    -d|--sudo      Бэкенд ретінде %2(8) қолдану.
+    -a|--doas      Бэкенд ретінде %4(1) қолдану.
+  команда          Орындалатын команда.
+  аргументтер        Командаға арналған міндетті емес аргументтер.
 </translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="97"/>
         <source>%1 version %2
 </source>
-        <translation>%1 версия %2
+        <translation>%1 нұсқасы %2
 </translation>
     </message>
 </context>
@@ -104,53 +103,53 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="211"/>
         <source>%1: no command to run provided!</source>
-        <translation>%1: не указана команда для запуска!</translation>
+        <translation>%1: орындалатын команда көрсетілмеген!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="218"/>
         <source>%1: no backend chosen!</source>
-        <translation>%1: вспомогательная программа повышения привилегий не выбрана!</translation>
+        <translation>%1: бэкенд таңдалмаған!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="235"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation>Ошибка системного вызова, не удалось выполнить fork: %1</translation>
+        <translation>Жүйелік шақыру қатесі, fork орындау сәтсіз аяқталды: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="263"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
-        <translation>не выбран</translation>
+        <translation>орнатылмаған</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="329"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation>%1: обнаружена попытка внедрения привилегированной команды через переменную среды LC_ALL(%2). Выполняется выход!
-</translation>
-    </message>
-    <message>
-        <location filename="../sudo.cpp" line="348"/>
-        <source>%1: Failed to exec &apos;%2&apos;: %3
-</source>
-        <translation>%1: Не удалось выполнить &apos;%2&apos;: %3
+        <translation>%1: LC_ALL env(%2) арқылы рұқсатты команданы енгізу әрекеті анықталды. Шығу!
 </translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="371"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation>Ошибка системного вызова, не удалось перевести терминал(pty) в неблокирующий режим: %1</translation>
+        <translation>Жүйелік шақыру қатесі, pty-ды бұғатталмайтын режимге өткізу сәтсіз аяқталды: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="379"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation>Ошибка системного вызова, не удалось выполнить fdopen() для терминала(pty): %1</translation>
+        <translation>Жүйелік шақыру қатесі, pty-ды fdopen арқылы ашу сәтсіз аяқталды: %1</translation>
+    </message>
+    <message>
+        <location filename="../sudo.cpp" line="348"/>
+        <source>%1: Failed to exec &apos;%2&apos;: %3
+</source>
+        <translation>%1: &apos;%2&apos; орындау сәтсіз аяқталды: %3
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="413"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation>Дочерний процесс &apos;%1&apos; завершился с ошибкой!
+        <translation>Туынды &apos;%1&apos; процесі сәтсіз аяқталды!
 %2</translation>
     </message>
 </context>
