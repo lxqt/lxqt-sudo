@@ -6,12 +6,12 @@
     <message>
         <location filename="../passworddialog.ui" line="6"/>
         <source>LXQt sudo</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt sudo</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="42"/>
         <source>Copy command to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiatu komandoa arbelean</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="45"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../passworddialog.ui" line="83"/>
         <source>The requested action needs administrative privileges.&lt;br&gt;Please enter your password.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eskatutako ekintzak administratzaile-pribilegioak behar ditu.&lt;br&gt;Mesedez, idatzi zure pasahitza.</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="106"/>
@@ -31,22 +31,22 @@
     <message>
         <location filename="../passworddialog.ui" line="109"/>
         <source>A program LXQt sudo calls in background to elevate privileges.</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt-ek sudo-k atzeko planoan deitzen duen programa bat pribilegioak igotzeko</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="119"/>
         <source>Command:</source>
-        <translation type="unfinished"></translation>
+        <translation>Agindua:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="126"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasahitza:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="133"/>
         <source>Enter password</source>
-        <translation type="unfinished"></translation>
+        <translation>Sartu pasahitza</translation>
     </message>
     <message>
         <location filename="../passworddialog.cpp" line="60"/>

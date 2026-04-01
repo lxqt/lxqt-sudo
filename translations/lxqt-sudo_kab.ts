@@ -16,7 +16,7 @@
     <message>
         <location filename="../passworddialog.ui" line="45"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nɣel</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
