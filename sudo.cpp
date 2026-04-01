@@ -284,10 +284,10 @@ void Sudo::child()
             break;
     }
 
-    std::unique_ptr<char const *[]> params{new char const *[params_cnt]};
+    auto params = std::make_unique<char const *[]>(params_cnt);
     const char ** param_arg = params.get() + 1;
 
-    std::string program = backendName().toLocal8Bit().data();
+    const std::string & program = backendName().toLocal8Bit().data();
 
     std::string preserve_env_param;
     switch (mBackend)
