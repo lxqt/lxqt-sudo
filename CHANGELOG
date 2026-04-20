@@ -1,3 +1,7 @@
+lxqt-sudo-2.4.0 / 2026-04-20
+ * Use std::make_unique C++17 and add const ref for readability.
+ * Updated translations.
+
 lxqt-sudo-2.3.0 / 2025-11-05
 =============================
  * Added `-q|--quiet` parameter.
