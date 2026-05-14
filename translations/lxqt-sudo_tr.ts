@@ -74,7 +74,22 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Kullanım: %1 seçenek [komut [argümanlar...]]
+
+%2/%3/%4 için grafik arayüzü
+
+Argümanlar:
+  seçenek:
+    -h|--help      Bu yardım metnini görüntüler.
+    -v|--version   Sürüm bilgilerini görüntüler.
+    -q|--quiet     %1&apos;in çıktı düzeyini azaltır.
+    -s|--su        %3(1) arka uç olarak kullan.
+    -d|--sudo      %2(8) arka uç olarak kullan.
+    -a|--doas      %4(1) arka uç olarak kullan.
+  command          Çalıştırılacak komut.
+  arguments        Komut için isteğe bağlı argümanlar.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="97"/>
