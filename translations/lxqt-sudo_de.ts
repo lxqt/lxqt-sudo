@@ -74,7 +74,7 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished">Aufruf: %1 Option [Befehl [Argumente...]]
+        <translation>Aufruf: %1 Option [Befehl [Argumente...]]
 
 GUI-Frontend für %2/%3/%4
 
@@ -82,7 +82,7 @@ Argumente:
   Option:
     -h|--help      Diese Hilfe ausgeben.
     -v|--version   Versionsinformationen ausgeben.
-    -q|--quiet     Make %1 less verbose.
+    -q|--quiet     %1 weniger ausführlich machen.
     -s|--su        %3(1) als Backend verwenden.
     -d|--sudo      %2(8) als Backend verwenden.
     -a|--doas      %4(1) als Backend verwenden.
