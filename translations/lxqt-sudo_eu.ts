@@ -16,7 +16,7 @@
     <message>
         <location filename="../passworddialog.ui" line="45"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kopiatu</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="83"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../passworddialog.ui" line="106"/>
         <source>LXQt sudo backend</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt sudo backend-a</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="109"/>
@@ -51,7 +51,7 @@
     <message>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Attempt #%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Saiakera #%1</translation>
     </message>
 </context>
 <context>
@@ -74,13 +74,29 @@ Arguments:
   arguments        Optional arguments for command.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Erabilera: %1 aukera [komandoa [argumentuak...]]
+
+%2/%3/%4(r)ako interfaze grafikoa
+
+Argumentuak:
+  aukera:
+    -h|--help      Inprimatu laguntza hau.
+    -v|--version   Inprimatu bertsioari buruzko informazioa.
+    -q|--quiet     Egin %1 gutxiago berritsua.
+    -s|--su        Erabili %3(1) back-end gisa.
+    -d|--sudo      Erabili %2(8) back-end gisa.
+    -a|--doas      Erabili %4(1) back-end gisa.
+  komandoa          Exekutatu beharreko komandoa.
+  argumentuak       Komandorako aukerako argumentuak.
+
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="97"/>
         <source>%1 version %2
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1 bertsioa %2
+</translation>
     </message>
 </context>
 <context>
@@ -88,51 +104,54 @@ Arguments:
     <message>
         <location filename="../sudo.cpp" line="211"/>
         <source>%1: no command to run provided!</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: ez da exekutatzeko komandorik eman!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="218"/>
         <source>%1: no backend chosen!</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: ez da back-endik aukeratu!</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="235"/>
         <source>Syscall error, failed to fork: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Sistemako deiaren errorea, fork egiteak huts egin du: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="263"/>
         <source>unset</source>
         <extracomment>shouldn&apos;t be actually used but keep as short as possible in translations just in case.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>unset</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="329"/>
         <source>%1: Detected attempt to inject privileged command via LC_ALL env(%2). Exiting!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1: pribilegio handiko komando bat LC_ALL ingurune-aldagaiaren bidez txertatzeko saiakera hauteman da (%2). Amaitzen!
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="371"/>
         <source>Syscall error, failed to bring pty to non-block mode: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Sistemako deiaren errorea, pty modu ez-blokeatzailean jartzeak huts egin du: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="379"/>
         <source>Syscall error, failed to fdopen pty: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Sistemako deiaren errorea, pty-rako fdopen egiteak huts egin du: %1</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="348"/>
         <source>%1: Failed to exec &apos;%2&apos;: %3
 </source>
-        <translation type="unfinished"></translation>
+        <translation>%1: ezin izan da &apos;%2&apos; exekutatu: %3
+</translation>
     </message>
     <message>
         <location filename="../sudo.cpp" line="413"/>
         <source>Child &apos;%1&apos; process failed!
 %2</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;%1&apos; prozesu umeak huts egin du!
+%2</translation>
     </message>
 </context>
 </TS>
